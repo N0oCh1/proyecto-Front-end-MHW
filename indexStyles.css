@@ -4,63 +4,98 @@ body{
     padding: 0;
     height: 100%;
    
+   
 }
 #mainIndex{
     min-height: 100vh;
     position: relative;
 }
 
-
-
-
-.background{
+#background{
     position: relative;
-    height: 100vh; 
+    height: 155vh; 
     width: 100%;   
 }
-.bgImg1, .bgVideo1, .bgResponsive1{
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
+ #bgVideo1, #bgResponsive1{
+    position: fixed; 
+   
     width: 100%; 
     height: 100%; 
-    transform: translate(-50%,-50%);
+    transition: all 0.3s ease;
     object-fit: cover; 
     z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.bgResponsive1{ display: none;}
 
 
 
-.logo{
+
+#bgResponsive1{ display: none;}
+
+
+
+#logo{
     display: flex;
     position:absolute;
-    z-index: 1;
-    transform: translateY(-850px);
+    z-index: 2;
+    transform: translateY(-125vh);
     justify-content: center;
     width: 100%;
     margin: 0 auto;
-    
-}
-.imgLogo{
-    height: 500px;
+  
     
 }
 
+.imgLogo{
+    height: 25vh; 
+}
+
+.transition {
+    height: 5vh;
+    background-image: url(recursos/transition.png);
+    background-size:contain;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    margin: 0 auto;
+    transform: translateY(-5vh);
+
+}
+
+#noticias, #productos{
+position: relative;
+    display: flex;
+    background-size:cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 155vh; 
+    width: 100%; 
+    z-index: 2;
+    top: 50%;
+   
+}
+
+#noticias{background-image: url(recursos/bgImagen0.jpg); }
+#productos{background-image: url(recursos/bgImagen2.JPEG); }
 
 .mask{
-    position:absolute;
-    top: 0;
-    left:0;
-    width: 100%;
-    height:  100%;
-    background-color: #1c1c1c;
-    opacity: 0.5;
-    mix-blend-mode: overlay;
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ pointer-events: none;
+ z-index: 1;
+ background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+ opacity: 0;
+ transition: opacity 0.3s ease;
 }
 
-@media (768px > width) {
-    .bgVideo1{ display: none;}
-    .bgResponsive1{ display: block;}
+
+@media (65vh > width) {
+    #bgVideo1{ display: none;}
+    #bgResponsive1{ display: block;}
 }
