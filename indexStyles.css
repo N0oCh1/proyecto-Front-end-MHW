@@ -150,7 +150,7 @@ h2{
 
 }
 
-#noticias, #productos{
+#noticias, #guia{
     
 position: relative;
 display: inline-block;
@@ -167,10 +167,10 @@ top: 50%;
 }
 
 
-#noticias{background-image: url(recursos/bgImagen0.jpg); }
+#guia{background-image: url(recursos/bgImagen0.jpg); }
 
 .title_text_shadow {
-    font-size: 8rem;
+    font-size: 6.5rem;
     position: absolute;
     z-index: -1;
     top: 1rem;
@@ -185,7 +185,7 @@ top: 50%;
 
 
 
-#productos{background-image: url(recursos/bgImagen2.JPEG); }
+#noticias{background-image: url(recursos/bgImagen2.JPEG); }
 
 /* utilidades*/
 footer{
