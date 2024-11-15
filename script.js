@@ -1,3 +1,4 @@
+
 window.addEventListener('scroll', function() {
     let overlay = document.querySelector('.mask');
     let scrollDistance = window.scrollY;
@@ -11,3 +12,16 @@ opacity = opacity > 0.7 ? 0.7 : opacity;
 // Aplicar el cambio de opacidad al overlay
 overlay.style.opacity = opacity;
   });
+
+  function toggle() 
+  { const menu = document.getElementById('menu');
+
+    if (menu.style.display === 'flex') 
+      {
+       menu.style.display = 'none'; 
+      } 
+    else 
+      { 
+        menu.style.display = 'flex';
+      }
+  }

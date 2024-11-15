@@ -18,29 +18,25 @@
 body{
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: auto;
+    line-height: 1.5;
+    background-color: #000;
+    color: #dcdcdc;
    
    
 }
 #mainIndex{
-    min-height: 100vh;
+    min-height: 155vh;
     position: relative;
 }
 
 
-h1{
- font-family: 'mh';
- font-weight: bold;
- font-size: 5vh;
- margin: 0 auto;
- color: white;
+h2{
+    line-height: 1.2;
+}
 
-}
-header{
-    width: 100%;
-    height: 10vh;
-}
-.menu {
+
+.menuIcon {
     position: fixed;
     width: 6rem;
     height: 6rem;
@@ -52,7 +48,10 @@ header{
     top: 0.5rem;
 }
 
+
+
 .btnMenu{
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: .57rem;
@@ -74,30 +73,37 @@ header{
     transform-origin: left;
 }
 
-.btnMenu:hover span:first-child{ 
-    transform: rotate(45deg);
-}
+.menu:hover span:first-child{ transform: rotate(45deg);}
 
 
-.btnMenu:hover span:nth-child(2){
-    opacity: 0;
+.menu:hover span:nth-child(2){opacity: 0;}
+
+.menu:hover span:last-child{transform: rotate(-45deg);}
+
+.menu { 
+    display: none; 
     
-}
+    position: fixed; 
+    width: 100%;
+    height: 100%;
+    background-color: #333; 
+ 
+    } 
 
-.btnMenu:hover span:last-child{
-   
-    transform: rotate(-45deg);
-}
-
+.menu a { color: white; 
+    text-decoration: none; 
+    padding: 10px; 
+    transition: background-color 0.3s; } 
+        
+.menu a:hover { background-color: #555; }
 
 #background{
     position: relative;
-    height: 155vh; 
+    height: 100%; 
     width: 100%;   
 }
  #bgVideo1, #bgResponsive1{
-    position: fixed; 
-   
+    position: fixed;  
     width: 100%; 
     height: 100%; 
     transition: all 0.3s ease;
@@ -117,12 +123,13 @@ header{
     flex-direction: column;
     position:absolute;
     z-index: 2;
-    transform: translateY(-125vh);
+   
     align-items:  center;
     width: 100%;
     height:fit-content;
-    margin: 0 auto;
-    
+    margin: 0 auto;  
+    top: 50%; 
+    transform: translateY(-130%); 
 }
 
 
@@ -144,24 +151,46 @@ header{
 }
 
 #noticias, #productos{
+    
 position: relative;
-    display: flex;
-    background-size:cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 155vh; 
-    width: 100%; 
-    z-index: 2;
-    top: 50%;
-   
+display: inline-block;
+background-size:cover;
+background-position: center center;
+background-repeat: no-repeat;
+font-family: Markazi Text, "source-han-serif-japanese", serif;
+font-weight: 400;
+text-shadow: 0 0 16px rgba(0, 0, 0, .4);
+height: 155vh; 
+width: 100%; 
+z-index: 2;
+top: 50%;
 }
+
 
 #noticias{background-image: url(recursos/bgImagen0.jpg); }
 
+.title_text_shadow {
+    font-size: 8rem;
+    position: absolute;
+    z-index: -1;
+    top: 1rem;
+    left: 2rem;
+    opacity: .2;
+}
+
+.title_text_letter{
+    font-size: 6rem;
+    color: #fff;
+}
+
+
+
 #productos{background-image: url(recursos/bgImagen2.JPEG); }
 
+/* utilidades*/
 footer{
-    
+    filter: brightness(1.3);
+    text-shadow: 0 0 12px rgba(242, 255, 3, .8);
     height: 20vh;
     text-align: left;
 }
@@ -178,7 +207,11 @@ footer{
  transition: opacity 0.3s ease;
 }
 
+.space{
+    height: 12vh;
+}
 
+/*medias querys*/
 @media (65vh > width) {
     #bgVideo1{ display: none;}
     #bgResponsive1{ display: block;}
