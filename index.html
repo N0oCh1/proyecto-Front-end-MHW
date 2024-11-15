@@ -7,30 +7,44 @@
     <link rel="stylesheet" href="indexStyles.css" />
   </head>
   <body>
+
+    <header>
+      <div class="menu">
+        <button class="btnMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+      </div>
+    </header>
+
     <main id="mainIndex">
 
-      <div id="background">
+      <section id="background">
         <video muted autoplay loop id="bgVideo1">
           <source src="recursos/bgVideo0.mp4" type="	video/webm" />
         </video>
         <img src="recursos/bgImagen1.jpg" id="bgResponsive1">
-      </div>
+      </section>
 
       <div class="transition"> </div>
 
       <div id="logo">
-        <img src="recursos/imgLogo.png" class="imgLogo" >
+        <img src="recursos/imgLogo.png" class="imgLogo">
+        <h1>API</h1>
       </div>
 
       <div id="noticias"> </div> 
       
-      <div id="productos"> </div>
-      <div class="transition"> </div>
-      <br>
-      <br>
-      <br>
+      <section id="productos"> </section>
+      <section class="transition"> </section>
       <div class="mask"></div>
        
+     
+      <footer> 
+        <h1> monster hunter API</h1>
+      </footer>
     </main>
     <script src="script.js"></script>
   </body>

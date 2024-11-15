@@ -1,4 +1,20 @@
 
+@font-face {
+    font-family: 'mh';
+    src: url(recursos/fonts/MonsterHunter-KLDp.otf);
+    font-weight: bold;
+    font-style: bold;
+}
+
+*{
+    scrollbar-width: none;
+}
+*, :after, :before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 body{
     margin: 0;
     padding: 0;
@@ -10,6 +26,69 @@ body{
     min-height: 100vh;
     position: relative;
 }
+
+
+h1{
+ font-family: 'mh';
+ font-weight: bold;
+ font-size: 5vh;
+ margin: 0 auto;
+ color: white;
+
+}
+header{
+    width: 100%;
+    height: 10vh;
+}
+.menu {
+    position: fixed;
+    width: 6rem;
+    height: 6rem;
+    cursor: pointer;
+    background: url('recursos/abrir\ menu.png') center/cover no-repeat;
+    transition: all 0.2s ease-out;
+    z-index: 3;  
+    right: 1.8rem;
+    top: 0.5rem;
+}
+
+.btnMenu{
+    display: flex;
+    flex-direction: column;
+    gap: .57rem;
+    width: 2rem;
+    height: 2rem;
+    z-index: 3;
+    background: transparent;
+    border: none;
+    transform: translate(2rem, 2.1rem);
+    
+}
+
+.btnMenu > span{
+    transition: all .5s;
+    background-color: #fff;
+    height: .15rem;
+    width: 100%; 
+    border-radius: 5px;
+    transform-origin: left;
+}
+
+.btnMenu:hover span:first-child{ 
+    transform: rotate(45deg);
+}
+
+
+.btnMenu:hover span:nth-child(2){
+    opacity: 0;
+    
+}
+
+.btnMenu:hover span:last-child{
+   
+    transform: rotate(-45deg);
+}
+
 
 #background{
     position: relative;
@@ -29,39 +108,38 @@ body{
     transform: translate(-50%, -50%);
 }
 
-
-
-
-
 #bgResponsive1{ display: none;}
 
 
 
 #logo{
     display: flex;
+    flex-direction: column;
     position:absolute;
     z-index: 2;
     transform: translateY(-125vh);
-    justify-content: center;
+    align-items:  center;
     width: 100%;
+    height:fit-content;
     margin: 0 auto;
-  
     
 }
+
+
 
 .imgLogo{
     height: 25vh; 
 }
 
 .transition {
-    height: 5vh;
+    height: 1vh;
     background-image: url(recursos/transition.png);
-    background-size:contain;
+    background-size:cover;
     position: absolute;
     z-index: 2;
     width: 100%;
     margin: 0 auto;
-    transform: translateY(-5vh);
+    transform: translateY(-1vh);
 
 }
 
@@ -79,8 +157,14 @@ position: relative;
 }
 
 #noticias{background-image: url(recursos/bgImagen0.jpg); }
+
 #productos{background-image: url(recursos/bgImagen2.JPEG); }
 
+footer{
+    
+    height: 20vh;
+    text-align: left;
+}
 .mask{
  position: fixed;
  top: 0;
