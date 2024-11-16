@@ -34,7 +34,7 @@ body{
 }
 a{
     color: rgb(254, 144, 0);
-    background-color: beige;
+    background-color: rgb(146, 190, 255);
     text-decoration: none;
 }
 a:hover{
