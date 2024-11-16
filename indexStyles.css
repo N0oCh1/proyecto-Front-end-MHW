@@ -52,6 +52,16 @@ a:checked{
     color: #9e9e9e;
 }
 
+.contenedor1{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.contenedor2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 #mainIndex{
     padding-top: 0;
     padding-bottom: 0;
@@ -130,7 +140,7 @@ h2,h3{
     padding-top: 50px;
     background-image: url(recursos/bg_menu_pc.jpg); 
     background-size:cover;
-    background-repeat: no-repeat;
+    background-position: top;
     } 
 
 .menu a { 
