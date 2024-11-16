@@ -48,8 +48,11 @@ a:checked{
 }
 
 #mainIndex{
+    display: flex;
+    justify-content: center;
     min-height: 155vh;
     position: relative;
+    margin: 0 auto;
 }
 
 
@@ -95,19 +98,20 @@ h2{
     transform-origin: left;
 }
 
-.menu:hover span:first-child{ transform: rotate(45deg);}
+.menuIcon:hover span:first-child{ transform: rotate(45deg);}
 
 
-.menu:hover span:nth-child(2){opacity: 0;}
+.menuIcon:hover span:nth-child(2){opacity: 0;}
 
-.menu:hover span:last-child{transform: rotate(-45deg);}
+.menuIcon:hover span:last-child{transform: rotate(-45deg);}
 
 .menu { 
     display: none; 
-    
+    flex-direction: column;
+    z-index: 3;
     position: fixed; 
     width: 100%;
-    height: 100%;
+    height: 155vh;
     background-color: #333; 
  
     } 
@@ -117,6 +121,26 @@ h2{
     padding: 10px; 
     transition: background-color 0.3s; } 
         
+.menu a:hover { background-color: #555; }
+
+.menu { display: none; 
+    flex-direction: column; 
+    z-index: 3; 
+    position: fixed; 
+    top: 0; 
+    right: 0; 
+    width: 100%; 
+    height: 100vh; 
+    background-color: #333; 
+    padding-top: 50px; } 
+
+.menu a { color: white; 
+    text-decoration: none; 
+    padding: 10px; 
+   
+
+     
+} 
 .menu a:hover { background-color: #555; }
 
 #background{
@@ -147,7 +171,7 @@ h2{
     z-index: 2;
    
     align-items:  center;
-    width: 100%;
+    width: 60%;
     height:fit-content;
     margin: 0 auto;  
     top: 50%; 
