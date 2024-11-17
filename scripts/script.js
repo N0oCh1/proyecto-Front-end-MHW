@@ -16,8 +16,7 @@ overlay.style.opacity = opacity;
 
 
   document.getElementById("AbrirMenu").addEventListener('click', function() {
-    const menu = document.getElementById("menu")
-    
+    const menu = document.getElementById("contenedor2")
     if(menu.style.display === "flex"){
       menu.style.display = "none"
     }
