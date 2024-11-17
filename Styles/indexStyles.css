@@ -158,7 +158,6 @@ h3 {
 }
 
 .menu a {
-    height: max-content;
     text-decoration: none;
     padding: 10px;
     transition: background-color 0.3s;
@@ -402,16 +401,7 @@ title {
 
 .noticia_2 {
   background-image: url(/recursos/parrafos\ bg.png);
-=======
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    transition: all 0.3s ease;
-    object-fit: cover;
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    
 }
 
 #bgResponsive1 {
@@ -605,7 +595,28 @@ footer {
 }
 
 /*medias querys*/
-@media (nd-size: cover;
+@media (758px > width) {
+  #bgVideo1 {
+    display: none;
+  }
+  .Video {
+    width: 75%;
+    height: 30vh;
+  }
+
+  #bgResponsive1 {
+    display: block;
+  }
+
+  .logo {
+    width: 90%;
+    min-width: auto;
+    max-width: none;
+  }
+
+  .menu {
+    background-image: url(/recursos/bg_menu_movil.jpg);
+    background-size: cover;
     background-position: top;
   }
 
