@@ -15,6 +15,22 @@
       {
         "image-alt": "off"
       }
+    ],
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "scrollbar-width",
+          "scrollbar-width: none"
+        ]
+      }
+    ],
+    "no-inline-styles": "off",
+    "axe/structure": [
+      "default",
+      {
+        "list": "off"
+      }
     ]
   }
 }
