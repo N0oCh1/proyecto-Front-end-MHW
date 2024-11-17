@@ -316,16 +316,18 @@ h3 {
   font-size: 5rem;
   width: 100%;
   color: #dcdcdc;
+  text-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4);
   animation: saturate 2s infinite;
   transition: all 0.2s ease-out;
+
 }
 
 .title_text {
   font-family: Markazi Text, "source-han-serif-japanese", serif;
   font-weight: 400;
-  text-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
   position: relative;
   display: inline-block;
+  width: 300px;
 }
 
 .Video-class {
@@ -361,19 +363,24 @@ title {
 
 .dec_letter_1 {
   position: absolute;
-  top: 3.5rem;
-  left: 20rem;
+  top: 3rem;
+  left: 15rem;
+  
 }
 
 .dec_letter_2 {
   position: absolute;
-  left: 1rem;
+  left: -1rem;
+  top: -1rem;
+  
 }
 
 .dec_letter_3 {
-  left: 12rem;
-  top: 5rem;
   position: absolute;
+  left: 8rem;
+  top: 5rem;
+  
+  
 }
 
 .noticia_1,
@@ -476,22 +483,23 @@ footer {
     width: auto;
     text-align: center;
     min-width: auto;
+    
   }
 
   .dec_letter_1 {
     position: absolute;
-    top: 2rem;
-    left: -5rem;
+    top: 1rem;
+    left: 14rem;
   }
 
   .dec_letter_2 {
     position: absolute;
-    left: 1rem;
+    left: -1.5rem;
   }
 
   .dec_letter_3 {
-    left: 6rem;
-    top: 1rem;
+    left: 8rem;
+    top: 3.5rem;
     position: absolute;
   }
 }
