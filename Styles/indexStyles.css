@@ -145,7 +145,7 @@ h3 {
 }
 
 .menu{
-    flex-direction: column;
+    flex-direction: row;
     display: flex;
     z-index: 6;
     position: fixed;
@@ -158,6 +158,7 @@ h3 {
 }
 
 .menu a {
+    height: max-content;
     text-decoration: none;
     padding: 10px;
     transition: background-color 0.3s;
