@@ -70,15 +70,7 @@ a:checked {
   height: 100%;
 }
 
-#contenedor2 {
-  display: none;
-  position: fixed;
-  z-index: 4;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+
 
 #mainIndex {
   display: flex;
@@ -144,29 +136,7 @@ h3 {
   transform: rotate(-45deg);
 }
 
-.menu{
-    flex-direction: row;
-    display: flex;
-    z-index: 6;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    padding-top: 50px;
-    background-image: url(/recursos/bg_menu_pc.jpg);
-    background-size: cover;
-    background-position: top;
-}
 
-.menu a {
-    text-decoration: none;
-    padding: 10px;
-    transition: background-color 0.3s;
-    width: fit-content;
-}
-
-.menu a:hover {
-  background-color: #555;
-}
 
 #background {
   position: fixed;
@@ -593,6 +563,7 @@ footer {
   height: 12vh;
 
 }
+
 
 /*medias querys*/
 @media (758px > width) {
