@@ -15,6 +15,7 @@
       {
         "image-alt": "off"
       }
+
     ],
     "compat-api/css": [
       "default",
