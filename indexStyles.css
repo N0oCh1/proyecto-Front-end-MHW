@@ -330,7 +330,9 @@ title{
     width: 100%;
     padding: 5rem 3rem;
     height: fit-content;
+    font-size: 1.3rem;
     text-align: left;
+    text-shadow: 0 5px 16px rgba(0, 0, 0, .4);
 }
 
 .noticia_1{background-image: url(recursos/parrafos\ bg.png);}
