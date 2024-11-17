@@ -15,6 +15,7 @@
       {
         "image-alt": "off"
       }
-    ]
+    ],
+    "disown-opener": "off"
   }
 }
