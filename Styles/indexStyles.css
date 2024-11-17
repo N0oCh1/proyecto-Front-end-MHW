@@ -65,7 +65,8 @@ a:checked {
     height: 100%;
 }
 
-.contenedor2 {
+#contenedor2 {
+    display: none;
     position: fixed;
     z-index: 4;
     top: 0;
@@ -145,7 +146,7 @@ h3 {
 
 .menu{
     flex-direction: column;
-    display: none;
+    display: flex;
     z-index: 6;
     position: fixed;
     width: 100%;
