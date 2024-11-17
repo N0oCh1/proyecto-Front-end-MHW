@@ -13,17 +13,15 @@ opacity = opacity > 0.7 ? 0.7 : opacity;
 overlay.style.opacity = opacity;
   });
 
-  function toggle() 
-  { const menu = document.getElementById('menu');
 
-    if (menu.style.display === 'flex') 
-      {
-       menu.style.display = 'none'; 
-      } 
-    else 
-      { 
-        menu.style.display = 'flex';
-      }
-  }
 
+  document.getElementById("AbrirMenu").addEventListener('click', function() {
+    const menu = document.getElementById("contenedor2")
+    if(menu.style.display === "flex"){
+      menu.style.display = "none"
+    }
+    else{
+      menu.style.display = "flex  "
+    }
+  })
   
