@@ -1,68 +1,29 @@
-
+/* Contenedor principal del Menu */
 #contenedor2 {
-    display: none;
-    flex-direction: column;
-    position: fixed;
-    z-index: 4;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-image: url(/recursos/bg_menu_pc.jpg);
-    background-size: cover;
-    background-position: top;
-    height: 100vh;
-  }
-
-  
-
- 
-  .menuButton{
-    text-decoration: none;
-    padding: 10px;
-    transition: background-color 0.3s;
-    width: fit-content;
-    height: min-content;
-    background-color: transparent;
-    border: none;
-    font-family: Markazi Text, "source-han-serif-japanese", serif;
-    color: #dcdcdc;
-    font-size: 30px;
-  }
-
- 
-
-
-  #resultados{
-    width: 100%;
-    overflow-y: scroll;
-    display: flex;
-    flex-direction: row;
-    padding: 30PX;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-
-  /* estilos para los elementos creado por JS */
-  .monstroCard{
-    cursor: pointer;
-    width: max-content;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-size: 24px;
-  }
-  .monstroCard:hover{
-    background-color: #5555554d;
-    border-radius: 8px;
-  }
-  .monstroImagenCard{
-    width: 200px;
-    height: 200px;
-  }
-
-
-.contenedor2_bg{
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-image: url(/recursos/bg_menu_pc.jpg);
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+}
+/* Estilos del NavBar */
+.menuButton{
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s;
+  width: fit-content;
+  height: min-content;
+  background-color: transparent;
+  border: none;
+  font-family: Markazi Text, "source-han-serif-japanese", serif;
+  color: #dcdcdc;
+  font-size: 30px;
 }
 
 .menu_nav{
@@ -71,8 +32,8 @@
   display: flex;
   gap: 24px
 }
-
-.menu_nav, a{
+  
+.menu_nav a{
   color: #fff;
   font-size: 4rem;
   font-weight: 400;
@@ -82,16 +43,40 @@
   opacity: .9;
   filter: drop-shadow(0 0 .75rem rgba(0, 0, 0, .1)) drop-shadow(0 0 .75rem rgba(0, 0, 0, .1));
 }
-
-.menu_nav,  li{
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 0 0 .5rem;
+ 
+/* Container del API */
+#resultados{
+  width: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: row;
+  padding: 30PX;
+  gap: 30px;
+  flex-wrap: wrap;
 }
+
+/* estilos para los elementos creado por JS */
+.monstroCard{
+  cursor: pointer;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 24px;
+}
+.monstroCard:hover{
+  background-color: #5555554d;
+  border-radius: 8px;
+}
+.monstroImagenCard{
+  width: 200px;
+  height: 200px;
+}
+
 
 @media (758px > width) { 
   .menu_nav{
-    padding: 24px;
+    padding: 12px;
     flex-direction:column;
     display: flex;
     gap: 5px;
@@ -100,6 +85,8 @@
   #contenedor2{
     background-image: url(/recursos/bg_menu_movil.jpg);
   }
-  
+  #resultados{
+    justify-content: center;
+  }
 
 }

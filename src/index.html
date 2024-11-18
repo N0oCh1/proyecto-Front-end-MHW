@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    // Menu Hamburguesa 
+    <!-- Menu Hamburguesa  -->
     <header>
       <div class="menuIcon">
         <button class="btnMenu" id="AbrirMenu" type="button">
@@ -25,17 +25,18 @@
         </button>
       </div>
     </header>
-    // Main Principal
+     <!-- Main Principal -->
     <main id="contenedor1">
       <div class="mask"></div>
 
+      <!-- Video de Fondo -->
       <div id="background">
         <video muted autoplay loop id="bgVideo1">
           <source src="/recursos/bgVideo0.mp4" type="	video/webm" />
         </video>
         <img src="/recursos/bgImagen1.jpg" id="bgResponsive1" />
       </div>
-
+      <!-- Logo de la Pagina -->
       <section id="mainIndex">
         <div class="logo">
           <div>
@@ -62,7 +63,10 @@
       <span class="transition"> </span>
       <ul class="space"></ul>
       <span class="transition"> </span>
+
+<!-- Seccion de Contenido -->
       <div class="secciones">
+<!-- Guias -->
         <section id="guia">
           <div class="title">
             <h2 class="title_text">
@@ -86,7 +90,7 @@
             </h2>
           </div>
         </section>
-
+<!-- Noticias -->
         <section id="noticias">
           <div class="title">
             <h2 class="title_text">
@@ -164,6 +168,7 @@
           </div>
 
           <span class="transition"> </span>
+<!-- Video de trailer -->
           <div class="Video-class">
             <span class="Video_tittle"> <h1>podria interesarte!</h1></span>
             <iframe
@@ -176,13 +181,10 @@
             ></iframe>
           </div>
         </section>
-
-        <ul class="space">
-          <span class="transition"> </span>
-        </ul>
+        <span class="transition"> </span>
       </div>
     </main>
-
+<!-- Parte del navBar boton Hamburguesa -->
     <div id="contenedor2">
       <ul class="menu_nav">
         <li>
@@ -208,24 +210,12 @@
       <section id="resultados"></section>
     </div>
 
+<!-- footer de la pagina -->
       <footer>
         <h1>Monster Hunter API</h1>
         <p>&copy; Sitio. Gael Pereira. Rubén Feng. César Aburto.</p>
         <p>&copy; Monster Hunter. CAPCOM.</p>
       </footer>
-
-
-      <div id="contenedor2">
-        <ul class="menu_nav"> 
-          <li> <button class="menuButton" id="monstro" type="button" onclick="showMonstros()">Monstruos</button></li>
-          <li> <a  href="#">Biomas</a></li>
-          <li> <a  href="#">Elementos</a></li>
-          <li> <a  href="..\src\autores.html">Autores</a></li>
-        </ul> 
-        <section id="resultados"> </section>
-      </div>
-    </main>
-
     <script src="/scripts/script.js"></script>
   </body>
 </html>
