@@ -1,5 +1,4 @@
 @font-face {
-
   font-family: "mh";
   src: url(/recursos/fonts/MarkaziText-VariableFont_wght.ttf);
   font-weight: bold;
@@ -19,12 +18,10 @@ p {
 }
 
 :after, :before {
-
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     list-style: none;
-
 }
 
 body {
@@ -34,7 +31,6 @@ body {
   line-height: 1.5;
   background-color: #000;
   color: #dcdcdc;
-  display: flex;
   flex-direction: column;
 }
 
@@ -46,46 +42,55 @@ img {
   height: auto;
 }
 
+
 a {
-  color: #dcdcdc;
   text-decoration: none;
   font-size: 30px;
 }
 
 a:hover {
-  color: rgb(0, 140, 255);
+  color: rgb(241, 175, 31);
 }
 
 a:active {
-  color: rgb(0, 4, 255);
+  color: rgb(250, 225, 84);
 }
 
 a:checked {
   color: #9e9e9e;
 }
 
-.contenedor1 {
+#contenedor1 {
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  line-height: 1.5;
+  background-color: #000;
+  color: #dcdcdc;
 }
 
 
 
 #mainIndex {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  
+ justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 155vh;
   position: relative;
   z-index: 1;
 }
 
-h2,
-h3 {
-  line-height: 1.2;
+a,h1,h2,h3 {
+line-height: 1.2;
+color: #dcdcdc;
+text-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4);
 }
 
 .menuIcon {
@@ -138,6 +143,7 @@ h3 {
 
 
 
+
 #background {
   position: fixed;
   height: 100%;
@@ -146,7 +152,6 @@ h3 {
 
 #bgVideo1,
 #bgResponsive1 {
-
   position: fixed;
   width: 100%;
   height: 100%;
@@ -170,6 +175,10 @@ h3 {
   justify-content: center;
   flex-direction: column;
   padding: 10px;
+  top: -30vh;
+  width: 90%;
+  min-width: auto;
+  max-width: none;
 }
 
 .buscador {
@@ -241,7 +250,7 @@ h3 {
  }
 
 .containerB {
-  width: fit-content;
+  width: 100%;
   height: fit-content;
 }
 
@@ -307,12 +316,19 @@ h3 {
 .Video-class {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   width: 100%;
+  padding: 1rem;
 }
 .Video {
-  width: 500px;
-  height: 380px;
+  width: 300px;
+  height: 200px;
+}
+.Video_tittle{
+text-align: left;
+color: #dcdcdc;
+text-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4);
+
 }
 title {
   position: absolute;
@@ -371,168 +387,10 @@ title {
 
 .noticia_2 {
   background-image: url(/recursos/parrafos\ bg.png);
-    
-}
-
-#bgResponsive1 {
-    display: none;
-}
-
-.logo {
-    width: max-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-
-.buscador2 {
-    height: 20vh;
-    margin-bottom: -6%;
-    position: relative;
-    width: 80%;
-}
-
-
-.transition {
-    min-height: 1vh;
-    height: 1vh;
-    background-image: url(/recursos/transition.png);
-    background-size: cover;
-    z-index: 3;
-    width: 100%;
-}
-
-
-
-
-#noticias,
-#guia {
-
-    padding: 1rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    font-family: Markazi Text, "source-han-serif-japanese", serif;
-    width: 100%;
-    z-index: 1;
-}
-
-
-#guia {
-    background-image: url(/recursos/bgImagen0.jpg);
-}
-
-#noticias {
-    background-image: url(/recursos/bgImagen2.JPEG);
-}
-
-.title_text_shadow {
-    font-size: 5.5rem;
-    position: absolute;
-    z-index: -1;
-    top: 1rem;
-    left: 2rem;
-    opacity: .2;
-    width: 100%;
-}
-
-
-
-.title_text_letter {
-
-    font-size: 5rem;
-    width: 100%;
-    color: #dcdcdc;
-    animation: saturate 2s infinite;
-    transition: all .2s ease-out;
-}
-
-.title_text {
-    font-family: Markazi Text, "source-han-serif-japanese", serif;
-    font-weight: 400;
-    text-shadow: 0 0 16px rgba(0, 0, 0, .4);
-    position: relative;
-    display: inline-block;
-
-}
-
-.Video-class{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-.Video{
-    width: 500px;
-    height: 380px;
-}
-title {
-    position: absolute;
-    top: 16rem;
-    left: 20rem;
-    min-width: 30rem;
-}
-
-@keyframes saturate {
-
-    0% {
-        filter: saturate(1);
-    }
-
-    75% {
-        filter: saturate(2);
-    }
-
-    0% {
-        filter: saturate(1);
-    }
-}
-
-
-
-.dec_letter_1 {
-    position: absolute;
-    top: 3.5rem;
-    left: 20rem;
-}
-
-.dec_letter_2 {
-    position: absolute;
-    left: 1rem;
-}
-
-.dec_letter_3 {
-    left: 12rem;
-    top: 5rem;
-    position: absolute;
-}
-
-
-.noticia_1,
-.noticia_2 {
-
-    background-size: cover;
-    padding: 5rem 3rem;
-    height: fit-content;
-    text-align: left;
-}
-
-.noticia_1 {
-    background-image: url(/recursos/parrafos\ bg.png);
-}
-
-.noticia_2 {
-    background-image: url(/recursos/parrafos\ bg.png);
 }
 
 /* utilidades*/
 footer {
- 
   padding: 8px 24px 8px 24px;
   height: 300px;
   display: flex;
@@ -540,6 +398,8 @@ footer {
   flex-direction: column;
   background-image: url(/recursos/footer_bg.png);
   background-size: cover;
+  position: absolute;
+  width: 100%;
 }
 
 .mask {
@@ -561,9 +421,7 @@ footer {
 
 .space {
   height: 12vh;
-
 }
-
 
 /*medias querys*/
 @media (758px > width) {
@@ -578,19 +436,6 @@ footer {
   #bgResponsive1 {
     display: block;
   }
-
-  .logo {
-    width: 90%;
-    min-width: auto;
-    max-width: none;
-  }
-
-  .menu {
-    background-image: url(/recursos/bg_menu_movil.jpg);
-    background-size: cover;
-    background-position: top;
-  }
-
   #noticias #guia {
     top: 20rem;
     right: 0;
@@ -637,4 +482,3 @@ footer {
     position: absolute;
   }
 }
-

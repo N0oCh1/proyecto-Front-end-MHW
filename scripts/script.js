@@ -16,12 +16,15 @@ overlay.style.opacity = opacity;
 
 
   document.getElementById("AbrirMenu").addEventListener('click', function() {
-    const menu = document.getElementById("contenedor2")
+    const menu = document.getElementById("contenedor2");
+    const main = document.getElementById("contenedor1")
     if(menu.style.display === "flex"){
       menu.style.display = "none"
+      main.style.display = "flex"
     }
     else{
-      menu.style.display = "flex  "
+      menu.style.display = "flex"
+      main.style.display = "none"
     }
   })
 
