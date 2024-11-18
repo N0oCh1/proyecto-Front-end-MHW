@@ -72,16 +72,29 @@
   gap: 24px
 }
 
-.menu_nav, a{
-  color: #fff;
+.menu_nav, a {
+  color: #ffffff;
   font-size: 4rem;
   font-weight: 400;
   letter-spacing: .05em;
   line-height: 1.2;
-  transition: all .25s ease-out;
+  transition: all .5s ease-out;
   opacity: .9;
-  filter: drop-shadow(0 0 .75rem rgba(0, 0, 0, .1)) drop-shadow(0 0 .75rem rgba(0, 0, 0, .1));
+  
 }
+
+.menuButton:hover {
+ filter: drop-shadow(0 0 .75rem rgb(241, 175, 31)) drop-shadow(0 0 .75rem rgb(241, 175, 31)); 
+}
+
+ .menuButton:active {
+  filter: drop-shadow(0 0 .75rem rgb(250, 225, 84)) drop-shadow(0 0 .75rem rgb(250, 225, 84)); 
+}
+
+ .menuButton:checked {
+  color: #9e9e9e;
+}
+
 
 .menu_nav,  li{
   margin-top: 1rem;
