@@ -11,14 +11,18 @@
     background-size: cover;
     background-position: top;
     height: 100vh;
+    
   }
+
+  .contenedor2_bg{
+    background-image: url(/recursos/bg_menu_movil.jpg);
+    background-size: cover;
+    background-position: top;
+   }
+
   .menu{
-    padding: 24px;
-      flex-direction: row;
-      display: flex;
+
   }
-  
-  
   .menuButton{
     text-decoration: none;
     padding: 10px;
@@ -44,6 +48,7 @@
 
 
   #resultados{
+    width: 100%;
     overflow-y: scroll;
     display: flex;
     flex-direction: row;
@@ -69,3 +74,29 @@
     width: 200px;
     height: 200px;
   }
+
+
+.contenedor2_bg{
+  background-image: url(/recursos/bg_menu_pc.jpg);
+}
+
+.menu_nav{
+  padding: 24px;
+  flex-direction: row;
+  display: flex;
+  gap: 24px
+}
+
+.menu_nav, a{
+  color: #fff;
+
+  transition: all .25s ease-out;
+  opacity: .9;
+  filter: drop-shadow(0 0 .75rem rgba(0, 0, 0, .1)) drop-shadow(0 0 .75rem rgba(0, 0, 0, .1));
+}
+
+.menu_nav,  li{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0 0 .5rem;
+}
