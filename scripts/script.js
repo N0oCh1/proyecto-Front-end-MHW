@@ -50,9 +50,7 @@ overlay.style.opacity = opacity;
           const nombre = document.createTextNode(monstro.nombre)
           createdElement.appendChild(image)
           createdElement.appendChild(nombre)
-
           
-
           container.appendChild(createdElement)
         })
       }
@@ -61,7 +59,6 @@ overlay.style.opacity = opacity;
       console.log(error)
     }
   }
-
   function Navigate (id) {  
     window.location.href = `/src/Monstros.html?id=${id}`;
   }

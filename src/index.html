@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HOME</title>
     <link rel="stylesheet" href="/Styles/indexStyles.css" />
-    <link rel="stylesheet" href="/Styles/MenuStyles.css">
+    <link rel="stylesheet" href="/Styles/MenuStyles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,20 +25,20 @@
       </div>
     </header>
 
-    <div class="mask"></div>
+    <main id="contenedor1">
+      <div class="mask"></div>
 
-    <div id="background">
-      <video muted autoplay loop id="bgVideo1">
-        <source src="/recursos/bgVideo0.mp4" type="	video/webm" />
-      </video>
-      <img src="/recursos/bgImagen1.jpg" id="bgResponsive1" />
-    </div>
+      <div id="background">
+        <video muted autoplay loop id="bgVideo1">
+          <source src="/recursos/bgVideo0.mp4" type="	video/webm" />
+        </video>
+        <img src="/recursos/bgImagen1.jpg" id="bgResponsive1" />
+      </div>
 
-    <main class="contenedor1">
       <div id="mainIndex">
         <div class="logo">
-          <div style="height: 35vh;">
-            <img src="/recursos/Logo Titulo.webp"  />
+          <div style="height: 35vh">
+            <img src="/recursos/Logo Titulo.webp" />
           </div>
 
           <div class="buscador">
@@ -46,7 +46,7 @@
               <span>
                 <img src="/recursos/border_top.png" class="buscadorTop"
               /></span>
-              <span >
+              <span>
                 <img src="/recursos/border_bttn.png" class="buscadorDown"
               /></span>
               <div class="containerB">
@@ -91,14 +91,20 @@
             <h2 class="title_text">
               <span class="title_text_letter"> NOTICIAS </span>
               <span class="title_text_shadow"> NOTICIAS</span>
-              <span >
-                <img class="dec_letter_1" src="/recursos/decoraciones/decoracion 1.png"
+              <span>
+                <img
+                  class="dec_letter_1"
+                  src="/recursos/decoraciones/decoracion 1.png"
               /></span>
-              <span >
-                <img class="dec_letter_2" src="/recursos/decoraciones/decoracion 2.png" 
+              <span>
+                <img
+                  class="dec_letter_2"
+                  src="/recursos/decoraciones/decoracion 2.png"
               /></span>
-              <span 
-                ><img class="dec_letter_3" src="/recursos/decoraciones/decoracion 3.png"
+              <span
+                ><img
+                  class="dec_letter_3"
+                  src="/recursos/decoraciones/decoracion 3.png"
               /></span>
             </h2>
           </div>
@@ -158,7 +164,7 @@
 
           <span class="transition"> </span>
           <div class="Video-class">
-            <span class="Video_tittle"> <h1> podria interesarte!</h1></span>
+            <span class="Video_tittle"> <h1>podria interesarte!</h1></span>
             <iframe
               class="Video"
               src="https://www.youtube.com/embed/ahy0AO8WwRc"
@@ -174,6 +180,32 @@
           <span class="transition"> </span>
         </ul>
       </div>
+    </main>
+
+    <div id="contenedor2">
+      <ul class="menu_nav">
+        <li>
+          <button
+            class="menuButton"
+            id="monstro"
+            type="button"
+            onclick="showMonstros()"
+          >
+            Monstruos
+          </button>
+        </li>
+        <li>
+          <button class="menuButton" type="button" href="#">Biomas</button>
+        </li>
+        <li>
+          <button class="menuButton" type="button" href="#">Elementos</button>
+        </li>
+        <li>
+          <button class="menuButton" type="button" href="#">Autores</button>
+        </li>
+      </ul>
+      <section id="resultados"></section>
+    </div>
 
       <footer>
         <h1>Monster Hunter API</h1>

@@ -11,14 +11,9 @@
     background-size: cover;
     background-position: top;
     height: 100vh;
-    
   }
 
-  .contenedor2_bg{
-    background-image: url(/recursos/bg_menu_movil.jpg);
-    background-size: cover;
-    background-position: top;
-   }
+  
 
  
   .menuButton{
@@ -29,20 +24,12 @@
     height: min-content;
     background-color: transparent;
     border: none;
+    font-family: Markazi Text, "source-han-serif-japanese", serif;
     color: #dcdcdc;
-    text-decoration: none;
     font-size: 30px;
   }
-  .menuButton:hover{
-    background-color: #555;
-    color: rgb(0, 140, 255);
-  }
-  .menuButton:active{
-    color: rgb(0, 4, 255);
-  }
-  .menuButton:checked{
-    color: #9e9e9e;
-  }
+
+ 
 
 
   #resultados{
@@ -87,7 +74,10 @@
 
 .menu_nav, a{
   color: #fff;
-
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: .05em;
+  line-height: 1.2;
   transition: all .25s ease-out;
   opacity: .9;
   filter: drop-shadow(0 0 .75rem rgba(0, 0, 0, .1)) drop-shadow(0 0 .75rem rgba(0, 0, 0, .1));
@@ -97,4 +87,19 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 0 0 .5rem;
+}
+
+@media (758px > width) { 
+  .menu_nav{
+    padding: 24px;
+    flex-direction:column;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+  #contenedor2{
+    background-image: url(/recursos/bg_menu_movil.jpg);
+  }
+  
+
 }
