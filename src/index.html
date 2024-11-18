@@ -16,6 +16,7 @@
 
   <body>
     <!-- Menu Hamburguesa  -->
+    <!-- Menu Hamburguesa  -->
     <header>
       <div class="menuIcon">
         <button class="btnMenu" id="AbrirMenu" type="button">
@@ -25,10 +26,11 @@
         </button>
       </div>
     </header>
-     <!-- Main Principal -->
+    <!-- Main Principal -->
     <main id="contenedor1">
       <div class="mask"></div>
 
+      <!-- Video de Fondo -->
       <!-- Video de Fondo -->
       <div id="background">
         <video muted autoplay loop id="bgVideo1">
@@ -38,7 +40,10 @@
       </div>
       <!-- Logo de la Pagina -->
       <section id="mainIndex">
+      <!-- Logo de la Pagina -->
+      <section id="mainIndex">
         <div class="logo">
+          <div>
           <div>
             <img src="/recursos/Logo Titulo.webp" />
           </div>
@@ -59,14 +64,14 @@
           </div>
         </div>
       </section>
+      </section>
 
-      <span class="transition"> </span>
       <ul class="space"></ul>
       <span class="transition"> </span>
 
-<!-- Seccion de Contenido -->
+      <!-- Seccion de Contenido -->
       <div class="secciones">
-<!-- Guias -->
+        <!-- Guias -->
         <section id="guia">
           <div class="title">
             <h2 class="title_text">
@@ -90,7 +95,7 @@
             </h2>
           </div>
         </section>
-<!-- Noticias -->
+        <!-- Noticias -->
         <section id="noticias">
           <div class="title">
             <h2 class="title_text">
@@ -168,23 +173,35 @@
           </div>
 
           <span class="transition"> </span>
-<!-- Video de trailer -->
-          <div class="Video-class">
-            <span class="Video_tittle"> <h1>podria interesarte!</h1></span>
-            <iframe
-              class="Video"
-              src="https://www.youtube.com/embed/ahy0AO8WwRc"
-              title="Monster Hunter Wilds: 5th Trailer | The Black Flame"
-              frameborder="0"
-              allow="accelerometer; autoplay;  encrypted-media; picture-in-picture;"
-              referrerpolicy="strict-origin-when-cross-origin"
-            ></iframe>
+          <div class="Video_box">
+            <span class="Video_tittle"> <h1>podria interesarte!</h1> </span>
+
+            <div class="Video-class">
+              <a class="Video0" href="https://youtu.be/ahy0AO8WwRc">
+                <img class="Video_play" src="/recursos/youtube-play.png" />
+                <img src="/recursos/videos_miniaturas/5th_trailer_wilds.jpg" />
+              </a>
+              <a class="Video1" href="https://youtu.be/H2lPUJ9VSpI">
+                <img class="Video_play" src="/recursos/youtube-play.png" />
+                <img src="/recursos/videos_miniaturas/outlanders trailer.jpg" />
+              </a>
+
+              <a class="Video2" href="https://youtu.be/uxQK-QDxGUs">
+                <img class="Video_play" src="/recursos/youtube-play.png" />
+                <img src="/recursos/videos_miniaturas/outlanders trailer.jpg" />
+              </a>
+              <a class="Video3" href="https://youtu.be/H2lPUJ9VSpI">
+                <img class="Video_play" src="/recursos/youtube-play.png" />
+                <img src="/recursos/videos_miniaturas/outlanders trailer.jpg" />
+              </a>
+            </div>
           </div>
         </section>
         <span class="transition"> </span>
+        <span class="transition"> </span>
       </div>
     </main>
-<!-- Parte del navBar boton Hamburguesa -->
+    <!-- Parte del navBar boton Hamburguesa -->
     <div id="contenedor2">
       <ul class="menu_nav">
         <li>
@@ -204,18 +221,19 @@
           <button class="menuButton" type="button" href="#">Elementos</button>
         </li>
         <li>
-          <button class="menuButton" type="button" href="#">Autores</button>
+          <a class="menuButton" type="button" href="autores.html">Autores</a>
         </li>
       </ul>
       <section id="resultados"></section>
     </div>
 
-<!-- footer de la pagina -->
-      <footer>
-        <h1>Monster Hunter API</h1>
-        <p>&copy; Sitio. Gael Pereira. Rubén Feng. César Aburto.</p>
-        <p>&copy; Monster Hunter. CAPCOM.</p>
-      </footer>
+    <!-- footer de la pagina -->
+    <footer>
+      <span class="transition"> </span>
+      <h1>Monster Hunter API</h1>
+      <p>&copy; Sitio. Gael Pereira. Rubén Feng. César Aburto.</p>
+      <p>&copy; Monster Hunter. CAPCOM.</p>
+    </footer>
     <script src="/scripts/script.js"></script>
   </body>
 </html>

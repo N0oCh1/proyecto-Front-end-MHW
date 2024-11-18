@@ -74,6 +74,47 @@
 }
 
 
+.contenedor2_bg{
+  background-image: url(/recursos/bg_menu_pc.jpg);
+}
+
+.menu_nav{
+  padding: 24px;
+  flex-direction: row;
+  display: flex;
+  gap: 24px
+}
+
+.menu_nav, a {
+  color: #ffffff;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: .05em;
+  line-height: 1.2;
+  transition: all .5s ease-out;
+  opacity: .9;
+  
+}
+
+.menuButton:hover {
+ filter: drop-shadow(0 0 .75rem rgb(241, 175, 31)) drop-shadow(0 0 .75rem rgb(241, 175, 31)); 
+}
+
+ .menuButton:active {
+  filter: drop-shadow(0 0 .75rem rgb(250, 225, 84)) drop-shadow(0 0 .75rem rgb(250, 225, 84)); 
+}
+
+ .menuButton:checked {
+  color: #9e9e9e;
+}
+
+
+.menu_nav,  li{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0 0 .5rem;
+}
+
 @media (758px > width) { 
   .menu_nav{
     padding: 12px;
@@ -88,5 +129,4 @@
   #resultados{
     justify-content: center;
   }
-
 }
