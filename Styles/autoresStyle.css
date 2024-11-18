@@ -7,5 +7,9 @@ body{
 }
 .nombreAutor{
     text-align: center;
-    
+
+}
+.parrafo{
+    padding: 10px;
+    background-color: rgb(135, 234, 237);
 }
