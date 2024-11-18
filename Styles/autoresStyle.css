@@ -1,0 +1,15 @@
+h1{
+    text-align: center;
+}
+body{
+    background-color: cadetblue;
+    color: white;
+}
+.nombreAutor{
+    text-align: center;
+
+}
+.parrafo{
+    padding: 10px;
+    background-color: rgb(75, 163, 166);
+}
