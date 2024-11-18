@@ -1,11 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monstruos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monstruos</title>
+  <link rel="stylesheet" href="/Styles/Monstruos.css">
 </head>
-<body>
-    Hola
+
+<body onload="GetMonstruo()">
+  <header></header>
+  <!-- Main de la pagina  -->
+  <main>
+<!-- informacion primaria -->
+    <div class="encabezado">
+      <div class="informacion">
+        <h2 id="nombre"> </h2>
+        <p id="descripcion" > </p>
+      </div>
+      <div class="iconoMonstruo">
+        <img id="icono"/>
+      </div>
+    </div>
+
+<!-- informacion secundaria -->
+    <div class="infoSecundaria">
+      <img class="imagenMonstruo"/>
+      <p></p>
+      <p></p>
+    </div>
+<!-- Elementos y de debilidad del mosntruo -->
+    <div class="atrubutos">
+      <div class="elmentos">
+
+      </div>
+      <div class="debilidades"">
+
+      </div>
+    </div>
+<!-- Rango en la que esta disponible -->
+    <div class="rango">
+
+    </div>
+<!-- Bioma en la que aparece -->
+    <div class="biomas">
+
+    </div>
+<!-- Items que suelta el monstro -->
+    <div class="items"> 
+
+    </div>
+
+  </main>
+
+<!-- Pie de pagina -->
+  <footer></footer>
 </body>
+
+<script src="/scripts/scriptMonstruos.js"></script>
 </html>
