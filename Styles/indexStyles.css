@@ -43,12 +43,8 @@ img {
   line-height: 1;
   width: auto;
   max-width: 100%;
-  height: auto;
+  height: 100%;
 }
-
-
-
-
 
 
 #contenedor1 {
@@ -288,60 +284,108 @@ text-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4);
   flex-direction: row;
   align-items: left;
   width: 100%;
-  gap: 2rem;
+  align-items: center;
   justify-content: center;
+
 }
 
 .Video_play{ 
-  position: relative;
-  max-height: 5rem ;
- 
+  position: absolute;
+  width: 25%;
+  bottom: 40%;
+  right: 35%;
+  height: auto;
+
 }
 .Video0 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  width: 300px;
-  height: 200px;
-  background-image: url(/recursos/videos_miniaturas/5th_trailer_wilds.jpg);
-  background-size: cover;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 20%;
   
 }
+.Video0:before {
+  content: "";
+  position: absolute;
+  top: -1.9rem;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  background-image: url(/recursos/border_video.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  line-height: 0;
+}
+
+
 .Video1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  width: 300px;
-  height: 200px;
-  background-image: url(/recursos/videos_miniaturas/5th_trailer_wilds.jpg);
-  background-size: cover;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 20%;
+  margin: 0 auto;
+ 
+
+}
+.Video1:before {
+  content: "";
+  position: absolute;
+  top: -1.8rem;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  background-image: url(/recursos/border_video.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  line-height: 0;
 }
 .Video2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  width: 300px;
-  height: 200px;
-  background-image: url(/recursos/videos_miniaturas/5th_trailer_wilds.jpg);
-  background-size: cover;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 20%;
+  margin: 0 auto;
+ 
 }
+
+  .Video2:before {
+      content: "";
+      position: absolute;
+      top: -1.6rem;
+      left: -6px;
+      right: -6px;
+      bottom: -6px;
+      background-image: url(/recursos/border_video.png);
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      line-height: 0;
+  }
 .Video3 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  width: 300px;
-  height: 200px;
-  background-image: url(/recursos/videos_miniaturas/5th_trailer_wilds.jpg);
-  background-size: cover;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 20%;
+  margin: 0 auto;
+  
 }
+
+.Video3:before {
+  content: "";
+  position: absolute;
+  top: -1.7rem;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  background-image: url(/recursos/border_video.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  line-height: 0; 
+}
+
 .Video_tittle{
 text-align: left;
 color: #dcdcdc;
-text-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4);
+text-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4); 
 
 }
 
