@@ -26,8 +26,7 @@ overlay.style.opacity = opacity;
       menu.style.display = "flex"
       main.style.display = "none"
     }
-  }
-)
+  })
 
 
 // boton menu MONSTRO
