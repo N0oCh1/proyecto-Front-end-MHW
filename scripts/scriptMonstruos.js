@@ -1,4 +1,5 @@
 
+
 async function GetMonstruo() {
     //Aqui ban los elementos del DOM
   
@@ -47,8 +48,9 @@ async function GetMonstruo() {
 
                 const imgBioma = document.createElement("img")
                 imgBioma.setAttribute('src', ObtenerImagenBioma(bioma.bioma))
-                nuevoBioma.appendChild(imgBioma)
+                imgBioma.setAttribute("class","imagenBioma")
                 nuevoBioma.appendChild(nuevoNombreBioma)
+                nuevoBioma.appendChild(imgBioma)
                 
                 document.getElementById("biomas").appendChild(nuevoBioma)
             })
