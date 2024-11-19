@@ -39,6 +39,7 @@ body {
 }
 
 img {
+ 
   margin: 0;
   line-height: 1;
   width: auto;
@@ -290,95 +291,82 @@ text-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4);
 
 .Video_play{ 
   position: absolute;
-  width: 25%;
-  bottom: 40%;
-  right: 35%;
+  z-index: 4;
+  width: 20%;
+  bottom: 3%;
+  right: 5%;
   height: auto;
 
 }
-.Video0 {
+.Video0, .Video1, .Video2, .Video3 {
   position: relative;
   aspect-ratio: 16 / 9;
   width: 20%;
-  
+  margin: 0 auto; 
 }
-.Video0:before {
+
+.Video0 > img, .Video1 > img, .Video2 > img, .Video3 > img {
+  position: absolute;
+}
+
+.Video0::after {
   content: "";
   position: absolute;
-  top: -1.9rem;
-  left: -6px;
-  right: -6px;
-  bottom: -6px;
+  top: -.3rem;
+  left: -.3rem;
+  right: -.3rem;
+  bottom: -.3rem;
   background-image: url(/recursos/border_video.png);
-  background-size: 100% auto;
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-position: 50%;
-  line-height: 0;
+  background-position: center; /* Centra la imagen */
+  pointer-events: none;
 }
 
 
-.Video1 {
-  position: relative;
-  aspect-ratio: 16 / 9;
-  width: 20%;
-  margin: 0 auto;
- 
 
-}
-.Video1:before {
+.Video1::after {
   content: "";
   position: absolute;
-  top: -1.8rem;
-  left: -6px;
-  right: -6px;
-  bottom: -6px;
+  top: -.3rem;
+  left: -.3rem;
+  right: -.3rem;
+  bottom: -.3rem;
   background-image: url(/recursos/border_video.png);
-  background-size: 100% auto;
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-position: 50%;
-  line-height: 0;
-}
-.Video2 {
-  position: relative;
-  aspect-ratio: 16 / 9;
-  width: 20%;
-  margin: 0 auto;
- 
+  background-position: center; /* Centra la imagen */
+  pointer-events: none;
 }
 
-  .Video2:before {
+
+  .Video2::after {
       content: "";
       position: absolute;
-      top: -1.6rem;
-      left: -6px;
-      right: -6px;
-      bottom: -6px;
+      top: -.3rem;
+      left: -.3rem;
+      right: -.3rem;
+      bottom: -.3rem;
       background-image: url(/recursos/border_video.png);
-      background-size: 100% auto;
+      background-size: 100%;
       background-repeat: no-repeat;
-      background-position: 50%;
-      line-height: 0;
+      background-position: center; /* Centra la imagen */
+      pointer-events: none;
   }
-.Video3 {
-  position: relative;
-  aspect-ratio: 16 / 9;
-  width: 20%;
-  margin: 0 auto;
-  
-}
 
-.Video3:before {
+
+.Video3::after {
   content: "";
   position: absolute;
-  top: -1.7rem;
-  left: -6px;
-  right: -6px;
-  bottom: -6px;
+  top: -.3rem;
+  left: -.3rem;
+  right: -.3rem;
+  bottom: -.3rem;
   background-image: url(/recursos/border_video.png);
-  background-size: 100% auto;
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-position: 50%;
-  line-height: 0; 
+  background-position: center; /* Centra la imagen */
+  pointer-events: none;
 }
 
 .Video_tittle{
@@ -486,10 +474,7 @@ footer {
   #bgVideo1 {
     display: none;
   }
-  .Video {
-    width: 75%;
-    height: 30vh;
-  }
+ 
 
   #bgResponsive1 {
     display: block;
@@ -539,4 +524,15 @@ footer {
     top: 3.5rem;
     position: absolute;
   }
+
+  .Video-class {
+    flex-direction:column; 
+  }
+
+  .Video0 , .Video1 , .Video2, .Video3  {
+    min-width: 80%;
+    margin-bottom: 20px;
+  }
+  
+
 }
