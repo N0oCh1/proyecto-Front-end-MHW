@@ -265,3 +265,13 @@ main{
         border-bottom: 1px solid white;
     }
 }
+footer {
+    color: white;
+    padding: 8px 24px 8px 24px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(/recursos/footer_bg.png);
+    background-size: cover;
+    width: 100%;
+  }
