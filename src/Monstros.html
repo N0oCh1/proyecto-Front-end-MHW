@@ -9,53 +9,115 @@
 </head>
 
 <body onload="GetMonstruo()">
-  <header></header>
+  <div class="background"> </div>
+  <header>
+    <button class="botonRegresar" type="button" onclick="history.back()">
+      <img src="/recursos/decoraciones/Puntero.png" class="punteroBoton"/>
+      <p>Regresar</p>
+    </button>
+   
+  </header>
   <!-- Main de la pagina  -->
   <main>
-<!-- informacion primaria -->
-    <div class="encabezado">
-      <div class="informacion">
-        <h2 id="nombre"> </h2>
-        <p id="descripcion" > </p>
-      </div>
-      <div class="iconoMonstruo">
-        <img id="icono"/>
-      </div>
-    </div>
+    
+    <div class="container1">
+      <!-- Decoracion de los bordes -->
+      <img class="borde1" src="/recursos//decoraciones/BorderFrame.webp"/>
+      <img class="borde2" src="/recursos//decoraciones/BorderFrame.webp"/>
+      <img class="borde3" src="/recursos//decoraciones/BorderFrame.webp"/>
+      <img class="borde4" src="/recursos//decoraciones/BorderFrame.webp"/>
+      
+      <!-- informacion primaria -->
+      <div class="encabezado">
 
-<!-- informacion secundaria -->
-    <div class="infoSecundaria">
-      <img class="imagenMonstruo"/>
-      <p></p>
-      <p></p>
-    </div>
-<!-- Elementos y de debilidad del mosntruo -->
-    <div class="atrubutos">
-      <div class="elmentos">
-
-      </div>
-      <div class="debilidades"">
-
+        <div class="informacion">
+          <h2 id="nombre"> </h2>
+          <p id="descripcion"> </p>
+        </div>
+        <div class="iconoMonstruo">
+          <img id="icono" class="icono"/>
+        </div>
       </div>
     </div>
-<!-- Rango en la que esta disponible -->
-    <div class="rango">
 
+      <!-- informacion secundaria -->
+      <div class="infoSecundaria">
+        <span class="transition"> </span>
+        <img class="imagenMonstruo" id="imagen" />
+        <div>
+          <p>Clase</p>
+          <p id="tipo"></p>
+        </div>
+        <div>
+          <p>Vida</p>
+          <p id="vida"></p>
+        </div>
+        <span class="transition"> </span>
+      </div>
+    
+    
+    <div class="container2">
+      <!-- Elementos y de debilidad del mosntruo -->
+      <div class="atributos">
+        <div class="elmentosContainer">
+          <h3>
+            Elementos
+          </h3>
+          <div class="separadorDecoracion"></div>
+          <div class="elementos" id="elementos"> </div>
+        </div>
+
+        <div class="debilidadesContainer">
+          <h3>
+            Debilidades
+          </h3>
+          <div class="separadorDecoracion"></div>
+
+          <div class="debilidades" id="debilidad"> </div>
+        </div>
+      </div>
+
+      <!-- Rango en la que esta disponible -->
+      <div class="rangoContainer">
+        <div class="rango">
+          <h3>
+            Rangos
+          </h3>
+          <div class="separadorDecoracion"></div>
+          <div id="rangos"> </div>
+        </div>
+      </div>
     </div>
-<!-- Bioma en la que aparece -->
-    <div class="biomas">
 
+    <!-- Bioma en la que aparece -->
+
+    <div class="biomaContainer">
+      <span class="transition"> </span>
+
+      <h1>
+        Localizacion
+      </h1>
+      <div class="separadorDecoracion"></div>
+
+      <div class="biomas" id="biomas"> </div>
     </div>
-<!-- Items que suelta el monstro -->
-    <div class="items"> 
+    
+    <!-- Items que suelta el monstro -->
+      <div class="itemsContainer">
+        <span class="transition"> </span>
+        <h1>
+          Items
+        </h1>
+        <div class="separadorDecoracion"></div>
 
-    </div>
-
+        <div class="items" id="items"> </div>
+      </div>
   </main>
 
-<!-- Pie de pagina -->
+  <!-- Pie de pagina -->
   <footer></footer>
 </body>
 
 <script src="/scripts/scriptMonstruos.js"></script>
+
 </html>
