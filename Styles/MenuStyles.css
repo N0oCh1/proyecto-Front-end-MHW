@@ -114,7 +114,36 @@
   margin-bottom: 1rem;
   padding: 0 0 .5rem;
 }
+.agregarMonstruo{
+  cursor: pointer;
+  bottom: 4rem;
+  right: 4rem;
+  background-color: transparent;
+  width: max-content;
+  position: fixed;
+  border: none;
+  p{
+    top:50%;
+    left: 25%;
+    line-height: 0;
+    position: absolute;
+    color: white;
+    font-size: 50px;
+  }
+}
+.botonAgregar{
+  width: 50px;
+  height: 50px;
+}
+.agregarMonstruo:hover{
+  p{
+    color: rgba(71, 167, 15, 0.886);
+  }
 
+  .botonAgregar{
+    filter: sepia(100%);
+  }
+}
 @media (758px > width) { 
   .menu_nav{
     padding: 12px;
