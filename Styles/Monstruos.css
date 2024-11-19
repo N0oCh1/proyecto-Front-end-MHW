@@ -71,6 +71,7 @@ main{
 .container1{
     background-image: url("/recursos//BgImagen3.webp");
     border-start-end-radius: 8px;
+    border-start-start-radius: 8px;
     padding: 40px;
     position: relative;
 }
@@ -210,6 +211,7 @@ main{
 }
 .biomaContainer{
     border-start-end-radius: 10px;
+    border-start-start-radius: 10px;
     padding: 24px;
     gap: 20px;
     display: flex;
@@ -248,6 +250,7 @@ main{
     background-color: rgba(0, 0, 0, 0.406);
     color:white;
     border-end-end-radius: 10px;
+    border-end-start-radius:10px ;
 
 }
 .items{
