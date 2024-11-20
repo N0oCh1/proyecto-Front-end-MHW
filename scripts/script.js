@@ -74,3 +74,7 @@ overlay.style.opacity = opacity;
     }).then(data=>data.json()).then(data=>data)
     return monstroData
   }
+
+  function navegarIngresar() {
+    window.location.href = "/src/nuevo.html"
+  }
