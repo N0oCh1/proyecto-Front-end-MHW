@@ -37,6 +37,10 @@ function navegarMonstruo(id){
   window.location.href = `/src/monstros.html?id=${id}`
 }
 
+function navegarMonstruo(id){
+  window.location.href = `/src/Monstros.html?id=${id}`
+}
+
 function filtroMonstros(monstros,lista){
 return monstros.filter(monstros => monstros.nombre.toLowerCase().includes(lista.toLowerCase()));
 }
