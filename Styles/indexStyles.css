@@ -66,6 +66,7 @@ img {
 
 #mainIndex {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -159,20 +160,15 @@ text-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4);
 .logo {
   position: relative;
   width: max-content;
-  height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: 10px;
 }
 
-.buscador {
-    position: relative;
-    text-align: center;
-    top: -200px;
-    z-index: 5;
-    display: flex;
-    justify-content: center;
+.logo_title{
+max-height: 20rem;
+aspect-ratio: 16 / 9;
 }
 
 #search{
@@ -188,12 +184,9 @@ text-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4);
 .box {
   position: relative;
   
-  width: 300px;
-  height: fit-content;
-  width: fit-content;
   text-align: center;
-  display: block;
   cursor: pointer;
+  
 }
 
 .buscadorTop {
@@ -228,6 +221,7 @@ text-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4);
   width: 100%;
   position: relative;
 }
+
 
 #noticias,
 #guia {
