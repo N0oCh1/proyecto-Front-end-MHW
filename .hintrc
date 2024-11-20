@@ -16,6 +16,12 @@
         "image-alt": "off"
       }
     ],
-    "disown-opener": "off"
+    "disown-opener": "off",
+    "axe/forms": [
+      "default",
+      {
+        "select-name": "off"
+      }
+    ]
   }
 }
