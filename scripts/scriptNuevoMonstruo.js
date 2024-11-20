@@ -29,7 +29,7 @@ function addBioma() {
   newDiv.setAttribute("class", "biomaField")
   newDiv.innerHTML = `
     <select id="bioma${biomaCount}" name="biomas[1][id_bioma]">
-        <option value="">Sleciona el bioma</option>
+        <option>Sleciona el bioma</option>
         <option value="1">Bosque primigenio</option>
         <option value="2">Yermo de agujas</option>
         <option value="3">Altiplano coralinos</option>
@@ -49,7 +49,7 @@ function addRango() {
   const containerRango = document.getElementById("rangoContainer")
   newDiv.innerHTML = `
         <select name="rangos[1][id_rango]" id="rango${rangoCount}">
-            <option value="">Seleccione el rango</option>
+            <option>Seleccione el rango</option>
             <option value="1">Rango bajo</option>
             <option value="2">Rango alto</option>
             <option value="3">Rango maestro</option>
@@ -67,7 +67,7 @@ function addElemento() {
   const containerElemento = document.getElementById("elementoContainer")
   newDiv.innerHTML = `
         <select name="elementos[1][id_elemento]" id="elemento${elementoCount}">
-            <option value="">Seleccione el Elementos del monstruo</option>
+            <option>Seleccione el Elementos del monstruo</option>
             <option value="1">Fuego</option>
             <option value="2">Agua</option>
             <option value="3">Treuno</option>
@@ -88,7 +88,7 @@ function addDebilidad() {
   const containerDebilidad = document.getElementById("debilidadContainer")
   newDiv.innerHTML = `
         <select name="debilidad[1][id_elemento]" id="debilidad${debilidadCount}">
-            <option value="">Seleccione el Elementos debil del monstruo</option>
+            <option>Seleccione el Elementos debil del monstruo</option>
             <option value="1">Fuego</option>
             <option value="2">Agua</option>
             <option value="3">Treuno</option>
@@ -173,4 +173,3 @@ function testImage() {
 function regresar() {
   window.location.href = "/src/index.html"
 }
-
