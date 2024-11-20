@@ -12,60 +12,14 @@
     scrollbar-width: none;
 }
 
-.background{
-    background-image: url("/recursos/bg_menu_pc.webp");
-    background-repeat: no-repeat;
-    background-origin: border-box;
-    background-position-x: center;
-    z-index: -1;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-}
 main{
     max-width: 75vw;
     padding: 3rem;
     margin: auto;
 }
-.transition {
-    min-height: 1vh;
-    height: 1vh;
-    background-image: url("/recursos/transition.png");
-    background-size: cover;
-    width: 100%;
-  }
-  
-.separadorDecoracion{
-    height: 2vh;
-    min-height: 2vh;
-    background-size: cover;
-    max-width: 75%;
-    margin: 0 auto 0 auto;
-    width: 100%;
-    background-image: url("/recursos/decoraciones/decoracion\ 4.webp");
-}
-.botonRegresar{
-    position: fixed;
-    top:1rem;
-    left: 1rem;
-    padding: 4px;
-    display: flex;
-    border-radius: 8px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    border:1px solid white;
-    gap: 16px;
-    cursor: pointer;
-    font-size: 24px;
-    color:white
-}
 
-.punteroBoton{
-    transform: scale(-1,1);
-}
+
+/* seccion informacion primaria */
 .container1{
     background-image: url("/recursos//BgImagen3.webp");
     border-start-end-radius: 8px;
@@ -73,40 +27,6 @@ main{
     padding: 40px;
     position: relative;
 }
-.container2{
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.borde1{
-    top: 1rem;
-    left: 1rem;
-    position: absolute;
-    width: 100px;
-    transform:  scale(-1,1);
-}
-.borde2{
-    top: 1rem;
-    right: 1rem;
-    position: absolute;
-    width: 100px;
-}
-.borde3{
-    bottom: 1rem;
-    right: 1rem;
-    position: absolute;
-    width: 100px;
-    rotate: 180deg;
-    transform:  scale(-1,1);
-
-}
-.borde4{
-    bottom: 1rem;
-    left: 1rem;
-    position: absolute;
-    width: 100px;
-    rotate: 180deg;
-}
-
 .encabezado{
     display: flex;
     flex-direction: row;
@@ -129,8 +49,12 @@ main{
     width: 100%;
     height: auto;
 }
-
+/* ------- */
 /* Informacio secundaria */
+.container2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 .infoSecundaria{
     background-color: #a497808a;
     color: white;
@@ -153,6 +77,8 @@ main{
     width: 100%;
     height: auto;
 }
+/* ------- */
+
 /* Elementos y de debilidad del mosntruo */
 
 .atributos{
@@ -185,6 +111,9 @@ main{
         gap: 20px;
     }
 }
+/* ------- */
+
+/* seccion del rango */
 .rangoContainer{
     margin-top: 20px;
     display: flex;
@@ -207,6 +136,8 @@ main{
         font-size: 24px;
     }
 }
+/* ------- */
+/* seccion del bioma */
 .biomaContainer{
     border-start-end-radius: 10px;
     border-start-start-radius: 10px;
@@ -231,6 +162,7 @@ main{
         font-size: 24px;
     }
 }
+
 .imagenBioma{
     border-radius: 10px;
     max-width: 500px;
@@ -238,7 +170,9 @@ main{
     height: auto;
     min-width: 250px;
 }
+/* ------- */
 
+/* seccion de los items */
 .itemsContainer{
     display: flex;
     padding: 20px;
@@ -263,6 +197,252 @@ main{
         border-bottom: 1px solid white;
     }
 }
+/* ------- */
+
+/* estilos de decoraciones */
+.transition {
+    min-height: 1vh;
+    height: 1vh;
+    background-image: url("/recursos/transition.png");
+    background-size: cover;
+    width: 100%;
+  }
+  .separadorDecoracion{
+    height: 2vh;
+    min-height: 2vh;
+    background-size: cover;
+    max-width: 75%;
+    margin: 0 auto 0 auto;
+    width: 100%;
+    background-image: url("/recursos/decoraciones/decoracion\ 4.webp");
+}
+.borde1{
+    top: 1rem;
+    left: 1rem;
+    position: absolute;
+    width: 100px;
+    transform:  scale(-1,1);
+}
+.borde2{
+    top: 1rem;
+    right: 1rem;
+    position: absolute;
+    width: 100px;
+}
+.borde3{
+    bottom: 1rem;
+    right: 1rem;
+    position: absolute;
+    width: 100px;
+    rotate: 180deg;
+    transform:  scale(-1,1);
+
+}
+.borde4{
+    bottom: 1rem;
+    left: 1rem;
+    position: absolute;
+    width: 100px;
+    rotate: 180deg;
+}
+/* ------- */
+
+
+/* estilos del fondo */
+.background{
+    background-image: url("/recursos/bg_menu_pc.webp");
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-position-x: center;
+    z-index: -1;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+}
+/* ------- */
+
+
+
+/* estilos de los botones */
+.botonRegresar{
+    z-index: 4;
+    top: 32px;
+    left: 32px;
+    position: fixed;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 8px 20px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    font-size: 24px;
+}
+.botonRegresar:hover{
+    color: rgb(255, 255, 133);
+    animation: regreso alternate 0.5s infinite;
+    left: 10px;
+}
+
+.punteroBoton{
+    transform: scale(-1,1);
+}
+.botonContainer{
+    background-color: rgba(0, 0, 0, 0.406);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    width: 100%;
+}
+.botonEditar, .botonEliminar{
+    border-radius: 8px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    padding: 2px 20px;
+}
+.botonEditar{
+    border: 1px solid orange;
+    cursor: pointer;
+    color: orange;
+}
+.botonEditar:hover{
+    background-color: orange;
+    color: white;
+}
+.botonEliminar{
+    color: red;
+    cursor: pointer;
+    border: 1px solid red;
+}
+.botonEliminar:hover{
+    color: white;
+    background-color: red;
+}
+/* ------- */
+
+/* pantalla de advertencia */
+.modalAdvertencia{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    width: max-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    gap: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.658);
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modalContainer{
+    z-index: 5;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.658);
+}
+.textContainer{
+    display: flex;
+    flex-direction: column;
+
+}
+.advert{
+    font-size: 40px;
+    text-align: center;
+}
+.bo{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+}
+.si, .no{
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 20px;
+    padding: 2px 20px;
+}
+.si{
+    color: red;
+    border: 1px solid red;
+}
+.si:hover{
+    color: white;
+    background-color: red;
+}
+.no{
+    color:  white;
+    border: 1px solid white;
+}
+.no:hover{
+    background-color: white;
+    color: black;
+
+}
+.animationBorder{
+    animation-name: ani-opcity;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+/* ------- */
+
+/* animaciones */
+@keyframes regreso {
+    0%{
+      left: 32px;
+    }
+    25%{
+      left: 25px
+    }
+    50%{
+      left: 20px;
+    }
+    75%{
+      left: 15px;
+    }
+    100%{
+      left: 10px;
+    }
+  }
+
+  @keyframes ani-opcity {
+    0%{
+      opacity: 0;
+    }
+    25%{
+      opacity: 0.25;
+    }
+    50%{
+      opacity: 0.5;
+    }
+    75%{
+      opacity: 0.75;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+/* ------- */
+
+
+  
+
 footer {
     color: white;
     padding: 8px 24px 8px 24px;
