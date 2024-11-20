@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actualizar Monstruo</title>
+  <link rel="stylesheet" href="/Styles/NuevoMonstroStyles.css">
+  <link rel="stylesheet" href="/Styles/actualizarStyle.css">
+</head>
+
+<body onload="IntroducirDatos()">
+  <main>
+    <div class="background"></div>
+    <button class="regresar" onclick="regresar()">
+      <img src="/recursos/decoraciones/Puntero.png" class="puntero"/>
+      Regresar
+    </button>
+    <form id="formularioMonstruo" class="form">
+      <!-- Informacion principal -->
+      <section class="infoPContainer">
+        <img class="borde1" src="/recursos/decoraciones/BorderFrame.webp" />
+        <img class="borde2" src="/recursos/decoraciones/BorderFrame.webp" />
+        <img class="borde3" src="/recursos/decoraciones/BorderFrame.webp" />
+        <img class="borde4" src="/recursos/decoraciones/BorderFrame.webp" />
+        <h1>
+          Informacion del Monstruo
+        </h1>
+        <hr class="transition" />
+        <div class="div1">
+          <div class="inputInfo1">
+            <div>
+              <label for="nombre">Nombre del Monstruo: </label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
+            <div>
+              <label for="vida">Vida del Monstruo: </label>
+              <input type="number" id="vida" name="vida" />
+            </div>
+            <div>
+              <label for="descripcion">Descripcion del Monstruo: </label>
+              <textarea id="descripcion" name="descripcion" rows="5" required></textarea>
+            </div>
+            <div>
+              <label for="tipo">Clasificacion del Monstru: </label>
+              <!-- Tipo de Monstruo         -->
+              <select id="tipo" name="tipo[id_categoria]" required>
+                <option>Selecciona la clasificacion</option>
+                <option value="1">Monstruo pequeño</option>
+                <option value="2">Wyvern bruto</option>
+                <option value="3">Wyvern volador</option>
+                <option value="4">Wyvern nadador</option>
+                <option value="5">Wyvern de colmillo</option>
+                <option value="6">Bestia de colmillo</option>
+                <option value="7">Dragon anciano</option>
+                <option value="8">Wyvern pajaro</option>
+              </select>
+            </div>
+      <!-- Imagen del monstruo -->
+            <div>
+              <label for="imagen">Image del Monstruo: </label>
+              <input type="url" id="imagen" name="imagen[imageUrl]" required />
+            </div>
+            <div>
+              <label for="icon">Icono del Monstruo: </label>
+              <input type="url" id="icon" name="imagen[iconUrl]" required />
+            </div>
+          </div>
+          <div class = "input1Info1">
+            <img id="imagenPrueba" class="imgP" width="200" height="200"/>
+            <img id="imagenPrueba2" class="imgP" width="200" height="200"/>
+            <button class="botonProbar" type="button" onclick="testImage()">Probar Imagenes</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="biomaRango">
+    <!-- input de biomas-->
+        <div class="biomaContainer">
+          <img class="borde1 negative" src="/recursos/decoraciones/BorderFrame.webp" />
+          <img class="borde2 negative" src="/recursos/decoraciones/BorderFrame.webp" />
+          <img class="borde3 negative" src="/recursos/decoraciones/BorderFrame.webp" />
+          <img class="borde4 negative" src="/recursos/decoraciones/BorderFrame.webp" />
+          <h2>
+            Biomas en la que pertenece
+          </h2>
+          <hr class="transition"/>
+          <div>
+            <label for="bioma">Localidad del Monstruo</label>
+            <div id="biomaContrainer">
+              <div class="biomaField">
+                <select id="bioma0" name="biomas[0][id_bioma]">
+                  <option>Sleciona el bioma</option>
+                  <option value="1">Bosque primigenio</option>
+                  <option value="2">Yermo de agujas</option>
+                  <option value="3">Altiplano coralinos</option>
+                  <option value="4">Valle putrefacto</option>
+                  <option value="5">Lecho de los ancianos</option>
+                  <option value="6">Arroyo de escarcha</option>
+                </select>
+                <button type="button" onclick="removeField(this,'biomaContrainer')" class="botonEliminar">Eliminar</button>
+              </div>
+            </div>
+          </div>
+          <hr class="transition"/>
+          <button type="button" onclick="addBioma()" class="botonAgregar">Agregar mas biomas</button>
+        </div>
+
+     <!-- input para agregar el Rango     -->
+        <div class="rangoContainer">
+          <img class="borde1 negative" src="/recursos/decoraciones/BorderFrame.webp" />
+          <img class="borde2 negative" src="/recursos/decoraciones/BorderFrame.webp" />
+          <img class="borde3 negative" src="/recursos/decoraciones/BorderFrame.webp" />
+          <img class="borde4 negative" src="/recursos/decoraciones/BorderFrame.webp" />
+          <h2>Nivel de rango que aparece el Monstruo</h2>
+          <hr class="transition"/>
+          <div>
+            <label for="rango">Rango del Monstruo</label>
+            <div id="rangoContainer">
+            <div class="rangoField">
+              <select name="rangos[0][id_rango]" id="rango0">
+                <option>Seleccione el rango</option>
+                <option value="1">Rango bajo</option>
+                <option value="2">Rango alto</option>
+                <option value="3">Rango maestro</option>
+              </select>
+              <button type="button" onclick="removeField(this,'rangoContainer')" class="botonEliminar">Eliminar</button>
+            </div>
+          </div>
+          </div>
+          <hr class="transition"/>
+          <button type="button" onclick="addRango()" class="botonAgregar">Agregar mas Rangos</button>
+        </div>
+      </section>
+      
+
+      <!-- input para agregar elementos -->
+      <section class="elementoContainer">
+        <img class="borde1 negative" src="/recursos/decoraciones/BorderFrame.webp" />
+        <img class="borde2 negative" src="/recursos/decoraciones/BorderFrame.webp" />
+        <img class="borde3 negative" src="/recursos/decoraciones/BorderFrame.webp" />
+        <img class="borde4 negative" src="/recursos/decoraciones/BorderFrame.webp" />
+        <h2>Elemento del Monstruo</h2>
+        <hr class="transition"/>
+        <div>
+          <label for="elemento">Elemento del Monstruo</label>
+          <div id="elementoContainer">
+            <div class="elementoField">
+              <select name="elementos[0][id_elemento]" id="elemento0">
+                <option>Seleccione el Elementos del monstruo</option>
+                <option value="1">Fuego</option>
+                <option value="2">Agua</option>
+                <option value="3">Treuno</option>
+                <option value="4">Hielo</option>
+                <option value="5">Dragon</option>
+                <option value="6">Ninguno</option>
+              </select>
+              <button type="button" onclick="removeField(this,'elementoContainer') " class="botonEliminar">Eliminar</button>
+            </div>
+          </div>
+        </div>
+        <hr class="transition"/>
+        <button type="button" onclick="addElemento()" class="botonAgregar">Agregar mas Elementos</button>
+      </section>
+
+
+      <!-- input para agregar las debilidades -->
+      <section class="debilidadContainer">
+        <img class="borde1 negative" src="/recursos/decoraciones/BorderFrame.webp" />
+        <img class="borde2 negative" src="/recursos/decoraciones/BorderFrame.webp" />
+        <img class="borde3 negative" src="/recursos/decoraciones/BorderFrame.webp" />
+        <img class="borde4 negative" src="/recursos/decoraciones/BorderFrame.webp" />
+        <h2>Elemento debil del monstruo</h2>
+        <hr class="transition"/>
+        <label for="debilida">Debilidad del Mosntruo</label>
+        <div id="debilidadContainer">
+          <div class="debilidadField">
+            <select name="debilidad[0][id_elemento]" id="debilidad0">
+              <option>Seleccione el Elementos debil del monstruo</option>
+              <option value="1">Fuego</option>
+              <option value="2">Agua</option>
+              <option value="3">Treuno</option>
+              <option value="4">Hielo</option>
+              <option value="5">Dragon</option>
+              <option value="6">Ninguno</option>
+            </select>
+            <label for="eficacia0">Eficacia</label>
+            <input type="number" id="eficacia0" name="debilidad[0][eficacia]" />
+            <button type="button" onclick="removeField(this,'debilidadContainer')" class="botonEliminar">Eliminar</button>
+          </div>
+        </div>
+        <hr class="transition"/>
+        <button type="button" onclick="addDebilidad()" class="botonAgregar">Agregar mas debilidades</button>
+      </section>
+      <!-- input para agregar los items -->
+      <section class="itemsContainer">
+        <img class="borde1 negative" src="/recursos/decoraciones/BorderFrame.webp" />
+        <img class="borde2 negative" src="/recursos/decoraciones/BorderFrame.webp" />
+        <img class="borde3 negative" src="/recursos/decoraciones/BorderFrame.webp" />
+        <img class="borde4 negative" src="/recursos/decoraciones/BorderFrame.webp" />
+        <h2>Items que deja caer el Monstruo</h2>
+        <hr class="transition"/>
+        <div id="itemsContainer">
+          <div class="itemsField">
+            <label for="items0">Nombre del item</label>
+            <input id="items0" name="items[0][name]" />
+            <label for="itemDes0">Descripcion del item</label>
+            <textarea id="itemDes0" name="items[0][description]"></textarea>
+            <button type="button" onclick="removeField(this,'itemsContainer')" class="botonEliminar">Eliminar</button>
+          </div>
+        </div>
+        <hr class="transition"/>
+        <button type="button" onclick="addItem()" class="botonAgregar">Agregar mas item</button>
+      </section>
+      <button type="submit" class="botonEnviar">
+        Enviar Formulario
+        <img src="/recursos/border_top.png" class="borderTop"/>
+        <img src="/recursos/border_bttn.png" class="borderBottom"/>
+      </button>
+    </form>
+  </main>
+  <div class="modalContainer" id="modal" style="display: none;">
+    <div class="modalValidacion">
+      <div class="textContainer">
+        <p>✅</p>
+        <p>El elemento se actualizo correctamente</p>
+      </div>
+      <button class="botonCerrar" onclick="history.back()">
+        Cerrar
+      </button>
+    </div>
+  </div>
+  <footer>
+
+  </footer>
+</body>
+<script src="/scripts/scriptActualizar.js"></script>
+
+</html>
