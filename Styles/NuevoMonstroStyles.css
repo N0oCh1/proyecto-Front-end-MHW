@@ -1,0 +1,414 @@
+@font-face {
+  font-family: "mh";
+  src: url(/recursos/fonts/MarkaziText-VariableFont_wght.ttf);
+}
+* {
+  font-family: "mh";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+label {
+  font-size: 24px;
+}
+
+h1{
+  text-align: center;
+  font-size: 40px;
+}
+
+/* estilos para la parte de informacion principal */
+.infoPContainer {
+  position: relative;
+  background-image: url("/recursos/BgImagen3.webp");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 40px 50px 40px;
+  border-radius: 8px;
+}
+.div1 {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-self: center;
+}
+.inputInfo1 {
+  padding-right: 20px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.input1Info1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgP{
+  position: relative;
+  border-radius: 10px;
+  object-fit: contain;
+  border: 1px dashed black;
+  margin-bottom: 8px;
+  background-color: rgba(255, 255, 255, 0.406);
+}
+/* ------ */
+
+/* estilos para la seccion de biomas y rango */
+.biomaRango{
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+#biomaContrainer, #rangoContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.biomaContainer, .rangoContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  position: relative;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 30px;
+}
+.biomaField, .rangoField{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8px;
+}
+/* ------ */
+
+/* Seccion del elemento */
+.elementoContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  align-self: center;
+  align-items: center;
+  position: relative;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 30px;
+}
+.elementoField{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8px;
+}
+#elementoContainer{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 4px;
+}
+/* ------ */
+
+/* Seccion de las debilidades */
+.debilidadContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  align-self: center;
+  position: relative;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 30px;
+  h2{
+    text-align: center;
+  }
+}
+.debilidadField{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8px;
+  input{
+    max-width: 200px;
+  }
+}
+#debilidadContainer{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 4px;
+}
+/* ------ */
+
+/* Seccion de Items */
+.itemsContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  align-self: center;
+  position: relative;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 30px;
+  h2{
+    text-align: center;
+  }
+}
+.itemsField{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+#itemsContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+/* ------ */
+
+
+/* estilos para los botones e Inputs */
+.botonProbar {
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 8px;
+  padding: 4px 20px;
+}
+.botonProbar:hover{
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+.botonAgregar{
+  cursor: pointer;
+  border: 1px solid greenyellow;
+  border-radius: 10px;
+  padding: 4px 20px;
+  color: greenyellow;
+  background-color: transparent;
+  font-size: 20px;
+  max-width: 50%;
+  align-self: center;
+}
+.botonAgregar:hover{
+  color: white;
+  border-color: white;
+}
+.botonEliminar{
+  cursor: pointer;
+  border: 1px solid red;
+  border-radius: 10px;
+  padding: 4px 20px;
+  color: red;
+  background-color: transparent;
+  font-size: 20px;
+}
+.botonEliminar:hover{
+  color: rgb(255, 137, 137);
+  border-color: rgb(255, 137, 137);
+}
+.botonEnviar{
+  position: relative;
+  cursor: pointer;
+  background-image: url("/recursos/decoraciones/BotonDecoration.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  max-width: 50%;
+  padding: 8px 20px;
+  width: 100%;
+  align-self: center;
+  color: white;
+  font-size: 20px;
+  transition: all 1s;
+}
+.botonEnviar:hover{
+  box-shadow: -3px 2px rgba(255, 255, 0, 0.542) , 2px 2px  rgba(255, 255, 0, 0.542) ;
+  .borderTop, .borderBottom{
+    display:  flex;
+  }
+}
+input, textarea, select {
+  font-size: 24px;
+  padding: 3px 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+}
+.regresar{
+  z-index: 4;
+  top: 32px;
+  left: 32px;
+  position: fixed;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 8px 20px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  font-size: 24px;
+}
+.regresar:hover{
+  color: rgb(255, 255, 133);
+  animation: regreso alternate 0.5s infinite;
+  left: 10px;
+}
+/* ------ */
+/* estilos de decoracion */
+.puntero{
+  transform: scale(-1,1);
+  width: 20px;
+  height: 20px;
+}
+.transition {
+  min-height: 1vh;
+  height: 1vh;
+  border: none;
+  background-image: url("/recursos/transition.png");
+  background-size: cover;
+  width: 100%;
+}
+.borde1 {
+  top: 1rem;
+  left: 1rem;
+  position: absolute;
+  width: 100px;
+  transform: scale(-1, 1);
+}
+.borde2 {
+  top: 1rem;
+  right: 1rem;
+  position: absolute;
+  width: 100px;
+}
+.borde3 {
+  bottom: 1rem;
+  right: 1rem;
+  position: absolute;
+  width: 100px;
+  rotate: 180deg;
+  transform: scale(-1, 1);
+}
+.borde4 {
+  bottom: 1rem;
+  left: 1rem;
+  position: absolute;
+  width: 100px;
+  rotate: 180deg;
+}
+.negative{
+  filter: invert();
+  z-index: -1;
+}
+.borderTop{
+  display: none;
+  position: absolute;
+  animation-name: ani-opcity;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+  top: 0;
+  left: 0;
+}
+.borderBottom{
+  display: none;
+  position: absolute;
+  animation-name: ani-opcity;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  bottom: 0;
+  right: 0;
+}
+
+/* ------ */
+/* estilos para el background */
+.background {
+  background-image: url("/recursos/bg_menu_pc.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -3;
+}
+/* ------ */
+#formularioMonstruo {
+  margin: 0 auto 0 auto;
+  max-width: 75vw;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px;
+}
+
+/* animaciones */
+@keyframes ani-opcity {
+  0%{
+    opacity: 0;
+  }
+  25%{
+    opacity: 0.25;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  75%{
+    opacity: 0.75;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes regreso {
+  0%{
+    left: 32px;
+  }
+  25%{
+    left: 25px
+  }
+  50%{
+    left: 20px;
+  }
+  75%{
+    left: 15px;
+  }
+  100%{
+    left: 10px;
+  }
+}
+/* ------- */
+@media (max-width:740px){
+  .div1{
+    flex-direction: column;
+  }
+  .biomaRango{
+    flex-direction: column;
+  }
+}
