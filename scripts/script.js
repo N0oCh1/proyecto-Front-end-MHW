@@ -59,6 +59,8 @@ overlay.style.opacity = opacity;
       console.log(error)
     }
   }
+
+  
   function Navigate (id) {  
     window.location.href = `/src/Monstros.html?id=${id}`;
   }

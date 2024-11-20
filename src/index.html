@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/Styles/indexStyles.css" />
     <link rel="stylesheet" href="/Styles/MenuStyles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="/Styles/busquedaStyles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap"
@@ -31,24 +32,23 @@
       <div class="mask"></div>
 
       <!-- Video de Fondo -->
-      <!-- Video de Fondo -->
       <div id="background">
         <video muted autoplay loop id="bgVideo1">
           <source src="/recursos/bgVideo0.mp4" type="	video/webm" />
         </video>
         <img src="/recursos/bgImagen1.jpg" id="bgResponsive1" />
       </div>
-      <!-- Logo de la Pagina -->
-      <section id="mainIndex">
+   
+     
       <!-- Logo de la Pagina -->
       <section id="mainIndex">
         <div class="logo">
-          <div>
-          <div>
+          
+          <div  class="logo_title">
             <img src="/recursos/Logo Titulo.webp" />
           </div>
 
-          <div class="buscador">
+        
             <div class="box">
               <span>
                 <img src="/recursos/border_top.png" class="buscadorTop"
@@ -59,12 +59,13 @@
               <div class="containerB">
                 <span class="boxIcon"><i class="fa fa-search"></i></span>
                 <input type="search" id="search" placeholder="Buscar.." />
-              </div>
+              
             </div>
           </div>
         </div>
+        <ul id="busquedaResult"></ul>
       </section>
-      </section>
+      
 
       <ul class="space"></ul>
       <span class="transition"> </span>
@@ -241,5 +242,6 @@
       </div>
     </footer>
     <script src="/scripts/script.js"></script>
+    <script src="/scripts/scriptBuscador.js"> </script>
   </body>
 </html>

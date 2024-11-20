@@ -1,0 +1,38 @@
+#busquedaResult { 
+    display: none;
+    flex-direction: column;
+    width: 50%; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+     border-radius: 4px; 
+    } 
+#busquedaResult{ 
+    list-style-type: none; 
+    padding: 0; 
+} 
+#busquedaResult li { 
+    padding: 8px; 
+    border: 1px solid #ddd; 
+    margin-bottom: 5px; 
+    border-radius: 4px; 
+    display: flex; 
+    align-items: center; 
+} 
+#busquedaResult li img {
+     margin-right: 10px;
+      width: 50px; 
+      height: 50px; 
+      border-radius: 50%; 
+    } 
+#busquedaResult li .contenidoMonstro {
+     display: flex; 
+     flex-direction: column; 
+    } 
+
+#busquedaResult li .contenidoMonstro h3 { 
+    margin: 0; 
+    font-size: 1.2em; 
+} 
+#busquedaResult li .contenidoMonstro p {
+     margin: 0; color: #666;
+}
