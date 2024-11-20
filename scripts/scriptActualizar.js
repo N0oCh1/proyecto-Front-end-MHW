@@ -11,17 +11,12 @@ function actualizarIndice(idCampo) {
   children.forEach((child, index) => {
     const input = child.querySelectorAll('input, select, textarea')
     input.forEach(input => {
-      console.log(index, input)
       const name = input.name
-      console.log("nombre actual ", name)
       const newName = name.replace(/\[\d+\]/, `[${index}]`)
-      console.log("nuevo nombre", newName)
       input.name = newName
     })
   })
 }
-
-
 
 function addBioma() {
   const newDiv = document.createElement("div")
@@ -29,7 +24,7 @@ function addBioma() {
   newDiv.setAttribute("class", "biomaField")
   newDiv.innerHTML = `
     <select id="bioma${biomaCount}" name="biomas[1][id_bioma]">
-        <option value="">Sleciona el bioma</option>
+        <option>Sleciona el bioma</option>
         <option value="1">Bosque primigenio</option>
         <option value="2">Yermo de agujas</option>
         <option value="3">Altiplano coralinos</option>
@@ -43,13 +38,14 @@ function addBioma() {
   biomaCount++
   actualizarIndice("biomaContrainer")
 }
+
 function addRango() {
   const newDiv = document.createElement("div")
   newDiv.setAttribute("class", "rangoField")
   const containerRango = document.getElementById("rangoContainer")
   newDiv.innerHTML = `
         <select name="rangos[1][id_rango]" id="rango${rangoCount}">
-            <option value="">Seleccione el rango</option>
+            <option>Seleccione el rango</option>
             <option value="1">Rango bajo</option>
             <option value="2">Rango alto</option>
             <option value="3">Rango maestro</option>
@@ -67,7 +63,7 @@ function addElemento() {
   const containerElemento = document.getElementById("elementoContainer")
   newDiv.innerHTML = `
         <select name="elementos[1][id_elemento]" id="elemento${elementoCount}">
-            <option value="">Seleccione el Elementos del monstruo</option>
+            <option>Seleccione el Elementos del monstruo</option>
             <option value="1">Fuego</option>
             <option value="2">Agua</option>
             <option value="3">Treuno</option>
@@ -88,7 +84,7 @@ function addDebilidad() {
   const containerDebilidad = document.getElementById("debilidadContainer")
   newDiv.innerHTML = `
         <select name="debilidad[1][id_elemento]" id="debilidad${debilidadCount}">
-            <option value="">Seleccione el Elementos debil del monstruo</option>
+            <option>Seleccione el Elementos debil del monstruo</option>
             <option value="1">Fuego</option>
             <option value="2">Agua</option>
             <option value="3">Treuno</option>
@@ -96,7 +92,7 @@ function addDebilidad() {
             <option value="5">Dragon</option>
             <option value="6">Ninguno</option>
         </select>
-        <label for="eficacia">Eficacia</label>
+        <label for="eficacia${debilidadCount}">Eficacia</label>
         <input type="number" id="eficacia${debilidadCount}" name="debilidad[1][eficacia]" />
         <button type="button" onclick="removeField(this,'debilidadContainer')" class="botonEliminar">Eliminar</button>
     `
@@ -125,31 +121,6 @@ function removeField(button, campo) {
   actualizarIndice(campo)
 }
 
-document.getElementById("formularioMonstruo").addEventListener("submit", function (e) {
-  e.preventDefault();
-  const formData = new FormData(this);
-  const jsonObject = {};
-  formData.forEach((value, key) => {
-    const keys = key.split(/[\[\]]+/).filter(k => k);
-    keys.reduce((acc, curr, i) => {
-      if (i === keys.length - 1) {
-        acc[curr] = value;
-      } else {
-        acc[curr] = acc[curr] || (isNaN(keys[i + 1]) ? {} : []);
-      }
-      return acc[curr];
-    }, jsonObject);
-  });
-  fetch('https://localhost:7101/monstro', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(jsonObject)
-  }).then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error(error));
-});
 
 
 function testImage() {
@@ -170,7 +141,105 @@ function testImage() {
   }
   
 }
+
 function regresar() {
-  window.location.href = "/src/index.html"
+  history.back()
 }
 
+// Introducir datos a los inputs 
+
+async function IntroducirDatos() {
+    const buscarMonstruo =  await ObtenerDetalle(getID())
+    document.getElementById("nombre").value = buscarMonstruo.nombre
+    document.getElementById("vida").value = buscarMonstruo.vida 
+    document.getElementById("descripcion").value = buscarMonstruo.descripcion
+    document.getElementById("tipo").value = buscarMonstruo.tipo.id_categoria
+    document.getElementById("imagen").value = buscarMonstruo.imagen.imageUrl
+    document.getElementById("icon").value = buscarMonstruo.imagen.iconUrl
+    buscarMonstruo.biomas.map((bioma,index) => {
+        if(index !==0)
+        {
+            addBioma()
+        }
+        document.getElementById(`bioma${index}`).value = bioma.id_bioma
+    })
+    buscarMonstruo.rangos.map((rango, index)=>{
+        if(index !==0){
+            addRango()
+        }
+        document.getElementById(`rango${index}`).value = rango.id_rango
+    })
+    buscarMonstruo.elementos.map((elemento, index)=>{
+        if(index!==0){
+            addElemento()
+        }
+        document.getElementById(`elemento${index}`).value = elemento.id_elemento
+    })
+    buscarMonstruo.debilidad.map((w,index)=>{
+        if(index !==0){
+            addDebilidad()
+        }
+        document.getElementById(`debilidad${index}`).value = w.id_elemento
+        document.getElementById(`eficacia${index}`).value = w.eficacia
+    })
+    buscarMonstruo.items.map((item,index)=>{
+        if(index !==0){
+            addItem()
+        }
+        document.getElementById(`items${index}`).value = item.name
+        document.getElementById(`itemDes${index}`).value = item.description
+    })
+}
+
+function getID(){
+    const path = window.location.search
+    const searchParams = new URLSearchParams(path)
+    const id = searchParams.get("id")
+    return id
+}
+
+async function ObtenerDetalle(id) {
+    return await fetch (`https://localhost:7101/monstro/${id}`, {method: "GET"}) .then(res=>res.json()).then(data=>data)
+}
+
+document.getElementById("formularioMonstruo").addEventListener("submit", async function (e) {
+    const id = getID()
+    e.preventDefault();
+    const formData = new FormData(this);
+    const jsonObject = {};
+    formData.forEach((value, key) => {
+      const keys = key.split(/[\[\]]+/).filter(k => k);
+      keys.reduce((acc, curr, i) => {
+        if (i === keys.length - 1) {
+          acc[curr] = value;
+        } else {
+          acc[curr] = acc[curr] || (isNaN(keys[i + 1]) ? {} : []);
+        }
+        return acc[curr];
+      }, jsonObject);
+    });
+    showModal()
+    try{
+        await fetch(`https://localhost:7101/monstro/${id}`, {
+            method: 'PUT',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(jsonObject)
+          })
+    }
+    catch(error){
+        console.log(error)
+    }
+
+  });
+  
+  function showModal() {
+    const modal = document.getElementById("modal")
+    if(modal.style.display === "none"){
+      modal.style.display = "flex"
+    }
+    else{
+      modal.style.display = "none"
+    }
+  }
