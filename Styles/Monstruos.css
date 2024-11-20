@@ -12,6 +12,17 @@
     scrollbar-width: none;
 }
 
+.background{
+    background-image: url("/recursos/bg_menu_pc.webp");
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-position-x: center;
+    z-index: -1;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+}
 main{
     max-width: 75vw;
     padding: 3rem;
