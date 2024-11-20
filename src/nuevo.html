@@ -34,7 +34,7 @@
             </div>
             <div>
               <label for="vida">Vida del Monstruo: </label>
-              <input type="number" id="vida" name="vida" />
+              <input type="number" id="vida" name="vida"  required/>
             </div>
             <div>
               <label for="descripcion">Descripcion del Monstruo: </label>
@@ -44,7 +44,7 @@
               <label for="tipo">Clasificacion del Monstru: </label>
               <!-- Tipo de Monstruo         -->
               <select id="tipo" name="tipo[id_categoria]" required>
-                <option>Selecciona la clasificacion</option>
+                <option value="">Selecciona la clasificacion</option>
                 <option value="1">Monstruo pequeño</option>
                 <option value="2">Wyvern bruto</option>
                 <option value="3">Wyvern volador</option>
@@ -88,8 +88,8 @@
             <label for="bioma">Localidad del Monstruo</label>
             <div id="biomaContrainer">
               <div class="biomaField">
-                <select id="bioma" name="biomas[0][id_bioma]">
-                  <option>Sleciona el bioma</option>
+                <select id="bioma" name="biomas[0][id_bioma]"required >
+                  <option value="">Sleciona el bioma</option>
                   <option value="1">Bosque primigenio</option>
                   <option value="2">Yermo de agujas</option>
                   <option value="3">Altiplano coralinos</option>
@@ -117,8 +117,8 @@
             <label for="rango">Rango del Monstruo</label>
             <div id="rangoContainer">
             <div class="rangoField">
-              <select name="rangos[0][id_rango]" id="rango">
-                <option>Seleccione el rango</option>
+              <select name="rangos[0][id_rango]" id="rango" required>
+                <option value="">Seleccione el rango</option>
                 <option value="1">Rango bajo</option>
                 <option value="2">Rango alto</option>
                 <option value="3">Rango maestro</option>
@@ -145,8 +145,8 @@
           <label for="elemento">Elemento del Monstruo</label>
           <div id="elementoContainer">
             <div class="elementoField">
-              <select name="elementos[0][id_elemento]" id="elemento">
-                <option>Seleccione el Elementos del monstruo</option>
+              <select name="elementos[0][id_elemento]" id="elemento" required>
+                <option value="">Seleccione el Elementos del monstruo</option>
                 <option value="1">Fuego</option>
                 <option value="2">Agua</option>
                 <option value="3">Treuno</option>
@@ -174,8 +174,8 @@
         <label for="debilida">Debilidad del Mosntruo</label>
         <div id="debilidadContainer">
           <div class="debilidadField">
-            <select name="debilidad[0][id_elemento]" id="debilidad">
-              <option>Seleccione el Elementos debil del monstruo</option>
+            <select name="debilidad[0][id_elemento]" id="debilidad" required>
+              <option value="">Seleccione el Elementos debil del monstruo</option>
               <option value="1">Fuego</option>
               <option value="2">Agua</option>
               <option value="3">Treuno</option>
@@ -184,7 +184,7 @@
               <option value="6">Ninguno</option>
             </select>
             <label for="eficacia">Eficacia</label>
-            <input type="number" id="eficacia" name="debilidad[0][eficacia]" />
+            <input type="number" id="eficacia" name="debilidad[0][eficacia]" required/>
             <button type="button" onclick="removeField(this,'debilidadContainer')" class="botonEliminar">Eliminar</button>
           </div>
         </div>
@@ -204,7 +204,7 @@
             <label for="items">Nombre del item</label>
             <input id="items" name="items[0][name]" />
             <label for="itemDes">Descripcion del item</label>
-            <textarea id="itemDes" name="items[0][description]"></textarea>
+            <textarea id="itemDes" name="items[0][description]" ></textarea>
             <button type="button" onclick="removeField(this,'itemsContainer')" class="botonEliminar">Eliminar</button>
           </div>
         </div>
