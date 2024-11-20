@@ -8,8 +8,11 @@ lista.innerHTML='';
 monstros.forEach( monstros => {
    const li = document.createElement('li');
    li.setAttribute("class","liMonstro");
+   li.addEventListener('click', ()=>{
+    navegarMonstruo(monstros.idMonstro)
+   })
    li.innerHTML= `
-    <img class="monstroImagenCard" src="monstro.imagen.iconUrl"> </img>
+    <img class="monstroImagenCard" src=${monstros.imagen.iconUrl}> </img>
      <div class="contenidoMonstro">
     <H3>${monstros.nombre}</H3>
     <p class="descrpcion"> ${monstros.descripcion} </p>
@@ -17,6 +20,10 @@ monstros.forEach( monstros => {
 
      lista.appendChild(li);
 });
+}
+
+function navegarMonstruo(id){
+  window.location.href = `/src/Monstros.html?id=${id}`
 }
 
 function filtroMonstros(monstros,lista){
