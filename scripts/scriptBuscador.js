@@ -11,7 +11,11 @@ monstros.forEach( monstros => {
    li.addEventListener('click', ()=>{
     navegarMonstruo(monstros.idMonstro)
    })
+   li.addEventListener('click', ()=>{
+    navegarMonstruo(monstros.idMonstro)
+   })
    li.innerHTML= `
+    <img class="monstroImagenCard" src=${monstros.imagen.iconUrl}> </img>
     <img class="monstroImagenCard" src=${monstros.imagen.iconUrl}> </img>
      <div class="contenidoMonstro">
     <H3>${monstros.nombre}</H3>
@@ -23,7 +27,7 @@ monstros.forEach( monstros => {
 }
 
 function navegarMonstruo(id){
-  window.location.href = `/src/monstros.html?id=${id}`
+  window.location.href = `/src/Monstros.html?id=${id}`
 }
 
 function filtroMonstros(monstros,lista){
