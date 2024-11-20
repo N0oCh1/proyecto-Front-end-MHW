@@ -2,16 +2,14 @@
 
 async function GetMonstruo() {
     //Aqui ban los elementos del DOM
-  
-
-    const path = window.location.search
-    const searchParams = new URLSearchParams(path)
-    const id = searchParams.get("id")
+    const id = getID()
 
     const datosMonstruo = await ObtenerDetalle(id)
-    console.log(datosMonstruo)
+    
     
     if(datosMonstruo){
+            const botonContainer = document.getElementById("botonContainer")
+            botonContainer.style.display = "flex"
             document.getElementById("nombre").appendChild(document.createTextNode(datosMonstruo.nombre))
             document.getElementById("descripcion").appendChild(document.createTextNode(datosMonstruo.descripcion))
             document.getElementById("icono").setAttribute('src',datosMonstruo.imagen.iconUrl)
@@ -66,9 +64,19 @@ async function GetMonstruo() {
                 document.getElementById("items").appendChild(nuevoItem)
             })
         }
-    }
-    
+}
 
+function EditarMonstruo () {
+    const id = getID()
+    window.location.href = `/src/actualizar.html?id=${id}`
+}
+    
+function getID(){
+    const path = window.location.search
+    const searchParams = new URLSearchParams(path)
+    const id = searchParams.get("id")
+    return id
+}
 
 function ObtenerImagenBioma(bioma){
     switch(bioma){
@@ -88,4 +96,21 @@ function ObtenerImagenBioma(bioma){
 }
 async function ObtenerDetalle(id) {
     return await fetch (`https://localhost:7101/monstro/${id}`, {method: "GET"}) .then(res=>res.json()).then(data=>data)
+}
+
+function showModal() {
+    const modal = document.getElementById("modal")
+    if(modal.style.display === "none"){
+        modal.style.display = "block"
+    }
+    else{
+        modal.style.display = "none"
+    }
+}
+
+async function ElminarMonstruo() {
+    const id = getID()
+    await fetch(`https://localhost:7101/monstro/${id}`,{method: "DELETE"})
+    showModal()
+    location.reload()
 }

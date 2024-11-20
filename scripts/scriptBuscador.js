@@ -23,7 +23,7 @@ monstros.forEach( monstros => {
 }
 
 function navegarMonstruo(id){
-  window.location.href = `/src/Monstros.html?id=${id}`
+  window.location.href = `/src/monstros.html?id=${id}`
 }
 
 function filtroMonstros(monstros,lista){

@@ -62,7 +62,7 @@ overlay.style.opacity = opacity;
 
   
   function Navigate (id) {  
-    window.location.href = `/src/Monstros.html?id=${id}`;
+    window.location.href = `/src/monstros.html?id=${id}`;
   }
     
 
