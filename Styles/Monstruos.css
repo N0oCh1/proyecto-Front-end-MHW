@@ -11,9 +11,7 @@
     box-sizing: border-box;
     scrollbar-width: none;
 }
-body{
 
-}
 .background{
     background-image: url("/recursos/bg_menu_pc.webp");
     background-repeat: no-repeat;
