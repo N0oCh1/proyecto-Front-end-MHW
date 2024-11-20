@@ -1,0 +1,48 @@
+h1{
+    text-align: center;
+}
+nav
+{
+    text-align: center;
+}
+button{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+body{
+    background-color: cadetblue;
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+.nombreAutor{
+    text-align: center;
+    background-color: rgb(51, 147, 150);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+footer
+{
+    background-color: rgb(44, 131, 134);
+    padding: 30px;
+    border-radius: 20px;
+}
+.parrafo{
+    padding: 10px;
+    background-color: rgb(75, 163, 166);
+}
+.imagecontainer{
+    text-align: center;
+}
+.image{
+    padding: 10px;
+    width: 300px;
+    height: 400px;
+}
