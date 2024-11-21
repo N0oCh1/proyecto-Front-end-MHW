@@ -6,23 +6,23 @@
 }
 *{
   font-family: mh;
-  font-size: 20px;
+  
 }
 .logging{
-  position: sticky;
+  position: absolute;
   top: 3rem;
   left: 1rem;
   color: whitesmoke;
   z-index: 4;
   button{
     cursor: pointer;
-    margin: 30px;
     padding: 4px 20px;
     background-color: transparent;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 35px;
     color: white;
     border: 1px solid transparent;
+    animation: FilterBreath infinite alternate 1s;
   }
   button:hover{
     background-color: rgba(255, 255, 255, 0.527);
@@ -31,6 +31,7 @@
 }
 /*===================== contenedor ===================== */
 .pantallaLoggin {
+  
   top: 3rem;
   left: 1rem;
   position: fixed;
@@ -48,6 +49,9 @@
   background-position: right;
   background-size: cover;
   z-index: 4;
+  *{
+    font-size: 20px;
+  }
 }
 /* =============================================================== */
 
@@ -195,5 +199,25 @@
     border: 1px solid rgba(255, 255, 255, 0.808);
   }
 
+}
+@keyframes FilterBreath {
+  0%{
+    filter: drop-shadow(0 0 1rem rgba(255, 187, 0, 0.151));
+  }
+  20%{
+    filter: drop-shadow(0 0 1rem rgba(255, 187, 0, 0.363));
+  }
+  40%{
+    filter: drop-shadow(0 0 1rem rgba(255, 187, 0, 0.411));
+  }
+  60%{
+    filter: drop-shadow(0 0 1rem rgba(255, 187, 0, 0.562));
+  }
+  80%{
+    filter: drop-shadow(0 0 1rem rgba(255, 187, 0, 0.795));
+  }
+  100%{
+    filter: drop-shadow(0 0 1rem rgb(255, 187, 0));
+  }
 }
 /* =============================================================== */

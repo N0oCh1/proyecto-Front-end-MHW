@@ -6,10 +6,10 @@
     <title>HOME</title>
     <link rel="stylesheet" href="/Styles/indexStyles.css" />
     <link rel="stylesheet" href="/Styles/MenuStyles.css" />
-    <link rel="stylesheet" href="/Styles/busquedaStyles.css">
-    <link rel="stylesheet" href="/Styles/pantallaLogginStyle.css">
+    <link rel="stylesheet" href="/Styles/busquedaStyles.css" />
+    <link rel="stylesheet" href="/Styles/pantallaLogginStyle.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap"
@@ -29,11 +29,10 @@
         </button>
       </div>
       <div class="logging">
-        <button type="button" onclick="AbrirLogging()">
-          LOGGING
-        </button>
+        <button type="button" onclick="AbrirLogging()">LOGGING</button>
       </div>
     </header>
+    
     <!-- Main Principal -->
     <main id="contenedor1">
       <div class="mask"></div>
@@ -46,33 +45,28 @@
         <img src="/recursos/bgImagen1.jpg" id="bgResponsive1" />
       </div>
 
-
       <!-- Logo de la Pagina -->
       <section id="mainIndex">
         <div class="logo">
-
-          <div  class="logo_title">
+          <div class="logo_title">
             <img src="/recursos/Logo Titulo.webp" />
           </div>
 
-
-            <div class="box">
-              <span>
-                <img src="/recursos/border_top.png" class="buscadorTop"
-              /></span>
-              <span>
-                <img src="/recursos/border_bttn.png" class="buscadorDown"
-              /></span>
-              <div class="containerB">
-                <span class="boxIcon"><i class="fa fa-search"></i></span>
-                <input type="search" id="search" placeholder="Buscar.." />
-
+          <div class="box">
+            <span>
+              <img src="/recursos/border_top.png" class="buscadorTop"
+            /></span>
+            <span>
+              <img src="/recursos/border_bttn.png" class="buscadorDown"
+            /></span>
+            <div class="containerB">
+              <span class="boxIcon"><i class="fa fa-search"></i></span>
+              <input type="search" id="search" placeholder="Buscar.." />
             </div>
           </div>
         </div>
         <ul id="busquedaResult"></ul>
       </section>
-
 
       <ul class="space"></ul>
       <span class="transition"> </span>
@@ -181,24 +175,41 @@
           </div>
 
           <span class="transition"> </span>
+      <!-- Contenedor de videos -->
           <div class="Video_box">
             <span class="Video_tittle"> <h1>podria interesarte!</h1> </span>
 
             <div class="Video-class">
-              <a class="Video0" href="https://youtu.be/ahy0AO8WwRc" target="_blank">
+              <a
+                class="Video0"
+                href="https://youtu.be/ahy0AO8WwRc"
+                target="_blank"
+              >
                 <img class="Video_play" src="/recursos/youtube-play.png" />
                 <img src="/recursos/videos_miniaturas/5th_trailer_wilds.jpg" />
               </a>
-              <a class="Video1" href="https://youtu.be/H2lPUJ9VSpI" target="_blank">
+              <a
+                class="Video1"
+                href="https://youtu.be/H2lPUJ9VSpI"
+                target="_blank"
+              >
                 <img class="Video_play" src="/recursos/youtube-play.png" />
                 <img src="/recursos/videos_miniaturas/outlanders trailer.jpg" />
               </a>
 
-              <a class="Video2" href="https://youtu.be/uxQK-QDxGUs " target="_blank">
+              <a
+                class="Video2"
+                href="https://youtu.be/uxQK-QDxGUs "
+                target="_blank"
+              >
                 <img class="Video_play" src="/recursos/youtube-play.png" />
                 <img src="/recursos/videos_miniaturas/outlanders trailer.jpg" />
               </a>
-              <a class="Video3" href="https://youtu.be/H2lPUJ9VSpI" target="_blank">
+              <a
+                class="Video3"
+                href="https://youtu.be/H2lPUJ9VSpI"
+                target="_blank"
+              >
                 <img class="Video_play" src="/recursos/youtube-play.png" />
                 <img src="/recursos/videos_miniaturas/outlanders trailer.jpg" />
               </a>
@@ -214,8 +225,14 @@
     <div id="contenedor2">
       <ul class="menu_nav">
         <li>
-          <button class="menuButton" id="monstro" type="button" onclick="showMonstros()"> Monstruos</button>
-
+          <button
+            class="menuButton"
+            id="monstro"
+            type="button"
+            onclick="showMonstros()"
+          >
+            Monstruos
+          </button>
         </li>
         <li>
           <button class="menuButton" type="button" href="#">Biomas</button>
@@ -224,66 +241,95 @@
           <button class="menuButton" type="button" href="#">Elementos</button>
         </li>
         <li>
-          <button class="menuButton" type="button"><a href="/src/autores.html">Autores  </a></button>
+          <button class="menuButton" type="button">
+            <a href="/src/autores.html">Autores </a>
+          </button>
         </li>
         <span class="transition"> </span>
       </ul>
 
-      <section id="resultados"> </section>
+      <section id="resultados"></section>
       <button class="agregarMonstruo" onclick="navegarIngresar()">
         <p>+</p>
-        <img src="/recursos/decoraciones/decoracion 2.png" class="botonAgregar"/>
+        <img
+          src="/recursos/decoraciones/decoracion 2.png"
+          class="botonAgregar"
+        />
       </button>
     </div>
 
     <!-- pantalla desplegable -->
-    <div class="pantallaLoggin" id="pantallaLoggin" style="display: none;">
-      <img class="borde4 animationBorder" src="/recursos/decoraciones/BorderFrame2.png"/>
-      <img class="borde2 animationBorder" src="/recursos/decoraciones/BorderFrame2.png"/>
-      <img class="borde3 animationBorder" src="/recursos/decoraciones/BorderFrame2.png"/>
-      <img class="borde1 animationBorder" src="/recursos/decoraciones/BorderFrame2.png"/>
+    <div class="pantallaLoggin" id="pantallaLoggin" style="display: none">
+      <img
+        class="borde4 animationBorder"
+        src="/recursos/decoraciones/BorderFrame2.png"
+      />
+      <img
+        class="borde2 animationBorder"
+        src="/recursos/decoraciones/BorderFrame2.png"
+      />
+      <img
+        class="borde3 animationBorder"
+        src="/recursos/decoraciones/BorderFrame2.png"
+      />
+      <img
+        class="borde1 animationBorder"
+        src="/recursos/decoraciones/BorderFrame2.png"
+      />
       <button class="botonX" onclick="AbrirLogging()">X</button>
-      <div >
-        <img src="/recursos/user.webp" class="iconUsers"/>
+      <div>
+        <img src="/recursos/user.webp" class="iconUsers" />
       </div>
-      
-
-      <form class="form" id="form" style="display: flex;">
+  <!-- Seccion de Logging -->
+      <form class="form" id="form" style="display: flex">
         <div class="inputsUsers">
           <div class="user">
             <label for="user">Nombre Usuario</label>
-            <input id="user" type="text" placeholder="user" name="usuario" required/>
+            <input
+              id="user"
+              type="text"
+              placeholder="user"
+              name="usuario"
+              required
+            />
           </div>
           <div class="password">
             <label for="password">Contraseña</label>
-            <input id="password" type="password" placeholder="********" name="password"required/>
+            <input
+              id="password"
+              type="password"
+              placeholder="********"
+              name="password"
+              required
+            />
           </div>
         </div>
-        <div class = "botonLog">
-          <button type="submit" data-action="registrar">
-            Registrarse
-          </button>
-          <button type="submit" data-action="inicio">
-            Iniciar sesion
-          </button>
+        <div class="botonLog">
+          <button type="submit" data-action="registrar">Registrarse</button>
+          <button type="submit" data-action="inicio">Iniciar sesion</button>
         </div>
       </form>
-      <button style="display: none;" id="cerrar" class="botonCerrarSesion" onclick="CerrarSesion(this)">
+      <button
+        style="display: none"
+        id="cerrar"
+        class="botonCerrarSesion"
+        onclick="CerrarSesion(this)"
+      >
         Cerrar Sesion
-      </button> 
+      </button>
     </div>
 
     <!-- footer de la pagina -->
     <script src="/scripts/script.js"></script>
-    <script src="/scripts/scriptBuscador.js"> </script>
+    <script src="/scripts/scriptBuscador.js"></script>
 
-  <footer>
-    <span class="transition"> </span>
-    <div class="footerInfo">
-      <h1>Monster Hunter API</h1>
-      <p>&copy; Sitio. Gael Pereira. Rubén Feng. César Aburto.</p>
-      <p>&copy; Monster Hunter. CAPCOM.</p>
-    </div>
-  </footer>
+    <footer>
+      <span class="transition"> </span>
+      <div class="footerInfo">
+        <h1>Monster Hunter API</h1>
+        <p>&copy; Sitio. Gael Pereira. Rubén Feng. César Aburto.</p>
+        <p>&copy; Monster Hunter. CAPCOM.</p>
+      </div>
+    </footer>
   </body>
 </html>
