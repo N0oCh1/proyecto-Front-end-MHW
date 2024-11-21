@@ -89,3 +89,94 @@ overlay.style.opacity = opacity;
   function navegarIngresar() {
     window.location.href = "/src/nuevo.html"
   }
+
+  function AbrirLogging() {
+    const loggin = document.getElementById("pantallaLoggin")
+    const mensaje = document.getElementById("mensaje")
+    if(mensaje){
+      mensaje.remove()
+    }
+    if(loggin.style.display === "none"){
+      loggin.style.display = "flex"
+    }
+    else{
+      loggin.style.display = "none"
+    }
+  }
+  document.getElementById("form").addEventListener("submit", async function(e){
+    e.preventDefault()
+    const user= document.getElementById("user")
+    const password = document.getElementById("password")
+    const formdata = new FormData(this)
+    const accion = e.submitter.getAttribute("data-action")
+    console.log(accion)
+    const jsonObject = {
+    }
+    formdata.forEach((value, key)=> {
+      jsonObject[key] = value
+    })
+    if(accion === "registrar"){
+      await Registrarse(jsonObject, user, password)
+    }
+    else{
+      if(accion === "inicio"){
+        await Iniciar(jsonObject, user, password)
+      }
+    }
+
+    console.log(jsonObject)
+  })
+
+  async function Registrarse(jsonObject, user, password) {
+    await fetch("https://localhost:7101/usuario/nuevo", {
+      method: "POST", 
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(jsonObject)})
+      .then(response =>{
+      if(response.status === 201){
+        console.log(response.status)
+        mensage("Se Registro correctamente")
+        user.value = ""
+        password.value = ""
+      }
+    })
+  }
+  async function Iniciar(jsonObject, user, password) {
+    const form = document.getElementById("form")
+    const boton = document.getElementById("cerrar")
+    await fetch("https://localhost:7101/usuario",{
+      method: "POST", 
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(jsonObject)}).then(response => {
+        if(response.ok){
+          mensage("Se Inicio correctamente")
+          user.value = ""
+          password.value = ""
+          form.style.display = "none"
+          boton.style.display = "flex"
+        }
+        if(response.status===401){
+          console.mensage("El usuario no esta registrado")
+        }
+      })
+    
+  }
+
+  function mensage(mensage) {
+    const pantallaLoggin = document.getElementById("pantallaLoggin")
+    const mesanje = document.createElement('p')
+    mesanje.setAttribute("class", "mensaje")
+    mesanje.setAttribute("id", "mensaje")
+    mesanje.innerHTML = mensage
+    pantallaLoggin.appendChild(mesanje)
+  }
+
+  function CerrarSesion (boton) {
+    const form = document.getElementById("form")
+    form.style.display = "flex"
+    boton.style.display = "none"
+  }
