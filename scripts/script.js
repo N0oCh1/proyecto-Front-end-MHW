@@ -20,11 +20,11 @@ overlay.style.opacity = opacity;
     const main = document.getElementById("contenedor1")
     if(menu.style.display === "flex"){
       menu.style.display = "none"
-      main.style.display = "flex"
+      main.style.position = "relative"
     }
     else{
       menu.style.display = "flex"
-      main.style.display = "none"
+      main.style.position = "fixed"
     }
   })
 
@@ -32,9 +32,18 @@ overlay.style.opacity = opacity;
 // boton menu MONSTRO
   async function showMonstros() {
     try{
+   
       const container= document.getElementById("resultados")
       container.innerHTML =''
       const monstros = await GetMonstro();
+      if(container.style.display === "flex"){
+        container.style.display = "none"
+        
+      }
+      else{
+        container.style.display = "flex"
+        
+      }
       if(monstros){
         monstros.map(monstro=>{
           const createdElement = document.createElement("div")
