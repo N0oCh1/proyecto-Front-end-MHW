@@ -28,6 +28,7 @@
     padding: 2px 20px
 }
 .modalContainer{
+    position: relativea;
     z-index: 5;
     background-color: rgba(0, 0, 0, 0.651);
     position: fixed;
@@ -37,3 +38,56 @@
     width: 100vw;
     height: 100vh;
 }
+
+.borde1{
+    top: 1rem;
+    left: 1rem;
+    position: absolute;
+    width: 100px;
+    transform:  scale(-1,1);
+}
+.borde2{
+    top: 1rem;
+    right: 1rem;
+    position: absolute;
+    width: 100px;
+}
+.borde3{
+    bottom: 1rem;
+    right: 1rem;
+    position: absolute;
+    width: 100px;
+    rotate: 180deg;
+    transform:  scale(-1,1);
+
+}
+.borde4{
+    bottom: 1rem;
+    left: 1rem;
+    position: absolute;
+    width: 100px;
+    rotate: 180deg;
+}
+.animationBorder{
+    animation-name: ani-opcity;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes ani-opcity {
+    0%{
+      opacity: 0;
+    }
+    25%{
+      opacity: 0.25;
+    }
+    50%{
+      opacity: 0.5;
+    }
+    75%{
+      opacity: 0.75;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
