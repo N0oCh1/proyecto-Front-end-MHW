@@ -25,13 +25,21 @@ function addBioma() {
   newDiv.setAttribute("class", "biomaField");
   newDiv.innerHTML = `
     <select id="bioma${biomaCount}" name="biomas[1][id_bioma]">
-        <option>Sleciona el bioma</option>
+        <option value="">Sleciona el bioma</option>
         <option value="1">Bosque primigenio</option>
         <option value="2">Yermo de agujas</option>
         <option value="3">Altiplano coralinos</option>
         <option value="4">Valle putrefacto</option>
         <option value="5">Lecho de los ancianos</option>
         <option value="6">Arroyo de escarcha</option>
+        <option value="7">Tierras destino</option>
+        <option value="8">Gran desfiladero</option>
+        <option value="9">Torrente eterno</option>
+        <option value="10">Confluencia de destinos</option>
+        <option value="11">Cavernas de El Dorado</option>
+        <option value="12">Isla origen</option>
+        <option value="13">Valle remoto</option>
+        <option value="14">Castillo skrad</option>
     </select>
     <button type="button" onclick="removeField(this,'biomaContrainer')" class="botonEliminar">Eliminar</button>
     `;
@@ -46,7 +54,7 @@ function addRango() {
   const containerRango = document.getElementById("rangoContainer");
   newDiv.innerHTML = `
         <select name="rangos[1][id_rango]" id="rango${rangoCount}">
-            <option>Seleccione el rango</option>
+            <option value="">Seleccione el rango</option>
             <option value="1">Rango bajo</option>
             <option value="2">Rango alto</option>
             <option value="3">Rango maestro</option>
@@ -64,7 +72,7 @@ function addElemento() {
   const containerElemento = document.getElementById("elementoContainer");
   newDiv.innerHTML = `
         <select name="elementos[1][id_elemento]" id="elemento${elementoCount}">
-            <option>Seleccione el Elementos del monstruo</option>
+            <option value="">Seleccione el Elementos del monstruo</option>
             <option value="1">Fuego</option>
             <option value="2">Agua</option>
             <option value="3">Treuno</option>
@@ -86,7 +94,7 @@ function addDebilidad() {
   const containerDebilidad = document.getElementById("debilidadContainer");
   newDiv.innerHTML = `
         <select name="debilidad[1][id_elemento]" id="debilidad${debilidadCount}">
-            <option>Seleccione el Elementos debil del monstruo</option>
+            <option value="">Seleccione el Elementos debil del monstruo</option>
             <option value="1">Fuego</option>
             <option value="2">Agua</option>
             <option value="3">Treuno</option>
