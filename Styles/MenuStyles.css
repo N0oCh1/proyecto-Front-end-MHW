@@ -1,102 +1,128 @@
 /* Contenedor principal del Menu */
 #contenedor2 {
-  
   display: none;
   flex-direction: column;
   position: fixed;
+  align-items: center;
   z-index: 4;
-  top: 0;
-  left: 0;
   width: 100%;
   background-image: url(/recursos/bg_menu_pc.webp);
   background-size: cover;
   background-position: top;
   height: 100vh;
+  height: 100%;
+  padding: 1rem;
+  overflow-y: scroll;
 }
 /* Estilos del NavBar */
 .menuButton{
   text-decoration: none;
-  padding: 10px;
   transition: background-color 0.3s;
   width: fit-content;
   height: min-content;
   background-color: transparent;
   border: none;
   font-family: Markazi Text, "source-han-serif-japanese", serif;
-  color: #dcdcdc;
-  font-size: 30px;
 }
 
 .menu_nav{
-  padding: 24px;
   flex-direction: row;
   display: flex;
-  gap: 24px
-}
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  gap: 24px;
   
-.menu_nav a{
-  color: #fff;
-  font-size: 4rem;
+}
+
+.menu_nav > li{
+  position: relative;
+  left: 10%;
+  width: 100%;
+}
+.menu_nav{
+  margin-top: 6rem;
+  padding: 0 0 .5rem;
+}
+.menu_nav > li{
+  
+  margin-bottom: 1rem;
+
+}
+.menu_nav a, .menuButton{
+  color: #dcdcdc;
+  font-size: 30px;
   font-weight: 400;
   letter-spacing: .05em;
   line-height: 1.2;
   transition: all .25s ease-out;
-  opacity: .9;
-  filter: drop-shadow(0 0 .75rem rgba(0, 0, 0, .1)) drop-shadow(0 0 .75rem rgba(0, 0, 0, .1));
-}
- 
-/* Container del API */
-#resultados{
-  width: 100%;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: row;
-  padding: 30PX;
-  gap: 30px;
-  flex-wrap: wrap;
+  opacity: .99;
+  filter: drop-shadow(0 0 1rem rgba(0, 0, 0, .1)) drop-shadow(0 0 .75rem rgba(0, 0, 0, .1))
 }
 
-/* estilos para los elementos creado por JS */
-.monstroCard{
-  cursor: pointer;
-  width: max-content;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  font-size: 24px;
+.menuButton::before{
+  content: "";
+  background-image: url(/recursos/decoraciones/decoracion\ 3.png);
+  background-size: cover;
+  height: 3rem;
+  width: 3rem;
+  left: -3.5rem;
+  position: absolute;
 }
-.monstroCard:hover{
-  background-color: #5555554d;
-  border-radius: 8px;
+
+.menuButton::after{
+  content: "";
+  display: none;
+  background-image: url(/recursos/decoraciones/glowIcon.png);
+  background-size: cover;
+  height: 3rem;
+  width: 3rem;
+  left: -3.5rem;
+  top:0;
+  position: absolute;
 }
-.monstroImagenCard{
-  width: 200px;
-  height: 200px;
-}
+
+
+ 
+
 
 
 .contenedor2_bg{
   background-image: url(/recursos/bg_menu_pc.jpg);
 }
 
-.menu_nav{
-  padding: 24px;
-  flex-direction: row;
+@keyframes saturate {
+  0% {
+    opacity: .2;
+    filter: saturate(100%);
+    filter: drop-shadow(0 0 .25rem rgba(240, 255, 0, .1)) drop-shadow(0 0 .25rem rgba(240, 255, 0, .1));
+  }
+
+  50% {
+    opacity: 1;
+    filter: saturate(200%);
+    filter: drop-shadow(0 0 .25rem rgba(238, 255, 0, .754)) drop-shadow(0 0 .25rem rgba(240, 255, 0, .6));
+  }
+
+  100% {
+    filter: saturate(100%);
+    opacity: .2;
+    filter: drop-shadow(0 0 .25rem rgba(240, 255, 0, .1)) drop-shadow(0 0 .25rem rgba(240, 255, 0, .1));
+  }
+}
+
+@keyframes regreso {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1); /* Puedes modificar este valor para obtener el efecto deseado */
+  }
+}
+.menuButton:hover::after{
   display: flex;
-  gap: 24px
+  animation: saturate 1.5s infinite;
 }
-
-.menu_nav, a {
-  color: #ffffff;
-  font-size: 4rem;
-  font-weight: 400;
-  letter-spacing: .05em;
-  line-height: 1.2;
-  transition: all .5s ease-out;
-  opacity: .9;
-  
-}
-
 .menuButton:hover {
  filter: drop-shadow(0 0 .75rem rgb(241, 175, 31)) drop-shadow(0 0 .75rem rgb(241, 175, 31)); 
 }
@@ -109,12 +135,36 @@
   color: #9e9e9e;
 }
 
-
-.menu_nav,  li{
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 0 0 .5rem;
+/* Container del API */
+#resultados{
+width: fit-content;
+height: 600px;
+justify-content: left;
+flex-wrap:wrap;
+padding-top: 1rem;
+overflow-y: scroll;
 }
+
+/* estilos para los elementos creado por JS */
+.monstroCard{
+  border-inline: 5rem;
+  cursor: pointer;
+  height: 35%;
+  aspect-ratio: 4/4;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 24px;
+
+  
+}
+
+.monstroCard:hover{
+  filter: drop-shadow(0 0 1rem rgba(202, 183, 8, 0.185)) drop-shadow(0 0 .50rem rgba(133, 130, 5, 0.1));
+  border-radius: 8px;
+}
+
+
 .agregarMonstruo{
   cursor: pointer;
   bottom: 4rem;
@@ -123,6 +173,7 @@
   width: max-content;
   position: fixed;
   border: none;
+  z-index: 4;
   
   p{
     top:50%;
@@ -152,14 +203,25 @@
   .menu_nav{
     padding: 12px;
     flex-direction:column;
-    display: flex;
-    gap: 5px;
-    align-items: center;
   }
+
+  .menu_nav > li{
+    left: 50%;
+  }
+
   #contenedor2{
     background-image: url(/recursos/bg_menu_movil.jpg);
   }
   #resultados{
-    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .monstroCard{
+    height: 230px;   
+    flex-direction: column;
+    font-size: 20px;
   }
 }

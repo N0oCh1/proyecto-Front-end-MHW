@@ -30,12 +30,11 @@ a:active {filter: drop-shadow(0 0 .75rem rgb(250, 225, 84)) drop-shadow(0 0 .75r
 body {
   margin: 0;
   padding: 0;
-  height: auto;
   line-height: 1.5;
   background-color: #000;
   color: #dcdcdc;
   flex-direction: column;
-  
+
 }
 
 img {
@@ -52,6 +51,7 @@ img {
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow: auto;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -371,19 +371,7 @@ text-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4);
 }
 
 
-@keyframes saturate {
-  0% {
-    filter: saturate(1);
-  }
 
-  75% {
-    filter: saturate(2);
-  }
-
-  0% {
-    filter: saturate(1);
-  }
-}
 
 .dec_letter_1 {
   position: absolute;
@@ -425,14 +413,15 @@ text-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4);
 
 /* utilidades*/
 footer {
-  padding: 8px 24px 8px 24px;
+  padding:  24px  24px;
   height: 300px;
   display: flex;
   flex-direction: column;
   background-image: url(/recursos/footer_bg.png);
   background-size: cover;
-  position: absolute;
+  position: relative;
   width: 100%;
+  
 }
 
 .mask {
