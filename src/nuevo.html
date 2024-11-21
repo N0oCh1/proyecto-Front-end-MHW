@@ -219,8 +219,31 @@
     </form>
 
   </main>
-  <footer>
+  <div class="modalContainer" id="modal" style="display: none;">
+    <div class="modalAdvertencia breathAnimation">
+      <img class="borde4 animationBorder" src="/recursos/decoraciones/BorderFrame2.png"/>
+      <img class="borde2 animationBorder" src="/recursos/decoraciones/BorderFrame2.png"/>
+      <img class="borde3 animationBorder" src="/recursos/decoraciones/BorderFrame2.png"/>
+      <img class="borde1 animationBorder" src="/recursos/decoraciones/BorderFrame2.png"/>
+      <div class="textoContainer">
+        <p class="advert">✅</p>
+        <p>! Se creo nuevo monstro exitosamente !</p>
+      </div>
+      <div class="bo">
+        <button class="si" onclick="MonstroInsertado()">
+          OK
+        </button>
+      </div>
+    </div>
+  </div>
 
+  <hr class="transition"/>
+  <footer>
+        <div class="footerInfo">
+        <h1>Monster Hunter API</h1>
+        <p>&copy; Sitio. Gael Pereira. Rubén Feng. César Aburto.</p>
+        <p>&copy; Monster Hunter. CAPCOM.</p>
+        </div>
   </footer>
 </body>
 <script src="/scripts//scriptNuevoMonstruo.js"></script>

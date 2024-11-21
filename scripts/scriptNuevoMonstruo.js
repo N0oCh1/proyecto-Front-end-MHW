@@ -140,15 +140,22 @@ document.getElementById("formularioMonstruo").addEventListener("submit", functio
       return acc[curr];
     }, jsonObject);
   });
-  fetch('https://localhost:7101/monstro', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(jsonObject)
-  }).then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error(error));
+  try{
+    fetch('https://localhost:7101/monstro', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(jsonObject)
+    }).then(response => {
+      if(response.ok){
+        ShowModal()
+      }
+    })
+  }
+  catch(error){
+    console.log(error)
+  }
 });
 
 
@@ -170,7 +177,19 @@ function testImage() {
   }
   
 }
+function ShowModal() {
+  const modal = document.getElementById("modal")
+  if(modal.style.display === "none"){
+    modal.style.display = "block"
+  }
+  else{
+    modal.style.display = "none"
+  }
+}
 function regresar() {
   window.location.href = "/src/index.html"
 }
 
+function MonstroInsertado() {
+  window.location.href = "/src/index.html"
+}
