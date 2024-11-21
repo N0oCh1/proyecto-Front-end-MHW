@@ -69,6 +69,35 @@ overlay.style.opacity = opacity;
     }
   }
 
+
+  async function showBioma (params) {
+    try {
+      const container = document.getElementById("resultadoBioma");
+      container.innerHTML =''
+      const bioma = await GetBioma();
+      if(container.style.display === "flex"){
+        container.style.display = "none"
+      }
+      else{
+        container.style.display = "flex"
+      }
+      if(bioma){
+        bioma.map(bioma=>{
+          const div = document.createElement("div")
+          div.setAttribute("class", "biomaImagen")
+          div.addEventListener("click", function(){
+          Navigate(bioma.id_bioma)
+
+          
+          })
+        })
+      }
+      
+    } catch (error) {
+      console.log(error)
+    }
+    
+  }
   
   function Navigate (id) {  
     window.location.href = `/src/monstros.html?id=${id}`;
@@ -89,3 +118,13 @@ overlay.style.opacity = opacity;
   function navegarIngresar() {
     window.location.href = "/src/nuevo.html"
   }
+
+  async function GetBioma() {
+    const biomaData = await fetch("https://localhost:7101/monstro/biomas",{
+      method: "GET",
+      headers:{
+        'content-type': 'application/json; charset=utf-8'
+      }
+  }).then(data=>data.json()).then(data=>data)
+  return biomaData
+}
