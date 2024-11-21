@@ -161,6 +161,7 @@ text-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4);
   position: relative;
   width: max-content;
   display: flex;
+  top: -20vh;
   align-items: center;
   flex-direction: column;
   padding: 10px;
