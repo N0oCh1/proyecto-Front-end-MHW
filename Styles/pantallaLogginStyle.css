@@ -1,4 +1,34 @@
-
+@font-face {
+  font-family: "mh";
+  src: url(/recursos/fonts/MarkaziText-VariableFont_wght.ttf);
+  font-weight: bold;
+  font-style: bold;
+}
+*{
+  font-family: mh;
+  font-size: 20px;
+}
+.logging{
+  position: sticky;
+  top: 3rem;
+  left: 1rem;
+  color: whitesmoke;
+  z-index: 4;
+  button{
+    cursor: pointer;
+    margin: 30px;
+    padding: 4px 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    border: 1px solid transparent;
+  }
+  button:hover{
+    background-color: rgba(255, 255, 255, 0.527);
+    color: black;
+  }
+}
 /*===================== contenedor ===================== */
 .pantallaLoggin {
   top: 3rem;
@@ -7,11 +37,16 @@
   display: flex;
   gap: 32px;
   width: 40%;
+  min-width: 200px;
   height: auto;
   flex-direction: column;
   padding: 40px;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.582);
+  background-image: url("/recursos/footer_bg.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
   z-index: 4;
 }
 /* =============================================================== */
@@ -85,10 +120,6 @@
   width: max-content;
   height: max-content;
   object-fit: contain;
-  animation-name: ani-opcity;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
 }
 
 .borde1 {
