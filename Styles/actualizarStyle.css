@@ -1,123 +1,143 @@
-.modalValidacion{
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    width: 50%;
-    height: 25%;
-    font-size: 24px;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    border-radius: 10px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 24px;
-    background-color: rgba(0, 0, 0, 0.849);
-    color: white;
-    filter: drop-shadow(0 0 .75rem rgb(241, 175, 31)) drop-shadow(0 0 .75rem rgb(241, 175, 31)); 
+/* ===================== Todos estos estilo le pertenence a un cuadro de feedback cuando actualiza datos de un mosntruo =====================*/
+.modalValidacion {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  width: 50%;
+  height: 25%;
+  font-size: 24px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 24px;
+  background-color: rgba(0, 0, 0, 0.849);
+  color: white;
+  filter: drop-shadow(0 0 .75rem rgb(241, 175, 31)) drop-shadow(0 0 .75rem rgb(241, 175, 31));
 }
-.textContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
-.icon{
-    font-size: 40px;
+
+.icon {
+  font-size: 40px;
 }
-.botonCerrar{
-    border-radius: 8px;
-    cursor: pointer;
-    color: greenyellow;
-    border: 1px solid greenyellow;
-    background-color: transparent;
-    font-size: 20px;
-    padding: 2px 20px
+
+.botonCerrar {
+  border-radius: 8px;
+  cursor: pointer;
+  color: greenyellow;
+  border: 1px solid greenyellow;
+  background-color: transparent;
+  font-size: 20px;
+  padding: 2px 20px
 }
+
 .botonCerrar:hover {
-    color: black;
-    background-color: greenyellow;
-}
-.modalContainer{
-    z-index: 5;
-    background-color: rgba(0, 0, 0, 0.651);
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100vw;
-    height: 100vh;
+  color: black;
+  background-color: greenyellow;
 }
 
-.borde1{
-    top: 1rem;
-    left: 1rem;
-    position: absolute;
-    width: 100px;
-    transform:  scale(-1,1);
+.modalContainer {
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.651);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
 }
-.borde2{
-    top: 1rem;
-    right: 1rem;
-    position: absolute;
-    width: 100px;
+
+.borde1 {
+  top: 1rem;
+  left: 1rem;
+  position: absolute;
+  width: 100px;
+  transform: scale(-1, 1);
 }
-.borde3{
-    bottom: 1rem;
-    right: 1rem;
-    position: absolute;
-    width: 100px;
-    rotate: 180deg;
-    transform:  scale(-1,1);
+
+.borde2 {
+  top: 1rem;
+  right: 1rem;
+  position: absolute;
+  width: 100px;
+}
+
+.borde3 {
+  bottom: 1rem;
+  right: 1rem;
+  position: absolute;
+  width: 100px;
+  rotate: 180deg;
+  transform: scale(-1, 1);
 
 }
-.borde4{
-    bottom: 1rem;
-    left: 1rem;
-    position: absolute;
-    width: 100px;
-    rotate: 180deg;
+
+.borde4 {
+  bottom: 1rem;
+  left: 1rem;
+  position: absolute;
+  width: 100px;
+  rotate: 180deg;
 }
-.animationBorder{
-    animation-name: ani-opcity;
+
+.animationBorder {
+  animation-name: ani-opcity;
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-.breathAnimation{
-    animation-name: saturate;
+
+.breathAnimation {
+  animation-name: saturate;
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+
+/* ===================== animaciones ===================== */
 @keyframes ani-opcity {
-    0%{
-      opacity: 0;
-    }
-    25%{
-      opacity: 0.25;
-    }
-    50%{
-      opacity: 0.5;
-    }
-    75%{
-      opacity: 0.75;
-    }
-    100%{
-      opacity: 1;
-    }
+  0% {
+    opacity: 0;
   }
-  @keyframes saturate {
-    0% {
-      filter: drop-shadow(0 0 .75rem rgb(241, 175, 31)) drop-shadow(0 0 .75rem rgb(241, 175, 31)); 
-    }
-  
-    50% {
-        filter: drop-shadow(0 0 .75rem rgba(241, 175, 31, 0.541)) drop-shadow(0 0 .75rem rgba(241, 175, 31, 0.541)); 
-    }
-  
-    100% {
-        filter: drop-shadow(0 0 .75rem rgba(241, 175, 31, 0.089)) drop-shadow(0 0 .75rem rgba(241, 175, 31, 0.116)); 
-    }
+
+  25% {
+    opacity: 0.25;
   }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes saturate {
+  0% {
+    filter: drop-shadow(0 0 .75rem rgb(241, 175, 31)) drop-shadow(0 0 .75rem rgb(241, 175, 31));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 .75rem rgba(241, 175, 31, 0.541)) drop-shadow(0 0 .75rem rgba(241, 175, 31, 0.541));
+  }
+
+  100% {
+    filter: drop-shadow(0 0 .75rem rgba(241, 175, 31, 0.089)) drop-shadow(0 0 .75rem rgba(241, 175, 31, 0.116));
+  }
+}
+
+/* =============================================================== */

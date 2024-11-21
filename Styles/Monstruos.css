@@ -19,7 +19,7 @@ main{
 }
 
 
-/* seccion informacion primaria */
+/* ===================== seccion informacion primaria ===================== */
 .container1{
     background-image: url("/recursos//BgImagen3.webp");
     border-start-end-radius: 8px;
@@ -31,6 +31,7 @@ main{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 }
 .informacion{
     display: flex;
@@ -49,8 +50,8 @@ main{
     width: 100%;
     height: auto;
 }
-/* ------- */
-/* Informacio secundaria */
+/* ==================================================================================== */
+/* ===================== Informacio secundaria ===================== */
 .container2{
     padding-top: 20px;
     padding-bottom: 20px;
@@ -77,9 +78,9 @@ main{
     width: 100%;
     height: auto;
 }
-/* ------- */
+/* =============================================================== */
 
-/* Elementos y de debilidad del mosntruo */
+/* ===================== Elementos y de debilidad del mosntruo ===================== */
 
 .atributos{
     display: flex;
@@ -111,9 +112,9 @@ main{
         gap: 20px;
     }
 }
-/* ------- */
+/* ==================================================================================== */
 
-/* seccion del rango */
+/* ===================== seccion del rango ===================== */
 .rangoContainer{
     margin-top: 20px;
     display: flex;
@@ -136,8 +137,8 @@ main{
         font-size: 24px;
     }
 }
-/* ------- */
-/* seccion del bioma */
+/* =============================================================== */
+/* ===================== seccion del bioma ===================== */
 .biomaContainer{
     border-start-end-radius: 10px;
     border-start-start-radius: 10px;
@@ -170,9 +171,9 @@ main{
     height: auto;
     min-width: 250px;
 }
-/* ------- */
+/* =============================================================== */
 
-/* seccion de los items */
+/* ===================== seccion de los items ===================== */
 .itemsContainer{
     display: flex;
     padding: 20px;
@@ -197,9 +198,9 @@ main{
         border-bottom: 1px solid white;
     }
 }
-/* ------- */
+/* =============================================================== */
 
-/* estilos de decoraciones */
+/* ===================== estilos de decoraciones ===================== */
 .transition {
     min-height: 1vh;
     height: 1vh;
@@ -245,10 +246,10 @@ main{
     width: 100px;
     rotate: 180deg;
 }
-/* ------- */
+/* =============================================================== */
 
 
-/* estilos del fondo */
+/* ===================== estilos del fondo ===================== */
 .background{
     background-image: url("/recursos/bg_menu_pc.webp");
     background-repeat: no-repeat;
@@ -260,11 +261,11 @@ main{
     height: 100vh;
     position: fixed;
 }
-/* ------- */
+/* =============================================================== */
 
 
 
-/* estilos de los botones */
+/* ===================== estilos de los botones ===================== */
 .botonRegresar{
     z-index: 4;
     top: 32px;
@@ -325,9 +326,9 @@ main{
     color: white;
     background-color: red;
 }
-/* ------- */
+/* =============================================================== */
 
-/* pantalla de advertencia */
+/* ===================== pantalla de advertencia ===================== */
 .modalAdvertencia{
     position: relative;
     display: flex;
@@ -406,9 +407,9 @@ main{
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-/* ------- */
+/* =============================================================== */
 
-/* animaciones */
+/* ===================== animaciones ===================== */
 @keyframes regreso {
     0%{
       left: 32px;
@@ -457,7 +458,7 @@ main{
         filter: drop-shadow(0 0 .75rem rgba(241, 175, 31, 0.089)) drop-shadow(0 0 .75rem rgba(241, 175, 31, 0.116)); 
     }
   }
-/* ------- */
+/* =============================================================== */
 
 
   

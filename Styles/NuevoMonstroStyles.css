@@ -18,7 +18,7 @@ h1{
   font-size: 40px;
 }
 
-/* estilos para la parte de informacion principal */
+/* ===================== estilos para la parte de informacion principal ===================== */
 .infoPContainer {
   position: relative;
   background-image: url("/recursos/BgImagen3.webp");
@@ -60,9 +60,9 @@ h1{
   margin-bottom: 8px;
   background-color: rgba(255, 255, 255, 0.406);
 }
-/* ------ */
+/* =============================================================== */
 
-/* estilos para la seccion de biomas y rango */
+/* ===================== estilos para la seccion de biomas y rango ===================== */
 .biomaRango{
   display: flex;
   flex-direction: row;
@@ -90,9 +90,9 @@ h1{
   justify-content: space-between;
   gap: 8px;
 }
-/* ------ */
+/* =============================================================== */
 
-/* Seccion del elemento */
+/* ===================== Seccion del elemento ===================== */
 .elementoContainer{
   display: flex;
   flex-direction: column;
@@ -118,9 +118,9 @@ h1{
   align-self: center;
   gap: 4px;
 }
-/* ------ */
+/* =============================================================== */
 
-/* Seccion de las debilidades */
+/* ===================== Seccion de las debilidades ===================== */
 .debilidadContainer{
   display: flex;
   flex-direction: column;
@@ -151,9 +151,9 @@ h1{
   align-self: center;
   gap: 4px;
 }
-/* ------ */
+/* =============================================================== */
 
-/* Seccion de Items */
+/* ===================== Seccion de Items ===================== */
 .itemsContainer{
   display: flex;
   flex-direction: column;
@@ -180,10 +180,10 @@ h1{
   flex-direction: column;
   gap: 8px;
 }
-/* ------ */
+/* =============================================================== */
 
 
-/* estilos para los botones e Inputs */
+/* ===================== estilos para los botones e Inputs ===================== */
 .botonProbar {
   cursor: pointer;
   font-size: 24px;
@@ -273,8 +273,8 @@ input, textarea, select {
   animation: regreso alternate 0.5s infinite;
   left: 10px;
 }
-/* ------ */
-/* estilos de decoracion */
+/* =============================================================== */
+/* ===================== estilos de decoracion ===================== */
 .puntero{
   transform: scale(-1,1);
   width: 20px;
@@ -342,8 +342,8 @@ input, textarea, select {
   right: 0;
 }
 
-/* ------ */
-/* estilos para el background */
+/* =============================================================== */
+/* ===================== estilos para el background ===================== */
 .background {
   background-image: url("/recursos/bg_menu_pc.webp");
   background-repeat: no-repeat;
@@ -354,7 +354,7 @@ input, textarea, select {
   height: 100vh;
   z-index: -3;
 }
-/* ------ */
+/* =============================================================== */
 #formularioMonstruo {
   margin: 0 auto 0 auto;
   max-width: 75vw;
@@ -368,7 +368,7 @@ input, textarea, select {
   padding: 50px;
 }
 
-/* Estilos para el modal */
+/* ===================== Estilos para el modal ===================== */
 .modalAdvertencia{
   position: relative;
   display: flex;
@@ -427,7 +427,7 @@ input, textarea, select {
   background-color: greenyellow;
 }
 
-/* ------ */
+/* =============================================================== */
 .animationBorder{
   animation-name: ani-opcity;
 animation-duration: 1s;
@@ -440,9 +440,9 @@ animation-duration: 1s;
 animation-iteration-count: infinite;
 animation-direction: alternate;
 }
-/* ------- */
+/* =============================================================== */
 
-/* animaciones */
+/* ===================== animaciones ===================== */
 @keyframes ani-opcity {
   0%{
     opacity: 0;
@@ -473,24 +473,6 @@ animation-direction: alternate;
       filter: drop-shadow(0 0 .75rem rgba(241, 175, 31, 0.089)) drop-shadow(0 0 .75rem rgba(241, 175, 31, 0.116)); 
   }
 }
-/* ------- */
-
-footer {
-  color: white;
-  padding:  24px  24px;
-  align-items: start;
-  justify-content: center;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  background-image: url(/recursos/footer_bg.png);
-  background-size: cover;
-  position: relative;
-  width: 100%;
-  
-}
-
-/* animaciones */
 @keyframes ani-opcity {
   0%{
     opacity: 0;
@@ -525,7 +507,23 @@ footer {
     left: 10px;
   }
 }
-/* ------- */
+/* =============================================================== */
+
+footer {
+  color: white;
+  padding:  24px  24px;
+  align-items: start;
+  justify-content: center;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  background-image: url(/recursos/footer_bg.png);
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  
+}
+/* ===================== media query ===================== */
 @media (max-width:740px){
   .div1{
     flex-direction: column;
@@ -534,3 +532,4 @@ footer {
     flex-direction: column;
   }
 }
+/* =============================================================== */
