@@ -1,5 +1,6 @@
 /* Contenedor principal del Menu */
 #contenedor2 {
+  
   display: none;
   flex-direction: column;
   position: fixed;
