@@ -87,9 +87,8 @@ overlay.style.opacity = opacity;
           div.setAttribute("class", "biomaImagen")
           div.addEventListener("click", function(){
           Navigate(bioma.id_bioma)
-
-          
           })
+          const imagen = d
         })
       }
       

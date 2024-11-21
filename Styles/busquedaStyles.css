@@ -26,7 +26,7 @@
     } 
 #busquedaResult li .contenidoMonstro {
      display: flex; 
-     flex-direction: column; 
+     flex-direction: row; 
     } 
 
 #busquedaResult li .contenidoMonstro h3 { 

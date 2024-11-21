@@ -5,25 +5,28 @@ const lista = document.getElementById('busquedaResult');
 function mostrarBusqueda (monstros){
 lista.innerHTML='';
 
-monstros.forEach( monstros => {
-   const li = document.createElement('li');
-   li.setAttribute("class","liMonstro");
-   li.addEventListener('click', ()=>{
-    navegarMonstruo(monstros.idMonstro)
-   })
-   li.addEventListener('click', ()=>{
-    navegarMonstruo(monstros.idMonstro)
-   })
-   li.innerHTML= `
-    <img class="monstroImagenCard" src=${monstros.imagen.iconUrl}> </img>
-    <img class="monstroImagenCard" src=${monstros.imagen.iconUrl}> </img>
-     <div class="contenidoMonstro">
-    <H3>${monstros.nombre}</H3>
-    <p class="descrpcion"> ${monstros.descripcion} </p>
-    </div>`;
+monstros.forEach(monstro => { 
+const li = document.createElement('li');
+li.setAttribute("class", "liMonstro"); 
+li.addEventListener('click', () => { 
+navegarMonstruo(monstro.idMonstro); 
+}); 
 
-     lista.appendChild(li);
-});
+//iterar en los elementos
+const iconUrls = { 
+  Fuego: '/recursos/elementos_icons/FuegoIcon.webp', 
+  Dragon: '/recursos/elementos_icons/DragonIcon.webp',
+  Treuno: '/recursos/elementos_icons/TreunoIcon.webp'
+} // Añade más elementos según sea necesario
+const elementosHTML = monstro.elementos.map(elemento => ` 
+<img class="elementoIcon" src="${iconUrls[elemento.elemento]}"> 
+`).join('');
+
+li.innerHTML = ` <img class="monstroImagenCard" src="${monstro.imagen.iconUrl}" > 
+<div class="contenidoMonstro"> 
+<h3>${monstro.nombre}</h3> 
+${elementosHTML} </div>`;
+lista.appendChild(li); });
 }
 
 function navegarMonstruo(id){
