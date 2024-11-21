@@ -1,0 +1,168 @@
+
+/*===================== contenedor ===================== */
+.pantallaLoggin {
+  top: 3rem;
+  left: 1rem;
+  position: fixed;
+  display: flex;
+  gap: 32px;
+  width: 40%;
+  height: auto;
+  flex-direction: column;
+  padding: 40px;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.582);
+  z-index: 4;
+}
+/* =============================================================== */
+
+.iconUsers {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/*===================== formulario =====================*/
+.form {
+  flex-direction: column;
+  gap: 24px
+}
+
+.inputsUsers {
+  display: flex;
+  flex-direction: column;
+}
+
+.user,
+.password {
+  display: flex;
+  flex-direction: column;
+}
+
+.botonX {
+  z-index: 6;
+  color: white;
+  border-radius: 100px;
+  padding: 10px;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  align-self: flex-end;
+}
+
+.botonX:hover {
+  background-color: rgba(255, 255, 255, 0.459);
+
+}
+
+.botonLog {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+
+  button {
+    cursor: pointer;
+    color: white;
+    padding: 2px 10px;
+    border: 1px solid transparent;
+    background-color: transparent;
+  }
+
+  button:hover {
+    filter: drop-shadow(0 0 1rem rgb(255, 255, 255));
+    animation: borderBreath infinite 1s alternate;
+  }
+}
+/* =============================================================== */
+
+.mensaje {
+  text-align: center;
+}
+
+
+/* ===================== Decoraciones ===================== */
+.animationBorder {
+  width: max-content;
+  height: max-content;
+  object-fit: contain;
+  animation-name: ani-opcity;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.borde1 {
+  top: 1rem;
+  left: 1rem;
+  position: absolute;
+  width: 100px;
+  transform: scale(-1, 1);
+}
+
+.borde2 {
+  top: 1rem;
+  right: 1rem;
+  position: absolute;
+  width: 100px;
+}
+
+.borde3 {
+  bottom: 1rem;
+  right: 1rem;
+  position: absolute;
+  width: 100px;
+  rotate: 180deg;
+  transform: scale(-1, 1);
+
+}
+
+.borde4 {
+  bottom: 1rem;
+  left: 1rem;
+  position: absolute;
+  width: 100px;
+  rotate: 180deg;
+}
+/* =============================================================== */
+
+/* ===================== animaciones ===================== */
+@keyframes ani-opcity {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes borderBreath {
+  0% {
+    border: 1px solid rgba(255, 255, 255, 0.123);
+  }
+
+  25% {
+    border: 1px solid rgba(255, 255, 255, 0.295);
+  }
+
+  50% {
+    border: 1px solid rgba(255, 255, 255, 0.493);
+  }
+
+  100% {
+    border: 1px solid rgba(255, 255, 255, 0.808);
+  }
+
+}
+/* =============================================================== */
