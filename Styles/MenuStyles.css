@@ -6,11 +6,11 @@
   align-items: center;
   z-index: 4;
   width: 100%;
+  top: 0;
   background-image: url(/recursos/bg_menu_pc.webp);
   background-size: cover;
   background-position: top;
   height: 100vh;
-  height: 100%;
   padding: 1rem;
   overflow-y: scroll;
 }
