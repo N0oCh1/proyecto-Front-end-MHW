@@ -4,6 +4,7 @@ let rangoCount = 1
 let elementoCount = 1
 let debilidadCount = 1
 let itemCount = 1
+// Funcion para actualizar el index de cada nuevo elemento en el formulario
 
 function actualizarIndice(idCampo) {
   const campo = document.getElementById(idCampo)
@@ -23,6 +24,7 @@ function actualizarIndice(idCampo) {
 
 
 
+// Funcion para agregar nuevo bioma
 function addBioma() {
   const newDiv = document.createElement("div")
   const containerBioma = document.getElementById("biomaContrainer")
@@ -43,6 +45,7 @@ function addBioma() {
   biomaCount++
   actualizarIndice("biomaContrainer")
 }
+// Funcion para agregar nuevo rango
 function addRango() {
   const newDiv = document.createElement("div")
   newDiv.setAttribute("class", "rangoField")
@@ -61,6 +64,7 @@ function addRango() {
   actualizarIndice("rangoContainer")
 }
 
+// Funcion para agregar nuevo elemento
 function addElemento() {
   const newDiv = document.createElement("div")
   newDiv.setAttribute("class", "elementoField")
@@ -82,6 +86,7 @@ function addElemento() {
   actualizarIndice("elementoContainer")
 }
 
+// Funcion para agregar nuevo debilidad
 function addDebilidad() {
   const newDiv = document.createElement("div")
   newDiv.setAttribute("class", "debilidadField")
@@ -104,6 +109,7 @@ function addDebilidad() {
   debilidadCount++
   actualizarIndice("debilidadContainer")
 }
+// Funcion para agregar nuevo items
 function addItem() {
   const newDiv = document.createElement("div")
   newDiv.setAttribute("class", "itemsField")
@@ -120,11 +126,13 @@ function addItem() {
   actualizarIndice("itemsContainer")
 }
 
+// funcion para eliminar los campos agregado
 function removeField(button, campo) {
   button.parentElement.remove()
   actualizarIndice(campo)
 }
 
+// Funcion para probar los link de imagenes insertado en el formulario
 document.getElementById("formularioMonstruo").addEventListener("submit", function (e) {
   e.preventDefault();
   const formData = new FormData(this);
@@ -159,6 +167,7 @@ document.getElementById("formularioMonstruo").addEventListener("submit", functio
 });
 
 
+// Funcion para probar los link de imagenes insertado en el formulario
 function testImage() {
   const imageContainer1 = document.getElementById("imagenPrueba")
   const imageContainer2 = document.getElementById("imagenPrueba2")
@@ -177,6 +186,7 @@ function testImage() {
   }
   
 }
+// Funcion para mosntra un feedBack de cuando se hiso correctamente la actualizacion
 function ShowModal() {
   const modal = document.getElementById("modal")
   if(modal.style.display === "none"){
@@ -186,10 +196,11 @@ function ShowModal() {
     modal.style.display = "none"
   }
 }
+// Funcion para regresa a la pagina anterior
 function regresar() {
   window.location.href = "/src/index.html"
 }
-
+// Funcion para regresar al home cuando se actualiza
 function MonstroInsertado() {
   window.location.href = "/src/index.html"
 }

@@ -1,4 +1,4 @@
-/* Contenedor principal del Menu */
+/*===================== Contenedor principal del Menu =====================*/
 #contenedor2 {
   display: none;
   flex-direction: column;
@@ -14,8 +14,14 @@
   padding: 1rem;
   overflow-y: scroll;
 }
-/* Estilos del NavBar */
-.menuButton{
+.contenedor2_bg {
+  background-image: url(/recursos/bg_menu_pc.jpg);
+}
+
+/* =============================================================== */
+
+/*===================== Estilos del NavBar =====================*/
+.menuButton {
   text-decoration: none;
   transition: background-color 0.3s;
   width: fit-content;
@@ -25,31 +31,35 @@
   font-family: Markazi Text, "source-han-serif-japanese", serif;
 }
 
-.menu_nav{
+.menu_nav {
   flex-direction: row;
   display: flex;
   position: relative;
   justify-content: center;
   width: 100%;
   gap: 24px;
-  
+
 }
 
-.menu_nav > li{
+.menu_nav>li {
   position: relative;
   left: 10%;
   width: 100%;
 }
-.menu_nav{
+
+.menu_nav {
   margin-top: 6rem;
   padding: 0 0 .5rem;
 }
-.menu_nav > li{
-  
+
+.menu_nav>li {
+
   margin-bottom: 1rem;
 
 }
-.menu_nav a, .menuButton{
+
+.menu_nav a,
+.menuButton {
   color: #dcdcdc;
   font-size: 30px;
   font-weight: 400;
@@ -60,7 +70,7 @@
   filter: drop-shadow(0 0 1rem rgba(0, 0, 0, .1)) drop-shadow(0 0 .75rem rgba(0, 0, 0, .1))
 }
 
-.menuButton::before{
+.menuButton::before {
   content: "";
   background-image: url(/recursos/decoraciones/decoracion\ 3.png);
   background-size: cover;
@@ -70,7 +80,7 @@
   position: absolute;
 }
 
-.menuButton::after{
+.menuButton::after {
   content: "";
   display: none;
   background-image: url(/recursos/decoraciones/glowIcon.png);
@@ -78,19 +88,128 @@
   height: 3rem;
   width: 3rem;
   left: -3.5rem;
-  top:0;
+  top: 0;
   position: absolute;
 }
-
-
- 
-
-
-
-.contenedor2_bg{
-  background-image: url(/recursos/bg_menu_pc.jpg);
+.menuButton:hover::after {
+  display: flex;
+  animation: saturate 1.5s infinite;
 }
 
+.menuButton:hover {
+  filter: drop-shadow(0 0 .75rem rgb(241, 175, 31)) drop-shadow(0 0 .75rem rgb(241, 175, 31));
+}
+
+.menuButton:active {
+  filter: drop-shadow(0 0 .75rem rgb(250, 225, 84)) drop-shadow(0 0 .75rem rgb(250, 225, 84));
+}
+
+.menuButton:checked {
+  color: #9e9e9e;
+}
+
+/* ==================================================================================== */
+
+
+/*===================== Container del API =====================*/
+#resultados {
+  width: fit-content;
+  height: 600px;
+  justify-content: left;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  overflow-y: scroll;
+}
+/* =============================================================== */
+
+/*===================== estilos para los elementos creado por JS =====================*/
+.monstroCard {
+  border-inline: 5rem;
+  cursor: pointer;
+  height: 35%;
+  aspect-ratio: 4/4;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 24px;
+}
+
+.monstroCard:hover {
+  filter: drop-shadow(0 0 1rem rgba(202, 183, 8, 0.185)) drop-shadow(0 0 .50rem rgba(133, 130, 5, 0.1));
+  border-radius: 8px;
+}
+/* =============================================================== */
+
+/*===================== boton inferior derecho =====================*/
+.agregarMonstruo {
+  cursor: pointer;
+  bottom: 4rem;
+  right: 4rem;
+  background-color: transparent;
+  width: max-content;
+  position: fixed;
+  border: none;
+  z-index: 4;
+
+  p {
+    top: 50%;
+    left: 25%;
+    line-height: 0;
+    position: absolute;
+    color: white;
+    transition: color 1s;
+    font-size: 50px;
+  }
+}
+
+.botonAgregar {
+  width: 50px;
+  height: 50px;
+
+}
+
+.agregarMonstruo:hover {
+  p {
+    color: rgba(71, 167, 15, 0.886);
+  }
+
+  .botonAgregar {
+    filter: sepia(100%);
+  }
+}
+/* =============================================================== */
+
+/*===================== Cambiar estilos cuando llegue a un tamano en especifico =====================*/
+@media (758px > width) {
+  .menu_nav {
+    padding: 12px;
+    flex-direction: column;
+  }
+
+  .menu_nav>li {
+    left: 50%;
+  }
+
+  #contenedor2 {
+    background-image: url(/recursos/bg_menu_movil.jpg);
+  }
+
+  #resultados {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .monstroCard {
+    height: 230px;
+    flex-direction: column;
+    font-size: 20px;
+  }
+}
+/* ==================================================================================== */
+
+/*===================== Animaciones =====================*/
 @keyframes saturate {
   0% {
     opacity: .2;
@@ -115,113 +234,10 @@
   0% {
     transform: scale(1);
   }
+
   100% {
-    transform: scale(1.1); /* Puedes modificar este valor para obtener el efecto deseado */
+    transform: scale(1.1);
+    /* Puedes modificar este valor para obtener el efecto deseado */
   }
 }
-.menuButton:hover::after{
-  display: flex;
-  animation: saturate 1.5s infinite;
-}
-.menuButton:hover {
- filter: drop-shadow(0 0 .75rem rgb(241, 175, 31)) drop-shadow(0 0 .75rem rgb(241, 175, 31)); 
-}
-
- .menuButton:active {
-  filter: drop-shadow(0 0 .75rem rgb(250, 225, 84)) drop-shadow(0 0 .75rem rgb(250, 225, 84)); 
-}
-
- .menuButton:checked {
-  color: #9e9e9e;
-}
-
-/* Container del API */
-#resultados{
-width: fit-content;
-height: 600px;
-justify-content: left;
-flex-wrap:wrap;
-padding-top: 1rem;
-overflow-y: scroll;
-}
-
-/* estilos para los elementos creado por JS */
-.monstroCard{
-  border-inline: 5rem;
-  cursor: pointer;
-  height: 35%;
-  aspect-ratio: 4/4;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  font-size: 24px;
-
-  
-}
-
-.monstroCard:hover{
-  filter: drop-shadow(0 0 1rem rgba(202, 183, 8, 0.185)) drop-shadow(0 0 .50rem rgba(133, 130, 5, 0.1));
-  border-radius: 8px;
-}
-
-
-.agregarMonstruo{
-  cursor: pointer;
-  bottom: 4rem;
-  right: 4rem;
-  background-color: transparent;
-  width: max-content;
-  position: fixed;
-  border: none;
-  z-index: 4;
-  
-  p{
-    top:50%;
-    left: 25%;
-    line-height: 0;
-    position: absolute;
-    color: white;
-    transition: color 1s;
-    font-size: 50px;
-  }
-}
-.botonAgregar{
-  width: 50px;
-  height: 50px;
-  
-}
-.agregarMonstruo:hover{
-  p{
-    color: rgba(71, 167, 15, 0.886);
-  }
-
-  .botonAgregar{
-    filter: sepia(100%);
-  }
-}
-@media (758px > width) { 
-  .menu_nav{
-    padding: 12px;
-    flex-direction:column;
-  }
-
-  .menu_nav > li{
-    left: 50%;
-  }
-
-  #contenedor2{
-    background-image: url(/recursos/bg_menu_movil.jpg);
-  }
-  #resultados{
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: nowrap;
-  }
-
-  .monstroCard{
-    height: 230px;   
-    flex-direction: column;
-    font-size: 20px;
-  }
-}
+/* =============================================================== */
