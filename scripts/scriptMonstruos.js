@@ -1,4 +1,3 @@
-
 // Funcion para obtener el datos del monstro e insertalo en su lugar correspondiente
 async function GetMonstruo() {
   //Aqui ban los elementos del DOM
@@ -105,6 +104,22 @@ function ObtenerImagenBioma(bioma) {
       return "/recursos/biomas/LechoDeAncianos.webp";
     case "Arroyo de escarcha":
       return "/recursos/biomas/ArroyoDeEscarcha.webp";
+    case "Tierras destino":
+      return "/recursos/biomas/TierraDeldestino.webp";
+    case "Gran desfiladero":
+      return "/recursos/biomas/GranDesfiladero.webp";
+    case "Torrente eterno":
+      return "/recursos/biomas/TorrenteEterno.webp";
+    case "Confluencia de destinos":
+      return "/recursos/biomas/ConfluenciaDelDestino.webp";
+    case "Cavernas de El Dorado":
+      return "/recursos/biomas/ElDorado.webp";
+    case "Isla origen":
+      return "/recursos/biomas/IslaOrigen.webp";
+    case "Valle remoto":
+      return "/recursos/biomas/ValleRemoto.webp";
+    case "Castillo skrad":
+      return "/recursos/biomas/CastilloSkrad.webp"
   }
 }
 // FUncion GET del api para  obtener todo los detalle del mosntruo especifico
@@ -124,7 +139,7 @@ function showModal() {
   }
 }
 
-// Funcion para eleminar le monstro 
+// Funcion para eleminar le monstro
 async function ElminarMonstruo() {
   const id = getID();
   await fetch(`https://localhost:7101/monstro/${id}`, { method: "DELETE" });
