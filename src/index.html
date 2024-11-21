@@ -205,15 +205,9 @@
     <!-- Parte del navBar boton Hamburguesa -->
     <div id="contenedor2">
       <ul class="menu_nav">
-        <li>
-          <button
-            class="menuButton"
-            id="monstro"
-            type="button"
-            onclick="showMonstros()"
-          >
-            Monstruos
-          </button>
+        <li> 
+          <button class="menuButton" id="monstro" type="button" onclick="showMonstros()"> Monstruos</button>
+          
         </li>
         <li>
           <button class="menuButton" type="button" href="#">Biomas</button>
@@ -222,26 +216,30 @@
           <button class="menuButton" type="button" href="#">Elementos</button>
         </li>
         <li>
-          <button class="menuButton" type="button"><a href="/src/autores.html">Autores</a></button>
+          <button class="menuButton" type="button"><a href="/src/autores.html">Autores  </a></button>
         </li>
+        <span class="transition"> </span>
       </ul>
-      <section id="resultados"></section>
+     
+      <section id="resultados"> </section>
       <button class="agregarMonstruo" onclick="navegarIngresar()">
         <p>+</p>
         <img src="/recursos/decoraciones/decoracion 2.png" class="botonAgregar"/>
       </button>
+    
     </div>
 
     <!-- footer de la pagina -->
-    <footer>
-      <span class="transition"> </span>
-      <div class="footerInfo">
-        <h1>Monster Hunter API</h1>
-        <p>&copy; Sitio. Gael Pereira. Rubén Feng. César Aburto.</p>
-        <p>&copy; Monster Hunter. CAPCOM.</p>
-      </div>
-    </footer>
     <script src="/scripts/script.js"></script>
     <script src="/scripts/scriptBuscador.js"> </script>
+  
+  <footer>
+    <span class="transition"> </span>
+    <div class="footerInfo">
+      <h1>Monster Hunter API</h1>
+      <p>&copy; Sitio. Gael Pereira. Rubén Feng. César Aburto.</p>
+      <p>&copy; Monster Hunter. CAPCOM.</p>
+    </div>
+  </footer>
   </body>
 </html>
