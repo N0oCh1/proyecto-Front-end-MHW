@@ -95,6 +95,11 @@ text-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4);
   top: 0.5rem;
 }
 
+.logging{
+  position: sticky;
+  color: white;
+  z-index: 4;
+}
 .btnMenu {
  position: absolute;
   cursor: pointer;
