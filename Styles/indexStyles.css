@@ -193,6 +193,7 @@ footer {
 #noticias,
 #guia {
   padding: 1rem;
+  padding-bottom: 10rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -206,6 +207,67 @@ footer {
 
 #guia {
   background-image: url(/recursos/bgImagen0.jpg);
+}
+.guiaContainer{
+  display: flex;
+  gap: 150px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4px 100px;
+}
+.guia1{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.guia2{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: end;
+}
+.guiaImage1{
+  position: relative;
+  width: 600px;
+  min-width: 300px;
+}
+.guiaText{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+  left: 45%;
+  top: 50%;
+  position: absolute;
+  padding: 30px;
+  z-index: 2;
+}
+.guiaText2{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+  right: 45%;
+  top: 50%;
+  position: absolute;
+  padding: 30px;
+  z-index: 2;
+}
+
+.guiaBack{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(52, 39, 1, .8), rgba(10, 8, 0, .8));;
+  filter: blur(6px);
+  z-index: -1;
 }
 
 #noticias {
@@ -460,7 +522,15 @@ footer {
   width: 100%;
   position: relative;
 }
-
+.separadorDecoracion{
+  border: none;
+  height: 2vh;
+  min-height: 2vh;
+  background-size: cover;
+  max-width: 75%;
+  width: 100%;
+  background-image: url("/recursos/decoraciones/decoracion\ 4.webp");
+}
 .mask {
   position: fixed;
   top: 0;
