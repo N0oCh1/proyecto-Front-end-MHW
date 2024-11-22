@@ -198,7 +198,7 @@ overlay.style.opacity = opacity;
           boton.style.display = "flex"
         }
         if(response.status===401){
-          console.mensage("El usuario no esta registrado")
+          mensage("El usuario no esta registrado")
         }
       })
     
@@ -207,9 +207,14 @@ overlay.style.opacity = opacity;
   // Funcion para monstrar estados de inicio de seccion
   function mensage(mensage) {
     const pantallaLoggin = document.getElementById("pantallaLoggin")
+    const p= document.getElementById("mensaje")
+    if(p){
+      p.remove()
+    }
     const mesanje = document.createElement('p')
     mesanje.setAttribute("class", "mensaje")
     mesanje.setAttribute("id", "mensaje")
+    mesanje.innerHTML = ""
     mesanje.innerHTML = mensage
     pantallaLoggin.appendChild(mesanje)
   }
