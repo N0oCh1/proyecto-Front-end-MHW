@@ -94,6 +94,12 @@ footer {
 /* ========================================================================================== */
 
 /* ============================== logo principal de la pagina ============================== */
+.iconExtra{
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  padding: 0;
+}
 
 #mainIndex {
   display: flex;
