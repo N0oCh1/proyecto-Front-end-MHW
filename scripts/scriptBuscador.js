@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
     <img class="monstroImagenCard" src=${monstros.imagen.iconUrl}> </img>
      <div class="contenidoMonstro">
     <H3>${monstros.nombre}</H3>
-    <p class="descrpcion"> ${monstros.descripcion} </p>
     </div>`;
 
       lista.appendChild(li);
