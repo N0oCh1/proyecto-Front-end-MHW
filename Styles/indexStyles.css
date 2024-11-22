@@ -53,9 +53,7 @@ img {
 }
 
 a,
-h1,
-h2,
-h3 {
+h1{
   text-decoration: none;
   line-height: 1.2;
   color: #dcdcdc;
@@ -63,14 +61,20 @@ h3 {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
+  div{
   padding: 24px 24px;
   height: 300px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background-image: url(/recursos/footer_bg.png);
   background-size: cover;
   position: relative;
   width: 100%;
+  }
+  
 }
 
 /* =============================================================== */
@@ -94,14 +98,21 @@ footer {
 /* ========================================================================================== */
 
 /* ============================== logo principal de la pagina ============================== */
+.iconExtra{
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  padding: 0;
+}
 
 #mainIndex {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 120vh;
+  width: 100vw;
+  min-height: 120vh;
+  height: 100%;
   position: relative;
   z-index: 1;
 }
@@ -317,15 +328,12 @@ footer {
   padding: 5rem 3rem;
   height: fit-content;
   text-align: left;
+  background-image: url(/recursos/parrafos\ bg.png);
+  a{
+    font-size: 30px;
+  }
 }
 
-.noticia_1 {
-  background-image: url(/recursos/parrafos\ bg.png);
-}
-
-.noticia_2 {
-  background-image: url(/recursos/parrafos\ bg.png);
-}
 
 /* ========================================================================================== */
 
@@ -496,7 +504,7 @@ footer {
   height: 1vh;
   background-image: url(/recursos/transition.png);
   background-size: cover;
-  z-index: 3;
+  z-index: 4;
   width: 100%;
   position: relative;
 }

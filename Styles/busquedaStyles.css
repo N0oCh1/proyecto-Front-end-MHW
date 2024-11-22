@@ -1,38 +1,44 @@
-#busquedaResult { 
-    display: none;
-    flex-direction: column;
-    width: 50%; 
-    padding: 10px; 
-    margin-bottom: 10px; 
-     border-radius: 4px; 
-    } 
-#busquedaResult{ 
-    list-style-type: none; 
-    padding: 0; 
-} 
-#busquedaResult li { 
-    padding: 8px; 
-    border: 1px solid #ddd; 
-    margin-bottom: 5px; 
-    border-radius: 4px; 
-    display: flex; 
-    align-items: center; 
-} 
-#busquedaResult li img {
-     margin-right: 10px;
-      width: 50px; 
-      height: 50px; 
-      border-radius: 50%; 
-    } 
-#busquedaResult li .contenidoMonstro {
-     display: flex; 
-     flex-direction: column; 
-    } 
+#busquedaResult {
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  list-style-type: none;
+  padding: 0;
+  justify-content: center;
+}
 
-#busquedaResult li .contenidoMonstro h3 { 
-    margin: 0; 
-    font-size: 1.2em; 
-} 
-#busquedaResult li .contenidoMonstro p {
-     margin: 0; color: #666;
+.liMonstro {
+  cursor: pointer;
+  max-width: 300px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  background-image: url("/recursos/BgImagen3.webp");
+  margin-bottom: 5px;
+  justify-content: space-between;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+
+}
+.liMonstro:hover{
+  filter: drop-shadow(0,0,20px white);
+}
+.monstroImagenCard {
+  margin-right: 10px;
+  width: 100px;
+  height: 100px;
+}
+.contenidoMonstro{
+  width: 100%;
+  h3{
+    text-align: center;
+    font-size: 24px;
+    color: black;
+  }
 }
