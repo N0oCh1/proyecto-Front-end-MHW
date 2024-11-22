@@ -235,6 +235,7 @@ footer {
   justify-content: end;
 }
 .guiaImage1 {
+  border-radius: 8px;
   position: relative;
   width: 600px;
   min-width: 300px;
