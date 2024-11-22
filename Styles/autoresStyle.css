@@ -1,48 +1,199 @@
-h1{
-    text-align: center;
+@font-face {
+  font-family: "mh";
+  src: url(/recursos/fonts/MarkaziText-VariableFont_wght.ttf);
+  font-weight: bold;
+  font-style: bold;
 }
-nav
-{
-    text-align: center;
+
+* {
+  font-family: "mh";
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
 }
-button{
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 10px;
+h1 {
+  font-size: 40px;
 }
-body{
-    background-color: cadetblue;
-    color: white;
+h2 {
+  font-size: 30px;
+  align-self: center;
 }
-a{
-    text-decoration: none;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
 }
-.nombreAutor{
-    text-align: center;
-    background-color: rgb(51, 147, 150);
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 10px;
+
+footer {
+  color: #dcdcdc;
+  font-size: 20px;
+  padding: 24px 24px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  background-image: url(/recursos/footer_bg.png);
+  background-size: cover;
+  position: relative;
+  width: 100%;
 }
-footer
-{
-    background-color: rgb(44, 131, 134);
-    padding: 30px;
-    border-radius: 20px;
+/* ============================= Headers ============================= */
+.titulo {
+  display: flex;
+  justify-content: center;
+  color: #dcdcdc;
 }
-.parrafo{
-    padding: 10px;
-    background-color: rgb(75, 163, 166);
+.logo {
+  width: 100%;
 }
-.imagecontainer{
-    text-align: center;
+/* ======================================================================================= */
+
+/* ============================= Decoraciones ============================= */
+.borde1 {
+  top: 1rem;
+  left: 1rem;
+  position: absolute;
+  width: 100px;
+  transform: scale(-1, 1);
 }
-.image{
-    padding: 10px;
-    width: 300px;
-    height: 400px;
+.borde2 {
+  top: 1rem;
+  right: 1rem;
+  position: absolute;
+  width: 100px;
+}
+.borde3 {
+  bottom: 1rem;
+  right: 1rem;
+  position: absolute;
+  width: 100px;
+  rotate: 180deg;
+  transform: scale(-1, 1);
+}
+.borde4 {
+  bottom: 1rem;
+  left: 1rem;
+  position: absolute;
+  width: 100px;
+  rotate: 180deg;
+}
+.transition {
+  min-height: 1vh;
+  height: 1vh;
+  border: none;
+  background-image: url(/recursos/transition.png);
+  background-size: cover;
+  z-index: 3;
+  width: 100%;
+  position: relative;
+}
+/* ======================================================================================= */
+
+/* ============================= estilos de fondo ============================= */
+.background {
+  background-image: url("/recursos/bg_menu_pc.webp");
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;
+}
+/* ======================================================================================= */
+
+/* ============================= estilo de las cartas de los autores ============================= */
+.image {
+  aspect-ratio: 1/1;
+  max-width: 200px;
+  max-height: 200px;
+  min-width: 100px;
+  min-height: 100px;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.containerAutores {
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.autorCard {
+  position: relative;
+  padding: 50px;
+  gap: 20px;
+  border-radius: 8px;
+  display: flex;
+  max-width: 50vw;
+  width: 100%;
+  align-self: center;
+  flex-direction: column;
+  background-image: url("/recursos/BgImagen3.webp");
+  background-color: transparent;
+}
+.infoContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+/* ======================================================================================= */
+
+/* ============================= estilos de botones ============================= */
+.botonRegresar {
+  z-index: 4;
+  top: 32px;
+  left: 32px;
+  position: fixed;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 8px 20px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  font-size: 24px;
+}
+.botonRegresar:hover {
+  color: rgb(255, 255, 133);
+  animation: regreso alternate 0.5s infinite;
+  left: 10px;
+}
+.punteroBoton {
+  transform: scale(-1, 1);
+}
+/* ======================================================================================= */
+
+/* ============================= animaciones ============================= */
+@keyframes regreso {
+  0% {
+    left: 32px;
+  }
+  25% {
+    left: 25px;
+  }
+  50% {
+    left: 20px;
+  }
+  75% {
+    left: 15px;
+  }
+  100% {
+    left: 10px;
+  }
+}
+/* ======================================================================================= */
+
+@media (max-width: 800px) {
+  .infoContainer {
+    flex-direction: column;
+  }
 }

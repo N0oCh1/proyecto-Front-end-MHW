@@ -1,78 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre nosotros.</title>
-    <link rel="stylesheet" href="..\Styles\autoresStyle.css">
-</head>
-<body>
+    <link rel="stylesheet" href="..\Styles\autoresStyle.css" />
+  </head>
+
+  <body>
+    <div class="background"></div>
     <main>
-        <!--Encabezado.-->
-        <header>
-            <h1>
-                Autores. <br>
-                Monster Hunter API.
-            </h1>
-        </header>
-        <nav>
-            <button ><a href="/src/Monstros.html">Monstruos</a></button>
-            <button >Biomas</button>
-            <button >Elementos</button>
-            <button ><a href="/src/index.html">Inicio</a></button>
-        </nav>
-        <section>
+      <!--Encabezado.-->
+      <header>
+        <button class="botonRegresar" type="button" onclick="history.back()">
+          <img src="/recursos/decoraciones/Puntero.png" class="punteroBoton" />
+          <p>Regresar</p>
+        </button>
+      </header>
 
-            <!--Nombre-->
-            <div class="nombreAutor">
-                <h2>Rubén Feng.</h2>
-            </div>
-            <!--Imagen-->
-            <div class="imagecontainer">
-                <img class="image" src="..\recursos\fotosAutores\Ruben-feng.webp" alt="Foto de Rubén">
-            </div>
-            <!--Descripcion.-->
-            <div class="parrafo">
-                "Cédula: ..." <br>
-                "Carrera: ..." <br>
-                "Experiencia: ..."
-            </div>
+      <section class="containerAutores">
+        <img src="/recursos/Logo Titulo.webp" class="logo"/>
+        <div class="titulo">
+          <h1>Autores</h1>
+        </div>
+        <!--Nombre-->
+        <div class="autorCard">
+          <img class="borde1" src="/recursos//decoraciones/BorderFrame.webp" />
+          <img class="borde2" src="/recursos//decoraciones/BorderFrame.webp" />
+          <img class="borde3" src="/recursos//decoraciones/BorderFrame.webp" />
+          <img class="borde4" src="/recursos//decoraciones/BorderFrame.webp" />
 
-            <!--Nombre-->
-            <div class="nombreAutor">
-                <h2>Gael Pereira.</h2>
+          <div>
+            <h2>Rubén Feng.</h2>
+            <hr class="transition" />
+          </div>
+          <div class="infoContainer">
+            <div>
+              <img
+              class="image"
+              src="\recursos\fotosAutores\Ruben-feng.webp"
+              alt="Foto de Rubén"
+              />
             </div>
-            <!--Imagen-->
-            <div class="imagecontainer">
-                <img class="image" src="..\recursos\fotosAutores\Gael Pereira.jpg" alt="Foto de Gael">
-            </div>
-            <!--Descripcion.-->
             <div class="parrafo">
-                "Cédula: ..." <br>
-                "Carrera: ..." <br>
-                "Experiencia: ..."
+              <p>Cedula: 8-987-117</p>
+              <p>Carrera: Lic. en desarrollo y gestion de Software</p>
+              <p>Experiencia: tengo conocimiento y experiencia trabajando en front-end y back-end</p>
             </div>
-            <br>
-            <!--Nombre-->
-            <div class="nombreAutor">
-                <h2>César Aburto.</h2>
+          </div>
+        </div>
+        <!--Nombre-->
+        <div class="autorCard">
+          <img class="borde1" src="/recursos//decoraciones/BorderFrame.webp" />
+          <img class="borde2" src="/recursos//decoraciones/BorderFrame.webp" />
+          <img class="borde3" src="/recursos//decoraciones/BorderFrame.webp" />
+          <img class="borde4" src="/recursos//decoraciones/BorderFrame.webp" />
+          <div>
+            <h2>Gael Pereira.</h2>
+            <hr class="transition" />
+          </div>
+          <div class="infoContainer">
+            <div>
+              <img
+              class="image"
+              src="\recursos\fotosAutores\Gael Pereira.webp"
+              alt="Foto de Gael"
+            />
             </div>
-            <!--Imagen-->
-            <div class="imagecontainer">
-                <img class="image" src="..\recursos\fotosAutores\Cesar.jpeg" alt="Foto de César">
-            </div>
-            <br>
-            <!--Descripcion.-->
+          <!--Descripcion.-->
             <div class="parrafo">
-                "Cédula: 8-981-484."<br>
-                "Carrera: Licenciatura en Desarrollo de Software." <br>
-                "Experiencia: Como estudiante desarrollador he visto lenguajes como C, Python, Java, C# y JavaScript."
+              <p>Cedula: 8-1000-622</p>
+              <p>Carrera: Lic. en desarrollo y gestion de Software</p>
+              <p>Experiencia: Manejo de gestion de personas</p>
             </div>
-        </section>
-        <br>
-        <footer>
-            &copy; Rubén Feng. Gael Pereira. César Aburto. 2024.
-        </footer>
+          </div>
+
+        </div>
+        <!--Imagen-->
+        
+        <!--Nombre-->
+        <div class="autorCard">
+          <img class="borde1" src="/recursos//decoraciones/BorderFrame.webp" />
+          <img class="borde2" src="/recursos//decoraciones/BorderFrame.webp" />
+          <img class="borde3" src="/recursos//decoraciones/BorderFrame.webp" />
+          <img class="borde4" src="/recursos//decoraciones/BorderFrame.webp" />
+          <div>
+            <h2>César Aburto.</h2>
+            <hr class="transition" />
+          </div>
+          <div class="infoContainer">
+            <div>
+              <img
+              class="image"
+              src="\recursos\fotosAutores\Cesar.webp"
+              alt="Foto de César"
+              />
+            </div>
+             <!--Descripcion.-->
+            <div class="parrafo">
+              <p>Cedula: 8-981-484.</p>
+              <p>Carrera: Licenciatura en Desarrollo de Software.</p>
+              <p>Experiencia: Como estudiante desarrollador he visto lenguajes como C,
+                Python, Java, C# y JavaScript.</p>
+            </div>
+          </div>
+         
+        </div>
+        <!--Imagen-->
+        
+      </section>
+      <br />
+      <hr class="transition" />
+      <footer>
+        <div class="footerInfo">
+          <h1>Monster Hunter API</h1>
+          <p>&copy; Sitio. Gael Pereira. Rubén Feng. César Aburto.</p>
+          <p>&copy; Monster Hunter. CAPCOM.</p>
+        </div>
+      </footer>
     </main>
-</body>
+  </body>
 </html>
