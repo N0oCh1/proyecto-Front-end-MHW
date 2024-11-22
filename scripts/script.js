@@ -55,7 +55,6 @@ overlay.style.opacity = opacity;
           const image = document.createElement("img")
           image.setAttribute("class", "monstroImagenCard")
           image.setAttribute("src", monstro.imagen.iconUrl)
-
           const nombre = document.createTextNode(monstro.nombre)
           createdElement.appendChild(image)
           createdElement.appendChild(nombre)
@@ -84,11 +83,13 @@ overlay.style.opacity = opacity;
       if(bioma){
         bioma.map(bioma=>{
           const div = document.createElement("div")
-          div.setAttribute("class", "biomaImagen")
+          div.setAttribute("class", "biomaCard")
           div.addEventListener("click", function(){
           Navigate(bioma.id_bioma)
           })
-          const imagen = d
+          const imagen = document.createElement("img")
+          imagen.setAttribute("class", "imagenBioma")
+          imagen.setAttribute("src","" )
         })
       }
       

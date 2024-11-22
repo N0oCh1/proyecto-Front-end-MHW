@@ -6,6 +6,8 @@ function mostrarBusqueda (monstros){
 lista.innerHTML='';
 
 monstros.forEach(monstro => { 
+const span = document.createElement('span');
+span.setAttribute("class", "transition");
 const li = document.createElement('li');
 li.setAttribute("class", "liMonstro"); 
 li.addEventListener('click', () => { 
@@ -19,13 +21,15 @@ const iconUrls = {
   Treuno: '/recursos/elementos_icons/TreunoIcon.webp'
 } // Añade más elementos según sea necesario
 const elementosHTML = monstro.elementos.map(elemento => ` 
-<img class="elementoIcon" src="${iconUrls[elemento.elemento]}"> 
+<img src="${iconUrls[elemento.elemento]}"> 
 `).join('');
 
-li.innerHTML = ` <img class="monstroImagenCard" src="${monstro.imagen.iconUrl}" > 
-<div class="contenidoMonstro"> 
-<h3>${monstro.nombre}</h3> 
-${elementosHTML} </div>`;
+li.innerHTML = ` 
+
+<img class="monstroImagenCard2" src="${monstro.imagen.iconUrl}" >
+<h3 class="contenidoMonstro">${monstro.nombre}</h3> 
+<span class ="elementoIcon"> ${elementosHTML} </span>`
+;
 lista.appendChild(li); });
 }
 
