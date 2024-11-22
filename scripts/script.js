@@ -1,34 +1,30 @@
-
 // Animacion cuando hace scroll y
-window.addEventListener('scroll', function() {
-    let overlay = document.querySelector('.mask');
-    let scrollDistance = window.scrollY;
+window.addEventListener("scroll", function () {
+  let overlay = document.querySelector(".mask");
+  let scrollDistance = window.scrollY;
 
-// opacidad de 0 a 0.7 dependiendo del scroll
-let opacity = scrollDistance / 1000;  // Se puede ajustar el valor para hacer el efecto más o menos pronunciado
+  // opacidad de 0 a 0.7 dependiendo del scroll
+  let opacity = scrollDistance / 1000; // Se puede ajustar el valor para hacer el efecto más o menos pronunciado
 
-// Limitar la opacidad entre 0 y 1
-opacity = opacity > 0.7 ? 0.7 : opacity;
+  // Limitar la opacidad entre 0 y 1
+  opacity = opacity > 0.7 ? 0.7 : opacity;
 
-// Aplicar el cambio de opacidad al overlay
-overlay.style.opacity = opacity;
-  });
-
+  // Aplicar el cambio de opacidad al overlay
+  overlay.style.opacity = opacity;
+});
 
 // funcion para cuando se habre el menu hamburguesa
-  document.getElementById("AbrirMenu").addEventListener('click', function() {
-    const menu = document.getElementById("contenedor2");
-    const main = document.getElementById("contenedor1")
-    if(menu.style.display === "flex"){
-      menu.style.display = "none"
-      main.style.position = "relative"
-    }
-    else{
-      menu.style.display = "flex"
-      main.style.position = "fixed"
-    }
-  })
-
+document.getElementById("AbrirMenu").addEventListener("click", function () {
+  const menu = document.getElementById("contenedor2");
+  const main = document.getElementById("contenedor1");
+  if (menu.style.display === "flex") {
+    menu.style.display = "none";
+    main.style.position = "relative";
+  } else {
+    menu.style.display = "flex";
+    main.style.position = "fixed";
+  }
+});
 
 // boton menu MONSTRO
   async function showMonstros() {
@@ -105,123 +101,122 @@ overlay.style.opacity = opacity;
   }
     
 
-  // funcion para obtener datos de la API
-  async function GetMonstro () {
-    const monstroData = await fetch("https://localhost:7101/monstro",{
-      method:"GET",
-      headers:{
-        'Content-Type': 'application/json; charset=utf-8'
-      }
-    }).then(data=>data.json()).then(data=>data)
-    return monstroData
-  }
-
-  // funcion para navegar 
-  function navegarIngresar() {
-    window.location.href = "/src/nuevo.html"
-  }
-
-  // funcion para abir el ventana e logging
-  function AbrirLogging() {
-    const loggin = document.getElementById("pantallaLoggin")
-    const mensaje = document.getElementById("mensaje")
-    if(mensaje){
-      mensaje.remove()
-    }
-    if(loggin.style.display === "none"){
-      loggin.style.display = "flex"
-    }
-    else{
-      loggin.style.display = "none"
-    }
-  }
-  // funcion cuando se envia los datos de REgistro e inicio de sesion
-  document.getElementById("form").addEventListener("submit", async function(e){
-    e.preventDefault()
-    const user= document.getElementById("user")
-    const password = document.getElementById("password")
-    const formdata = new FormData(this)
-    const accion = e.submitter.getAttribute("data-action")
-    console.log(accion)
-    const jsonObject = {
-    }
-    formdata.forEach((value, key)=> {
-      jsonObject[key] = value
-    })
-    if(accion === "registrar"){
-      await Registrarse(jsonObject, user, password)
-    }
-    else{
-      if(accion === "inicio"){
-        await Iniciar(jsonObject, user, password)
-      }
-    }
-
-    console.log(jsonObject)
+// funcion para obtener datos de la API
+async function GetMonstro() {
+  const monstroData = await fetch("https://localhost:7101/monstro", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+    },
   })
+    .then((data) => data.json())
+    .then((data) => data);
+  return monstroData;
+}
 
-  // Funcion cuando se registra nuevo usuario
-  async function Registrarse(jsonObject, user, password) {
-    await fetch("https://localhost:7101/usuario/nuevo", {
-      method: "POST", 
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(jsonObject)})
-      .then(response =>{
-      if(response.status === 201){
-        console.log(response.status)
-        mensage("Se Registro correctamente")
-        user.value = ""
-        password.value = ""
-      }
-      if(response.status === 409){
-        mensage("El usuario ya existe")
-      }
-    })
-  }
-  // funcion cuando se inicia sesion
-  async function Iniciar(jsonObject, user, password) {
-    const form = document.getElementById("form")
-    const boton = document.getElementById("cerrar")
-    await fetch("https://localhost:7101/usuario",{
-      method: "POST", 
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(jsonObject)}).then(response => {
-        if(response.ok){
-          mensage("Se Inicio correctamente")
-          user.value = ""
-          password.value = ""
-          form.style.display = "none"
-          boton.style.display = "flex"
-        }
-        if(response.status===401){
-          mensage("El usuario no esta registrado")
-        }
-      })
-    
-  }
+// funcion para navegar
+function navegarIngresar() {
+  window.location.href = "/src/nuevo.html";
+}
 
-  // Funcion para monstrar estados de inicio de seccion
-  function mensage(mensage) {
-    const pantallaLoggin = document.getElementById("pantallaLoggin")
-    const p= document.getElementById("mensaje")
-    if(p){
-      p.remove()
+// funcion para abir el ventana e logging
+function AbrirLogging() {
+  const loggin = document.getElementById("pantallaLoggin");
+  const mensaje = document.getElementById("mensaje");
+  if (mensaje) {
+    mensaje.remove();
+  }
+  if (loggin.style.display === "none") {
+    loggin.style.display = "flex";
+  } else {
+    loggin.style.display = "none";
+  }
+}
+// funcion cuando se envia los datos de REgistro e inicio de sesion
+document.getElementById("form").addEventListener("submit", async function (e) {
+  e.preventDefault();
+  const user = document.getElementById("user");
+  const password = document.getElementById("password");
+  const formdata = new FormData(this);
+  const accion = e.submitter.getAttribute("data-action");
+  console.log(accion);
+  const jsonObject = {};
+  formdata.forEach((value, key) => {
+    jsonObject[key] = value;
+  });
+  if (accion === "registrar") {
+    await Registrarse(jsonObject, user, password);
+  } else {
+    if (accion === "inicio") {
+      await Iniciar(jsonObject, user, password);
     }
-    const mesanje = document.createElement('p')
-    mesanje.setAttribute("class", "mensaje")
-    mesanje.setAttribute("id", "mensaje")
-    mesanje.innerHTML = ""
-    mesanje.innerHTML = mensage
-    pantallaLoggin.appendChild(mesanje)
   }
 
-  // Funcion para cerrar la ventana de Logging
-  function CerrarSesion (boton) {
-    const form = document.getElementById("form")
-    form.style.display = "flex"
-    boton.style.display = "none"
+  console.log(jsonObject);
+});
+
+// Funcion cuando se registra nuevo usuario
+async function Registrarse(jsonObject, user, password) {
+  await fetch("https://localhost:7101/usuario/nuevo", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(jsonObject),
+  }).then((response) => {
+    if (response.status === 201) {
+      console.log(response.status);
+      mensage("Se Registro correctamente");
+      user.value = "";
+      password.value = "";
+    }
+    if (response.status === 409) {
+      mensage("El usuario ya existe");
+    }
+  });
+}
+// funcion cuando se inicia sesion
+async function Iniciar(jsonObject, user, password) {
+  const form = document.getElementById("form");
+  const boton = document.getElementById("cerrar");
+  await fetch("https://localhost:7101/usuario", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(jsonObject),
+  }).then((response) => {
+    if (response.ok) {
+      mensage("Se Inicio correctamente");
+      user.value = "";
+      password.value = "";
+      form.style.display = "none";
+      boton.style.display = "flex";
+    }
+    if (response.status === 401) {
+      mensage("El usuario no esta registrado");
+    }
+  });
+}
+
+// Funcion para monstrar estados de inicio de seccion
+function mensage(mensage) {
+  const pantallaLoggin = document.getElementById("pantallaLoggin");
+  const p = document.getElementById("mensaje");
+  if (p) {
+    p.remove();
   }
+  const mesanje = document.createElement("p");
+  mesanje.setAttribute("class", "mensaje");
+  mesanje.setAttribute("id", "mensaje");
+  mesanje.innerHTML = "";
+  mesanje.innerHTML = mensage;
+  pantallaLoggin.appendChild(mesanje);
+}
+
+// Funcion para cerrar la ventana de Logging
+function CerrarSesion(boton) {
+  const form = document.getElementById("form");
+  form.style.display = "flex";
+  boton.style.display = "none";
+}

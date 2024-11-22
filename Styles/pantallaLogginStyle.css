@@ -4,17 +4,16 @@
   font-weight: bold;
   font-style: bold;
 }
-*{
+* {
   font-family: mh;
-  
 }
-.logging{
+.logging {
   position: absolute;
   top: 3rem;
   left: 1rem;
   color: whitesmoke;
   z-index: 4;
-  button{
+  button {
     cursor: pointer;
     padding: 4px 20px;
     background-color: transparent;
@@ -24,14 +23,13 @@
     border: 1px solid transparent;
     animation: FilterBreath infinite alternate 1s;
   }
-  button:hover{
+  button:hover {
     background-color: rgba(255, 255, 255, 0.527);
     color: black;
   }
 }
 /*===================== contenedor ===================== */
 .pantallaLoggin {
-  
   top: 3rem;
   left: 1rem;
   position: fixed;
@@ -49,7 +47,7 @@
   background-position: right;
   background-size: cover;
   z-index: 4;
-  *{
+  * {
     font-size: 20px;
   }
 }
@@ -64,7 +62,7 @@
 /*===================== formulario =====================*/
 .form {
   flex-direction: column;
-  gap: 24px
+  gap: 24px;
 }
 
 .inputsUsers {
@@ -91,7 +89,6 @@
 
 .botonX:hover {
   background-color: rgba(255, 255, 255, 0.459);
-
 }
 
 .botonLog {
@@ -117,7 +114,6 @@
 .mensaje {
   text-align: center;
 }
-
 
 /* ===================== Decoraciones ===================== */
 .animationBorder {
@@ -148,7 +144,6 @@
   width: 100px;
   rotate: 180deg;
   transform: scale(-1, 1);
-
 }
 
 .borde4 {
@@ -198,25 +193,24 @@
   100% {
     border: 1px solid rgba(255, 255, 255, 0.808);
   }
-
 }
 @keyframes FilterBreath {
-  0%{
+  0% {
     filter: drop-shadow(0 0 1rem rgba(255, 187, 0, 0.151));
   }
-  20%{
+  20% {
     filter: drop-shadow(0 0 1rem rgba(255, 187, 0, 0.363));
   }
-  40%{
+  40% {
     filter: drop-shadow(0 0 1rem rgba(255, 187, 0, 0.411));
   }
-  60%{
+  60% {
     filter: drop-shadow(0 0 1rem rgba(255, 187, 0, 0.562));
   }
-  80%{
+  80% {
     filter: drop-shadow(0 0 1rem rgba(255, 187, 0, 0.795));
   }
-  100%{
+  100% {
     filter: drop-shadow(0 0 1rem rgb(255, 187, 0));
   }
 }

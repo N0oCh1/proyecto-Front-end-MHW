@@ -1,408 +1,401 @@
 @font-face {
-    font-family: "mh";
-    src: url(/recursos/fonts/MarkaziText-VariableFont_wght.ttf);
-
-  }
-
-*{
-    font-family: "mh";
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scrollbar-width: none;
+  font-family: "mh";
+  src: url(/recursos/fonts/MarkaziText-VariableFont_wght.ttf);
 }
 
-main{
-    max-width: 75vw;
-    padding: 3rem;
-    margin: auto;
+* {
+  font-family: "mh";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
 }
 
+main {
+  max-width: 75vw;
+  padding: 3rem;
+  margin: auto;
+}
 
 /* ===================== seccion informacion primaria ===================== */
-.container1{
-    background-image: url("/recursos//BgImagen3.webp");
-    border-start-end-radius: 8px;
-    border-start-start-radius: 8px;
-    padding: 40px;
-    position: relative;
+.container1 {
+  background-image: url("/recursos//BgImagen3.webp");
+  border-start-end-radius: 8px;
+  border-start-start-radius: 8px;
+  padding: 40px;
+  position: relative;
 }
-.encabezado{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+.encabezado {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
-.informacion{
-    display: flex;
-    flex-direction: column;
-    h2 {
-        font-size: 40px;
-        margin-bottom: 1rem;
-    }
-    p{
-        font-size: 24px;
-    }
+.informacion {
+  display: flex;
+  flex-direction: column;
+  h2 {
+    font-size: 40px;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 24px;
+  }
 }
-.icono{
-    max-width: 250px;
-    min-width: 100px;
-    width: 100%;
-    height: auto;
+.icono {
+  max-width: 250px;
+  min-width: 100px;
+  width: 100%;
+  height: auto;
 }
 /* ==================================================================================== */
 /* ===================== Informacio secundaria ===================== */
-.container2{
-    padding-top: 20px;
-    padding-bottom: 20px;
+.container2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-.infoSecundaria{
-    background-color: #a497808a;
-    color: white;
+.infoSecundaria {
+  background-color: #a497808a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  div {
+    justify-self: left;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: left;
-    div{
-        justify-self: left;
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-    }
-    p{
-        font-size: 24px;
-    }
+    flex-direction: row;
+    gap: 1rem;
+  }
+  p {
+    font-size: 24px;
+  }
 }
-.imagenMonstruo{
-    max-width: 500px;
-    width: 100%;
-    height: auto;
+.imagenMonstruo {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
 }
 /* =============================================================== */
 
 /* ===================== Elementos y de debilidad del mosntruo ===================== */
 
-.atributos{
-    display: flex;
-    gap: 1rem;
-    flex-direction: row;
+.atributos {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
 }
-.elmentosContainer, .debilidadesContainer{
-    border-radius: 8px;
-    padding: 1rem;
-    width: 50%;
-    background-color: rgba(0, 0, 0, 0.406);
-    color:  white;
-    display: flex;
-    flex-direction: column;
-    h3{
-        font-size: 40px;
-    }
+.elmentosContainer,
+.debilidadesContainer {
+  border-radius: 8px;
+  padding: 1rem;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.406);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  h3 {
+    font-size: 40px;
+  }
 }
-.elementos{
-    display: flex;
-    flex-direction: column;
+.elementos {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+}
+.debilidades {
+  div {
     font-size: 24px;
-}
-.debilidades{
-    div{
-        font-size: 24px;
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-    }
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
 }
 /* ==================================================================================== */
 
 /* ===================== seccion del rango ===================== */
-.rangoContainer{
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
+.rangoContainer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
-.rango{
-    background-color: rgba(0, 0, 0, 0.406);
-    width: 50%;
-    color:  white;
-    display: flex;
-    border-radius: 8px;
-    padding: 1rem;
-    flex-direction: column;
-    h3{
-        text-align: center;
-        font-size: 40px;
-    }
-    div{
-        font-size: 24px;
-    }
+.rango {
+  background-color: rgba(0, 0, 0, 0.406);
+  width: 50%;
+  color: white;
+  display: flex;
+  border-radius: 8px;
+  padding: 1rem;
+  flex-direction: column;
+  h3 {
+    text-align: center;
+    font-size: 40px;
+  }
+  div {
+    font-size: 24px;
+  }
 }
 /* =============================================================== */
 /* ===================== seccion del bioma ===================== */
-.biomaContainer{
-    border-start-end-radius: 10px;
-    border-start-start-radius: 10px;
-    padding: 24px;
-    gap: 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.406);
-    h1{
-        text-align: center;
-        font-size: 40px;
-    }
+.biomaContainer {
+  border-start-end-radius: 10px;
+  border-start-start-radius: 10px;
+  padding: 24px;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.406);
+  h1 {
+    text-align: center;
+    font-size: 40px;
+  }
 }
-.biomas{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    div{
-        text-align: center;
-        font-size: 24px;
-    }
+.biomas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div {
+    text-align: center;
+    font-size: 24px;
+  }
 }
 
-.imagenBioma{
-    border-radius: 10px;
-    max-width: 500px;
-    width: 100%;
-    height: auto;
-    min-width: 250px;
+.imagenBioma {
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  min-width: 250px;
 }
 /* =============================================================== */
 
 /* ===================== seccion de los items ===================== */
-.itemsContainer{
+.itemsContainer {
+  display: flex;
+  padding: 20px;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.406);
+  color: white;
+  border-end-end-radius: 10px;
+  border-end-start-radius: 10px;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  div {
+    font-size: 24px;
     display: flex;
-    padding: 20px;
-    gap: 8px;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.406);
-    color:white;
-    border-end-end-radius: 10px;
-    border-end-start-radius:10px ;
-
-}
-.items{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    div{
-        font-size: 24px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-bottom: 1px solid white;
-    }
+    border-bottom: 1px solid white;
+  }
 }
 /* =============================================================== */
 
 /* ===================== estilos de decoraciones ===================== */
 .transition {
-    min-height: 1vh;
-    height: 1vh;
-    background-image: url("/recursos/transition.png");
-    background-size: cover;
-    width: 100%;
-  }
-  .separadorDecoracion{
-    height: 2vh;
-    min-height: 2vh;
-    background-size: cover;
-    max-width: 75%;
-    margin: 0 auto 0 auto;
-    width: 100%;
-    background-image: url("/recursos/decoraciones/decoracion\ 4.webp");
+  min-height: 1vh;
+  height: 1vh;
+  background-image: url("/recursos/transition.png");
+  background-size: cover;
+  width: 100%;
 }
-.borde1{
-    top: 1rem;
-    left: 1rem;
-    position: absolute;
-    width: 100px;
-    transform:  scale(-1,1);
+.separadorDecoracion {
+  height: 2vh;
+  min-height: 2vh;
+  background-size: cover;
+  max-width: 75%;
+  margin: 0 auto 0 auto;
+  width: 100%;
+  background-image: url("/recursos/decoraciones/decoracion\ 4.webp");
 }
-.borde2{
-    top: 1rem;
-    right: 1rem;
-    position: absolute;
-    width: 100px;
+.borde1 {
+  top: 1rem;
+  left: 1rem;
+  position: absolute;
+  width: 100px;
+  transform: scale(-1, 1);
 }
-.borde3{
-    bottom: 1rem;
-    right: 1rem;
-    position: absolute;
-    width: 100px;
-    rotate: 180deg;
-    transform:  scale(-1,1);
-
+.borde2 {
+  top: 1rem;
+  right: 1rem;
+  position: absolute;
+  width: 100px;
 }
-.borde4{
-    bottom: 1rem;
-    left: 1rem;
-    position: absolute;
-    width: 100px;
-    rotate: 180deg;
+.borde3 {
+  bottom: 1rem;
+  right: 1rem;
+  position: absolute;
+  width: 100px;
+  rotate: 180deg;
+  transform: scale(-1, 1);
+}
+.borde4 {
+  bottom: 1rem;
+  left: 1rem;
+  position: absolute;
+  width: 100px;
+  rotate: 180deg;
 }
 /* =============================================================== */
-
 
 /* ===================== estilos del fondo ===================== */
-.background{
-    background-image: url("/recursos/bg_menu_pc.webp");
-    background-repeat: no-repeat;
-    background-origin: border-box;
-    background-position-x: center;
-    z-index: -1;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    position: fixed;
+.background {
+  background-image: url("/recursos/bg_menu_pc.webp");
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-position-x: center;
+  z-index: -1;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
 }
 /* =============================================================== */
 
-
-
 /* ===================== estilos de los botones ===================== */
-.botonRegresar{
-    z-index: 4;
-    top: 32px;
-    left: 32px;
-    position: fixed;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    padding: 8px 20px;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-    align-items: center;
-    font-size: 24px;
+.botonRegresar {
+  z-index: 4;
+  top: 32px;
+  left: 32px;
+  position: fixed;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 8px 20px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  font-size: 24px;
 }
-.botonRegresar:hover{
-    color: rgb(255, 255, 133);
-    animation: regreso alternate 0.5s infinite;
-    left: 10px;
+.botonRegresar:hover {
+  color: rgb(255, 255, 133);
+  animation: regreso alternate 0.5s infinite;
+  left: 10px;
 }
 
-.punteroBoton{
-    transform: scale(-1,1);
+.punteroBoton {
+  transform: scale(-1, 1);
 }
-.botonContainer{
-    background-color: rgba(0, 0, 0, 0.406);
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    justify-content: center;
-    width: 100%;
+.botonContainer {
+  background-color: rgba(0, 0, 0, 0.406);
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+  width: 100%;
 }
-.botonEditar, .botonEliminar{
-    border-radius: 8px;
-    background-color: transparent;
-    border: none;
-    font-size: 24px;
-    padding: 2px 20px;
+.botonEditar,
+.botonEliminar {
+  border-radius: 8px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  padding: 2px 20px;
 }
-.botonEditar{
-    border: 1px solid orange;
-    cursor: pointer;
-    color: orange;
+.botonEditar {
+  border: 1px solid orange;
+  cursor: pointer;
+  color: orange;
 }
-.botonEditar:hover{
-    background-color: orange;
-    color: white;
+.botonEditar:hover {
+  background-color: orange;
+  color: white;
 }
-.botonEliminar{
-    color: red;
-    cursor: pointer;
-    border: 1px solid red;
+.botonEliminar {
+  color: red;
+  cursor: pointer;
+  border: 1px solid red;
 }
-.botonEliminar:hover{
-    color: white;
-    background-color: red;
+.botonEliminar:hover {
+  color: white;
+  background-color: red;
 }
 /* =============================================================== */
 
 /* ===================== pantalla de advertencia ===================== */
-.modalAdvertencia{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
-    width: max-content;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    gap: 20px;
-    color: white;
-    background-color: rgb(0, 0, 0);
-    font-size: 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.modalAdvertencia {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  width: max-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 20px;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.modalContainer{
-    z-index: 5;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.658);
+.modalContainer {
+  z-index: 5;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.658);
 }
-.textContainer{
-    display: flex;
-    flex-direction: column;
-
+.textContainer {
+  display: flex;
+  flex-direction: column;
 }
-.advert{
-    font-size: 40px;
-    text-align: center;
+.advert {
+  font-size: 40px;
+  text-align: center;
 }
-.bo{
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-
+.bo {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
 }
-.si, .no{
-    cursor: pointer;
-    background-color: transparent;
-    font-size: 20px;
-    padding: 2px 20px;
+.si,
+.no {
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 20px;
+  padding: 2px 20px;
 }
-.si{
-    color: red;
-    border: 1px solid red;
+.si {
+  color: red;
+  border: 1px solid red;
 }
-.si:hover{
-    color: white;
-    background-color: red;
+.si:hover {
+  color: white;
+  background-color: red;
 }
-.no{
-    color:  white;
-    border: 1px solid white;
+.no {
+  color: white;
+  border: 1px solid white;
 }
-.no:hover{
-    background-color: white;
-    color: black;
-
+.no:hover {
+  background-color: white;
+  color: black;
 }
-.animationBorder{
-    animation-name: ani-opcity;
+.animationBorder {
+  animation-name: ani-opcity;
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-.breathAnimation{
-    animation-name: saturate;
+.breathAnimation {
+  animation-name: saturate;
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -411,65 +404,65 @@ main{
 
 /* ===================== animaciones ===================== */
 @keyframes regreso {
-    0%{
-      left: 32px;
-    }
-    25%{
-      left: 25px
-    }
-    50%{
-      left: 20px;
-    }
-    75%{
-      left: 15px;
-    }
-    100%{
-      left: 10px;
-    }
+  0% {
+    left: 32px;
+  }
+  25% {
+    left: 25px;
+  }
+  50% {
+    left: 20px;
+  }
+  75% {
+    left: 15px;
+  }
+  100% {
+    left: 10px;
+  }
+}
+
+@keyframes ani-opcity {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes saturate {
+  0% {
+    filter: drop-shadow(0 0 0.75rem rgb(241, 175, 31))
+      drop-shadow(0 0 0.75rem rgb(241, 175, 31));
   }
 
-  @keyframes ani-opcity {
-    0%{
-      opacity: 0;
-    }
-    25%{
-      opacity: 0.25;
-    }
-    50%{
-      opacity: 0.5;
-    }
-    75%{
-      opacity: 0.75;
-    }
-    100%{
-      opacity: 1;
-    }
+  50% {
+    filter: drop-shadow(0 0 0.75rem rgba(241, 175, 31, 0.541))
+      drop-shadow(0 0 0.75rem rgba(241, 175, 31, 0.541));
   }
-  @keyframes saturate {
-    0% {
-      filter: drop-shadow(0 0 .75rem rgb(241, 175, 31)) drop-shadow(0 0 .75rem rgb(241, 175, 31)); 
-    }
-  
-    50% {
-        filter: drop-shadow(0 0 .75rem rgba(241, 175, 31, 0.541)) drop-shadow(0 0 .75rem rgba(241, 175, 31, 0.541)); 
-    }
-  
-    100% {
-        filter: drop-shadow(0 0 .75rem rgba(241, 175, 31, 0.089)) drop-shadow(0 0 .75rem rgba(241, 175, 31, 0.116)); 
-    }
+
+  100% {
+    filter: drop-shadow(0 0 0.75rem rgba(241, 175, 31, 0.089))
+      drop-shadow(0 0 0.75rem rgba(241, 175, 31, 0.116));
   }
+}
 /* =============================================================== */
 
-
-  
-
 footer {
-    color: white;
-    padding: 8px 24px 8px 24px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    background-image: url(/recursos/footer_bg.png);
-    background-size: cover;
-    width: 100%;
-  }
+  color: white;
+  padding: 8px 24px 8px 24px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  background-image: url(/recursos/footer_bg.png);
+  background-size: cover;
+  width: 100%;
+}

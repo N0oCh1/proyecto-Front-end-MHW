@@ -16,7 +16,8 @@
   padding: 24px;
   background-color: rgba(0, 0, 0, 0.849);
   color: white;
-  filter: drop-shadow(0 0 .75rem rgb(241, 175, 31)) drop-shadow(0 0 .75rem rgb(241, 175, 31));
+  filter: drop-shadow(0 0 0.75rem rgb(241, 175, 31))
+    drop-shadow(0 0 0.75rem rgb(241, 175, 31));
 }
 
 .textContainer {
@@ -37,7 +38,7 @@
   border: 1px solid greenyellow;
   background-color: transparent;
   font-size: 20px;
-  padding: 2px 20px
+  padding: 2px 20px;
 }
 
 .botonCerrar:hover {
@@ -78,7 +79,6 @@
   width: 100px;
   rotate: 180deg;
   transform: scale(-1, 1);
-
 }
 
 .borde4 {
@@ -128,15 +128,18 @@
 
 @keyframes saturate {
   0% {
-    filter: drop-shadow(0 0 .75rem rgb(241, 175, 31)) drop-shadow(0 0 .75rem rgb(241, 175, 31));
+    filter: drop-shadow(0 0 0.75rem rgb(241, 175, 31))
+      drop-shadow(0 0 0.75rem rgb(241, 175, 31));
   }
 
   50% {
-    filter: drop-shadow(0 0 .75rem rgba(241, 175, 31, 0.541)) drop-shadow(0 0 .75rem rgba(241, 175, 31, 0.541));
+    filter: drop-shadow(0 0 0.75rem rgba(241, 175, 31, 0.541))
+      drop-shadow(0 0 0.75rem rgba(241, 175, 31, 0.541));
   }
 
   100% {
-    filter: drop-shadow(0 0 .75rem rgba(241, 175, 31, 0.089)) drop-shadow(0 0 .75rem rgba(241, 175, 31, 0.116));
+    filter: drop-shadow(0 0 0.75rem rgba(241, 175, 31, 0.089))
+      drop-shadow(0 0 0.75rem rgba(241, 175, 31, 0.116));
   }
 }
 
