@@ -119,7 +119,7 @@ function ObtenerImagenBioma(bioma) {
     case "Valle remoto":
       return "/recursos/biomas/ValleRemoto.webp";
     case "Castillo skrad":
-      return "/recursos/biomas/CastilloSkrad.webp"
+      return "/recursos/biomas/CastilloSkrad.webp";
   }
 }
 // FUncion GET del api para  obtener todo los detalle del mosntruo especifico

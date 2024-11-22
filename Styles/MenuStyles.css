@@ -38,10 +38,9 @@
   justify-content: center;
   width: 100%;
   gap: 24px;
-
 }
 
-.menu_nav>li {
+.menu_nav > li {
   position: relative;
   left: 10%;
   width: 100%;
@@ -49,13 +48,11 @@
 
 .menu_nav {
   margin-top: 6rem;
-  padding: 0 0 .5rem;
+  padding: 0 0 0.5rem;
 }
 
-.menu_nav>li {
-
+.menu_nav > li {
   margin-bottom: 1rem;
-
 }
 
 .menu_nav a,
@@ -63,11 +60,12 @@
   color: #dcdcdc;
   font-size: 30px;
   font-weight: 400;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   line-height: 1.2;
-  transition: all .25s ease-out;
-  opacity: .99;
-  filter: drop-shadow(0 0 1rem rgba(0, 0, 0, .1)) drop-shadow(0 0 .75rem rgba(0, 0, 0, .1))
+  transition: all 0.25s ease-out;
+  opacity: 0.99;
+  filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.1))
+    drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.1));
 }
 
 .menuButton::before {
@@ -97,11 +95,13 @@
 }
 
 .menuButton:hover {
-  filter: drop-shadow(0 0 .75rem rgb(241, 175, 31)) drop-shadow(0 0 .75rem rgb(241, 175, 31));
+  filter: drop-shadow(0 0 0.75rem rgb(241, 175, 31))
+    drop-shadow(0 0 0.75rem rgb(241, 175, 31));
 }
 
 .menuButton:active {
-  filter: drop-shadow(0 0 .75rem rgb(250, 225, 84)) drop-shadow(0 0 .75rem rgb(250, 225, 84));
+  filter: drop-shadow(0 0 0.75rem rgb(250, 225, 84))
+    drop-shadow(0 0 0.75rem rgb(250, 225, 84));
 }
 
 .menuButton:checked {
@@ -109,7 +109,6 @@
 }
 
 /* ==================================================================================== */
-
 
 /*===================== Container del API =====================*/
 #resultados {
@@ -135,7 +134,8 @@
 }
 
 .monstroCard:hover {
-  filter: drop-shadow(0 0 1rem rgba(202, 183, 8, 0.185)) drop-shadow(0 0 .50rem rgba(133, 130, 5, 0.1));
+  filter: drop-shadow(0 0 1rem rgba(202, 183, 8, 0.185))
+    drop-shadow(0 0 0.5rem rgba(133, 130, 5, 0.1));
   border-radius: 8px;
 }
 /* =============================================================== */
@@ -165,7 +165,6 @@
 .botonAgregar {
   width: 50px;
   height: 50px;
-
 }
 
 .agregarMonstruo:hover {
@@ -186,7 +185,7 @@
     flex-direction: column;
   }
 
-  .menu_nav>li {
+  .menu_nav > li {
     left: 50%;
   }
 
@@ -212,21 +211,24 @@
 /*===================== Animaciones =====================*/
 @keyframes saturate {
   0% {
-    opacity: .2;
+    opacity: 0.2;
     filter: saturate(100%);
-    filter: drop-shadow(0 0 .25rem rgba(240, 255, 0, .1)) drop-shadow(0 0 .25rem rgba(240, 255, 0, .1));
+    filter: drop-shadow(0 0 0.25rem rgba(240, 255, 0, 0.1))
+      drop-shadow(0 0 0.25rem rgba(240, 255, 0, 0.1));
   }
 
   50% {
     opacity: 1;
     filter: saturate(200%);
-    filter: drop-shadow(0 0 .25rem rgba(238, 255, 0, .754)) drop-shadow(0 0 .25rem rgba(240, 255, 0, .6));
+    filter: drop-shadow(0 0 0.25rem rgba(238, 255, 0, 0.754))
+      drop-shadow(0 0 0.25rem rgba(240, 255, 0, 0.6));
   }
 
   100% {
     filter: saturate(100%);
-    opacity: .2;
-    filter: drop-shadow(0 0 .25rem rgba(240, 255, 0, .1)) drop-shadow(0 0 .25rem rgba(240, 255, 0, .1));
+    opacity: 0.2;
+    filter: drop-shadow(0 0 0.25rem rgba(240, 255, 0, 0.1))
+      drop-shadow(0 0 0.25rem rgba(240, 255, 0, 0.1));
   }
 }
 
