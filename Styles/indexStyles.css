@@ -492,7 +492,7 @@ footer {
 }
 
 .transition {
-  min-height: 1vh;
+  height: 1vh;
   height: 1vh;
   background-image: url(/recursos/transition.png);
   background-size: cover;

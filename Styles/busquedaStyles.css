@@ -1,25 +1,59 @@
-#busquedaResult { 
+#busquedaContenedor{
     display: none;
+    width: 32rem;
+    position: relative;
     flex-direction: column;
-    margin-bottom: 10px; 
     overflow-y: scroll;
-    
-    } 
-
-    .liMonstro { 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    transform: translateY(-7rem);
     background-image: url(/recursos/BgImagen3.webp);
     background-size: cover;
     background-position: center;
+}
+#busquedaResult { 
+    display: none;
+    position: relative;
+    flex-direction: column;
+    margin: 10px;
+    width: 100%;
+    } 
+
+.liMonstro { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
     height: 90px;
     width: 30rem;
     margin-bottom: 5px; 
+    animation: regreso alternate 1s infinite;
+    border-image-source: url('/recursos/transition.png'); /* Asegúrate de que sea visible */
+    border-image-slice: 100;
   
 } 
 
+.liMonstro:hover{
+    filter: drop-shadow(0 0 0.75rem rgb(241, 175, 31))
+    drop-shadow(0 0 0.75rem rgb(241, 175, 31));
+    
+}
 
+@keyframes regreso {
+    0% {
+      left: 32px;
+    }
+    25% {
+      left: 25px;
+    }
+    50% {
+      left: 20px;
+    }
+    75% {
+      left: 15px;
+    }
+    100% {
+      left: 10px;
+    }
+  }
 
 .monstroImagenCard2 {
      
@@ -51,7 +85,22 @@
   aspect-ratio: 4/4;
 }
 
+
+
+
     @media (758px > width) { 
+
+        #busquedaContenedor{
+            display: flex;
+            width: 40%;
+            position: relative;
+            flex-direction: column;
+            overflow-y: scroll;
+            transform: translateY(-7rem);
+            background-image: url(/recursos/BgImagen3.webp);
+            background-size: cover;
+            background-position: center;
+        }
 
         .contenidoMonstro {
             position: relative;
@@ -80,8 +129,6 @@
 
 
         #busquedaResult{
-        
-           
             align-items: center;
         }
 
@@ -93,24 +140,17 @@
             flex-direction: column;          
         } 
 
-        .liMonstro::after{
-            content: "";
-            display: flex;
-            position: relative; 
-            transform:  scale(1,-1);
-            background-image: url(/recursos/decoraciones/BorderFrame.webp);
-            background-size: cover;
-            background-position: center;
-        }
-
-        .liMonstro::before{
-            content: "";
-            display: flex;
-            position: relative; 
-            transform:  scale(1,-1);
-            background-image: url(/recursos/decoraciones/BorderFrame.webp);
-            background-size: cover;
-            background-position: center;
-        }
+        .busquedaDecoration{
+            display: none;
+            position:fixed;
+            transform: translateY(5rem);
+            left: 9rem;
+            top: -6rem;
+            height: 100%;
+            width: 50%;
+            background: linear-gradient(0deg, rgba(52, 39, 1, 0.8), rgba(10, 8, 0, 0.8));
+            
+            z-index: -1;
+            }
     
     }
