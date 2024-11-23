@@ -27,43 +27,39 @@ document.getElementById("AbrirMenu").addEventListener("click", function () {
 });
 
 // boton menu MONSTRO
-  async function showMonstros() {
-    try{
-   
-      const container= document.getElementById("resultados")
-      container.innerHTML =''
-      const monstros = await GetMonstro();
-      if(container.style.display === "flex"){
-        container.style.display = "none"
-        
-      }
-      else{
-        container.style.display = "flex"
-        
-      }
-      if(monstros){
-        monstros.map(monstro=>{
-          const createdElement = document.createElement("div")
-          createdElement.setAttribute("class", "monstroCard")
-          createdElement.addEventListener('click', function(){
-            Navigate(monstro.idMonstro)
-          })
+async function showMonstros() {
+  try {
+    const container = document.getElementById("resultados");
+    container.innerHTML = "";
+    const monstros = await GetMonstro();
+    if (container.style.display === "flex") {
+      container.style.display = "none";
+    } else {
+      container.style.display = "flex";
+    }
+    if (monstros) {
+      monstros.map((monstro) => {
+        const createdElement = document.createElement("div");
+        createdElement.setAttribute("class", "monstroCard");
+        createdElement.addEventListener("click", function () {
+          Navigate(monstro.idMonstro);
+        });
 
-          const image = document.createElement("img")
-          image.setAttribute("class", "monstroImagenCard")
-          image.setAttribute("src", monstro.imagen.iconUrl)
-          const nombre = document.createTextNode(monstro.nombre)
-          createdElement.appendChild(image)
-          createdElement.appendChild(nombre)
-          
-          container.appendChild(createdElement)
-        })
-      }
+        const image = document.createElement("img");
+        image.setAttribute("class", "monstroImagenCard");
+        image.setAttribute("src", monstro.imagen.iconUrl);
+
+        const nombre = document.createTextNode(monstro.nombre);
+        createdElement.appendChild(image);
+        createdElement.appendChild(nombre);
+
+        container.appendChild(createdElement);
+      });
     }
-    catch(error){
-      console.log(error)
-    }
+  } catch (error) {
+    console.log(error);
   }
+}
 
 
   async function showBioma (params) {
@@ -100,6 +96,9 @@ document.getElementById("AbrirMenu").addEventListener("click", function () {
     window.location.href = `/src/monstros.html?id=${id}`;
   }
     
+function Navigate(id) {
+  window.location.href = `/src/monstros.html?id=${id}`;
+}
 
 // funcion para obtener datos de la API
 async function GetMonstro() {
