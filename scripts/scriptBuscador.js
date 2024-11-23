@@ -32,9 +32,10 @@ li.innerHTML = `
 lista.appendChild(li); });
 }
 
-function navegarMonstruo(id){
-  window.location.href = `/src/monstros.html?id=${id}`
-}
+  // funcion para navegar a la pagina que pertenece al monstruo buscado
+  function navegarMonstruo(id) {
+    window.location.href = `/src/monstros.html?id=${id}`;
+  }
 
   // funcion para navegar a la pagina que pertenece al monstruo buscado
   function navegarMonstruo(id) {
