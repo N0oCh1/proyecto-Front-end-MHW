@@ -302,6 +302,9 @@
           <button class="menuButton" type="button">
             <a href="/src/autores.html">Autores </a>
           </button>
+          <button class="menuButton" type="button">
+            <a href="/src/autores.html">Autores </a>
+          </button>
         </li>
         
       </ul>
@@ -311,6 +314,10 @@
       <section id="resultadoElemento"></section>
       <button class="agregarMonstruo" onclick="navegarIngresar()">
         <p>+</p>
+        <img
+          src="/recursos/decoraciones/decoracion 2.png"
+          class="botonAgregar"
+        />
         <img
           src="/recursos/decoraciones/decoracion 2.png"
           class="botonAgregar"
@@ -379,10 +386,71 @@
       </button>
     </div>
 
+    <!-- pantalla desplegable -->
+    <div class="pantallaLoggin" id="pantallaLoggin" style="display: none">
+      <img
+        class="borde4 animationBorder"
+        src="/recursos/decoraciones/BorderFrame2.png"
+      />
+      <img
+        class="borde2 animationBorder"
+        src="/recursos/decoraciones/BorderFrame2.png"
+      />
+      <img
+        class="borde3 animationBorder"
+        src="/recursos/decoraciones/BorderFrame2.png"
+      />
+      <img
+        class="borde1 animationBorder"
+        src="/recursos/decoraciones/BorderFrame2.png"
+      />
+      <button class="botonX" onclick="AbrirLogging()">X</button>
+      <div>
+        <img src="/recursos/user.webp" class="iconUsers" />
+      </div>
+  <!-- Seccion de Logging -->
+      <form class="form" id="form" style="display: flex">
+        <div class="inputsUsers">
+          <div class="user">
+            <label for="user">Nombre Usuario</label>
+            <input
+              id="user"
+              type="text"
+              placeholder="user"
+              name="usuario"
+              required
+            />
+          </div>
+          <div class="password">
+            <label for="password">Contraseña</label>
+            <input
+              id="password"
+              type="password"
+              placeholder="********"
+              name="password"
+              required
+            />
+          </div>
+        </div>
+        <div class="botonLog">
+          <button type="submit" data-action="registrar">Registrarse</button>
+          <button type="submit" data-action="inicio">Iniciar sesion</button>
+        </div>
+      </form>
+      <button
+        style="display: none"
+        id="cerrar"
+        class="botonCerrarSesion"
+        onclick="CerrarSesion(this)"
+      >
+        Cerrar Sesion
+      </button>
+    </div>
+
     <!-- footer de la pagina -->
     <script src="/scripts/script.js"></script>
     <script src="/scripts/scriptBuscador.js"></script>
-   
+
     <footer>
       <span class="transition"> </span>
       <div class="footerInfo">

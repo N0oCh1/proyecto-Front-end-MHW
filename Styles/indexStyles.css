@@ -53,7 +53,13 @@ img {
 }
 
 a,
+<<<<<<< HEAD
 h1{
+=======
+h1,
+h2,
+h3 {
+>>>>>>> d4e3e44331f3cc8e207c688213e0aeb94edc4e2d
   text-decoration: none;
   line-height: 1.2;
   color: #dcdcdc;
@@ -61,20 +67,29 @@ h1{
 }
 
 footer {
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   div{
+=======
+>>>>>>> d4e3e44331f3cc8e207c688213e0aeb94edc4e2d
   padding: 24px 24px;
   height: 300px;
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   justify-content: center;
+=======
+>>>>>>> d4e3e44331f3cc8e207c688213e0aeb94edc4e2d
   background-image: url(/recursos/footer_bg.png);
   background-size: cover;
   position: relative;
   width: 100%;
+<<<<<<< HEAD
   }
   
+=======
+>>>>>>> d4e3e44331f3cc8e207c688213e0aeb94edc4e2d
 }
 
 /* =============================================================== */
@@ -104,6 +119,12 @@ footer {
   object-fit: cover;
   padding: 0;
 }
+<<<<<<< HEAD
+=======
+/* ========================================================================================== */
+
+/* ============================== logo principal de la pagina ============================== */
+>>>>>>> d4e3e44331f3cc8e207c688213e0aeb94edc4e2d
 
 #mainIndex {
   display: flex;
@@ -121,7 +142,7 @@ footer {
   position: relative;
   width: max-content;
   display: flex;
-  top: -20vh;
+    top: -20vh;
   align-items: center;
   flex-direction: column;
   padding: 10px;
@@ -235,7 +256,10 @@ footer {
   justify-content: end;
 }
 .guiaImage1 {
+<<<<<<< HEAD
   border-radius: 8px;
+=======
+>>>>>>> d4e3e44331f3cc8e207c688213e0aeb94edc4e2d
   position: relative;
   width: 600px;
   min-width: 300px;
@@ -329,13 +353,18 @@ footer {
   padding: 5rem 3rem;
   height: fit-content;
   text-align: left;
-  background-image: url(/recursos/parrafos\ bg.png);
-  a{
-    font-size: 30px;
-  }
 }
 
+.noticia_1 {
+  background-image: url(/recursos/parrafos\ bg.png);
+}
 
+.noticia_2 {
+  background-image: url(/recursos/parrafos\ bg.png);
+}
+
+<<<<<<< HEAD
+=======
 /* ========================================================================================== */
 
 /* ============================== Apartado de videos ============================== */
@@ -348,6 +377,7 @@ footer {
   justify-content: center;
 }
 
+>>>>>>> d4e3e44331f3cc8e207c688213e0aeb94edc4e2d
 .Video_play {
   position: absolute;
   z-index: 4;
@@ -495,6 +525,7 @@ footer {
 /* ========================================================================================== */
 
 /* ============================== Decoraciones ============================== */
+<<<<<<< HEAD
 .scrollDown{
   display: flex;
   text-align: center;
@@ -508,17 +539,23 @@ footer {
   animation: scrolldown alternate 1s infinite ease-in-out;
 }
 
+=======
+>>>>>>> d4e3e44331f3cc8e207c688213e0aeb94edc4e2d
 .containerB {
   width: 100%;
   height: fit-content;
 }
 
 .transition {
-  min-height: 1vh;
+  height: 1vh;
   height: 1vh;
   background-image: url(/recursos/transition.png);
   background-size: cover;
+<<<<<<< HEAD
   z-index: 4;
+=======
+  z-index: 3;
+>>>>>>> d4e3e44331f3cc8e207c688213e0aeb94edc4e2d
   width: 100%;
   position: relative;
 }
@@ -564,6 +601,12 @@ footer {
   }
 }
 /* ========================================================================================== */
+<<<<<<< HEAD
+=======
+
+/* ============================== medias querys ============================== */
+/* ========================================================================================== */
+>>>>>>> d4e3e44331f3cc8e207c688213e0aeb94edc4e2d
 
 /* ============================== medias querys ============================== */
 @media (758px > width) {

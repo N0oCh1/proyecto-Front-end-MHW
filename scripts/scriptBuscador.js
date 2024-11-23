@@ -38,11 +38,6 @@ lista.appendChild(li); });
     window.location.href = `/src/monstros.html?id=${id}`;
   }
 
-  // funcion para navegar a la pagina que pertenece al monstruo buscado
-  function navegarMonstruo(id) {
-    window.location.href = `/src/monstros.html?id=${id}`;
-  }
-
   // funcion para buscar el monstro segun cuando estas tecleando
   function filtroMonstros(monstros, lista) {
     cont.style.display="flex";
