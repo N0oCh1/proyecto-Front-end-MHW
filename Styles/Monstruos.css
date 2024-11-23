@@ -202,6 +202,7 @@ main {
 .transition {
   min-height: 1vh;
   height: 1vh;
+  border: none;
   background-image: url("/recursos/transition.png");
   background-size: cover;
   width: 100%;
@@ -457,12 +458,17 @@ main {
 /* =============================================================== */
 
 footer {
-  color: white;
-  padding: 8px 24px 8px 24px;
-  height: 300px;
   display: flex;
   flex-direction: column;
-  background-image: url(/recursos/footer_bg.png);
-  background-size: cover;
-  width: 100%;
+  div{
+    color:  #dcdcdc;
+    padding: 8px 24px 8px 24px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(/recursos/footer_bg.png);
+    background-size: cover;
+    width: 100%;
+  } 
 }

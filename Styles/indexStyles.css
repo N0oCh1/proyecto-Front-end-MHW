@@ -94,14 +94,24 @@ footer {
 /* ========================================================================================== */
 
 /* ============================== logo principal de la pagina ============================== */
+.iconExtra{
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  padding: 0;
+}
+/* ========================================================================================== */
+
+/* ============================== logo principal de la pagina ============================== */
 
 #mainIndex {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 120vh;
+  width: 100vw;
+  min-height: 120vh;
+  height: 100%;
   position: relative;
   z-index: 1;
 }
@@ -110,7 +120,7 @@ footer {
   position: relative;
   width: max-content;
   display: flex;
-  top: -20vh;
+    top: -20vh;
   align-items: center;
   flex-direction: column;
   padding: 10px;
@@ -492,7 +502,7 @@ footer {
 }
 
 .transition {
-  min-height: 1vh;
+  height: 1vh;
   height: 1vh;
   background-image: url(/recursos/transition.png);
   background-size: cover;
@@ -530,6 +540,20 @@ footer {
   height: 12vh;
 }
 
+/* ========================================================================================== */
+
+/* ============================== animacion ==============================  */
+@keyframes scrolldown {
+  0%{
+    bottom: 30vh;
+  }
+  100%{
+    bottom: 25vh;
+  }
+}
+/* ========================================================================================== */
+
+/* ============================== medias querys ============================== */
 /* ========================================================================================== */
 
 /* ============================== medias querys ============================== */
