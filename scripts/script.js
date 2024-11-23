@@ -96,9 +96,6 @@ async function showMonstros() {
     window.location.href = `/src/monstros.html?id=${id}`;
   }
     
-function Navigate(id) {
-  window.location.href = `/src/monstros.html?id=${id}`;
-}
 
 // funcion para obtener datos de la API
 async function GetMonstro() {
