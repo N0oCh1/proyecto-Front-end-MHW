@@ -6,7 +6,42 @@
     <title>Monstruos</title>
     <link rel="stylesheet" href="/Styles/Monstruos.css" />
   </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monstruos</title>
+    <link rel="stylesheet" href="/Styles/Monstruos.css" />
+  </head>
 
+  <body onload="GetMonstruo()">
+    <div class="background"></div>
+    <header>
+      <button class="botonRegresar" type="button" onclick="history.back()">
+        <img src="/recursos/decoraciones/Puntero.png" class="punteroBoton" />
+        <p>Regresar</p>
+      </button>
+    </header>
+
+    <!-- Main de la pagina  -->
+    <main>
+      <div class="container1">
+        <!-- Decoracion de los bordes -->
+        <img class="borde1" src="/recursos//decoraciones/BorderFrame.webp" />
+        <img class="borde2" src="/recursos//decoraciones/BorderFrame.webp" />
+        <img class="borde3" src="/recursos//decoraciones/BorderFrame.webp" />
+        <img class="borde4" src="/recursos//decoraciones/BorderFrame.webp" />
+
+        <!-- informacion primaria -->
+        <div class="encabezado">
+          <div class="informacion">
+            <h2 id="nombre"></h2>
+            <p id="descripcion"></p>
+          </div>
+          <div class="iconoMonstruo">
+            <img id="icono" class="icono" />
+          </div>
+        </div>
+      </div>
   <body onload="GetMonstruo()">
     <div class="background"></div>
     <header>
@@ -61,10 +96,25 @@
             <div class="elementos" id="elementos"></div>
           </div>
 
+      <div class="container2">
+        <!-- Elementos y de debilidad del mosntruo -->
+        <div class="atributos">
+          <div class="elmentosContainer">
+            <h3>Elementos</h3>
+            <div class="separadorDecoracion"></div>
+            <div class="elementos" id="elementos"></div>
+          </div>
+
+          <div class="debilidadesContainer">
+            <h3>Debilidades</h3>
+            <div class="separadorDecoracion"></div>
           <div class="debilidadesContainer">
             <h3>Debilidades</h3>
             <div class="separadorDecoracion"></div>
 
+            <div class="debilidades" id="debilidad"></div>
+          </div>
+        </div>
             <div class="debilidades" id="debilidad"></div>
           </div>
         </div>
@@ -78,12 +128,26 @@
           </div>
         </div>
       </div>
+        <!-- Rango en la que esta disponible -->
+        <div class="rangoContainer">
+          <div class="rango">
+            <h3>Rangos</h3>
+            <div class="separadorDecoracion"></div>
+            <div id="rangos"></div>
+          </div>
+        </div>
+      </div>
 
+      <!-- Bioma en la que aparece -->
       <!-- Bioma en la que aparece -->
 
       <div class="biomaContainer">
         <span class="transition"> </span>
+      <div class="biomaContainer">
+        <span class="transition"> </span>
 
+        <h1>Localizacion</h1>
+        <div class="separadorDecoracion"></div>
         <h1>Localizacion</h1>
         <div class="separadorDecoracion"></div>
 
@@ -91,13 +155,27 @@
       </div>
 
       <!-- Items que suelta el monstro -->
+        <div class="biomas" id="biomas"></div>
+      </div>
+
+      <!-- Items que suelta el monstro -->
       <div class="itemsContainer">
         <span class="transition"> </span>
+        <h1>Items</h1>
         <h1>Items</h1>
         <div class="separadorDecoracion"></div>
 
         <div class="items" id="items"></div>
+        <div class="items" id="items"></div>
       </div>
+      <!-- Boton de eliminacion y de edicion -->
+      <div class="botonContainer" id="botonContainer" style="display: none">
+        <button onclick="EditarMonstruo()" class="botonEditar">
+          ✏️ Editar
+        </button>
+        <button class="botonEliminar" onclick="showModal(this)">
+          ☠️ Eliminar
+        </button>
       <!-- Boton de eliminacion y de edicion -->
       <div class="botonContainer" id="botonContainer" style="display: none">
         <button onclick="EditarMonstruo()" class="botonEditar">
@@ -127,11 +205,33 @@
             class="borde1 animationBorder"
             src="/recursos/decoraciones/BorderFrame2.png"
           />
+      <!-- Seccion del feedback -->
+      <div class="modalContainer" id="modal" style="display: none">
+        <div class="modalAdvertencia breathAnimation">
+          <img
+            class="borde4 animationBorder"
+            src="/recursos/decoraciones/BorderFrame2.png"
+          />
+          <img
+            class="borde2 animationBorder"
+            src="/recursos/decoraciones/BorderFrame2.png"
+          />
+          <img
+            class="borde3 animationBorder"
+            src="/recursos/decoraciones/BorderFrame2.png"
+          />
+          <img
+            class="borde1 animationBorder"
+            src="/recursos/decoraciones/BorderFrame2.png"
+          />
           <div class="textoContainer">
             <p class="advert">⚠️</p>
             <p>Seguro que quieres elimiar el monstruo?</p>
+            <p>Seguro que quieres elimiar el monstruo?</p>
           </div>
           <div class="bo">
+            <button class="si" onclick="ElminarMonstruo()">Eliminar</button>
+            <button class="no" onclick="showModal()">NO</button>
             <button class="si" onclick="ElminarMonstruo()">Eliminar</button>
             <button class="no" onclick="showModal()">NO</button>
           </div>
@@ -139,15 +239,24 @@
       </div>
       <!-- Pie de pagina -->
     </main>
+    
+      <!-- Pie de pagina -->
+    </main>
     <hr class="transition" />
     <footer>
+      <hr class="transition" />
+      <div class="footerInfo">
       <div class="footerInfo">
         <h1>Monster Hunter API</h1>
         <p>&copy; Sitio. Gael Pereira. Rubén Feng. César Aburto.</p>
         <p>&copy; Monster Hunter. CAPCOM.</p>
       </div>
+      </div>
     </footer>
+  </body>
   </body>
 
   <script src="/scripts/scriptMonstruos.js"></script>
+  <script src="/scripts/scriptMonstruos.js"></script>
 </html>
+

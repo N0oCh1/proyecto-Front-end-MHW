@@ -1,4 +1,3 @@
-// Funcion para ensenar la busqueda que se hiso en el buscador
 document.addEventListener("DOMContentLoaded", function () {
   const input = document.getElementById("search");
   const lista = document.getElementById("busquedaResult");
@@ -8,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
     lista.innerHTML = "";
 
 monstros.forEach(monstro => { 
+const span = document.createElement('span');
+span.setAttribute("class", "transition");
 const li = document.createElement('li');
 li.setAttribute("class", "liMonstro"); 
 li.addEventListener('click', () => { 
