@@ -17,8 +17,8 @@ navegarMonstruo(monstro.idMonstro);
 //iterar en los elementos
 const iconUrls = { 
   Fuego: "/recursos/elementos_icons/FuegoIcon.webp", 
-  Dragon: "/recursos/elementos_icons/DragonIcon.webp",
-  Treuno: "/recursos/elementos_icons/TreunoIcon.webp",
+  Draco: "/recursos/elementos_icons/DragonIcon.webp",
+  Trueno: "/recursos/elementos_icons/TreunoIcon.webp",
   Agua: "/recursos/elementos_icons/Agua.png",
   Hielo: "/recursos/elementos_icons/Hielo.png"
 } // Añade más elementos según sea necesario

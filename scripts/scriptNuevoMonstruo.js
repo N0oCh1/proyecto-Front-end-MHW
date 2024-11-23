@@ -79,9 +79,9 @@ function addElemento() {
             <option value="">Seleccione el Elementos del monstruo</option>
             <option value="1">Fuego</option>
             <option value="2">Agua</option>
-            <option value="3">Treuno</option>
+            <option value="3">Trueno</option>
             <option value="4">Hielo</option>
-            <option value="5">Dragon</option>
+            <option value="5">Draco</option>
             <option value="6">Ninguno</option>
         </select>
         <button type="button" onclick="removeField(this,'elementoContainer')" class="botonEliminar">Eliminar</button>
@@ -101,9 +101,9 @@ function addDebilidad() {
             <option value="">Seleccione el Elementos debil del monstruo</option>
             <option value="1">Fuego</option>
             <option value="2">Agua</option>
-            <option value="3">Treuno</option>
+            <option value="3">Trueno</option>
             <option value="4">Hielo</option>
-            <option value="5">Dragon</option>
+            <option value="5">Draco</option>
             <option value="6">Ninguno</option>
         </select>
         <label for="eficacia">Eficacia</label>
