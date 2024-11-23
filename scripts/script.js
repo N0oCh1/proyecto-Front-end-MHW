@@ -27,43 +27,79 @@ document.getElementById("AbrirMenu").addEventListener("click", function () {
 });
 
 // boton menu MONSTRO
-async function showMonstros() {
-  try {
-    const container = document.getElementById("resultados");
-    container.innerHTML = "";
-    const monstros = await GetMonstro();
-    if (container.style.display === "flex") {
-      container.style.display = "none";
-    } else {
-      container.style.display = "flex";
+  async function showMonstros() {
+    try{
+   
+      const container= document.getElementById("resultados")
+      container.innerHTML =''
+      const monstros = await GetMonstro();
+      if(container.style.display === "flex"){
+        container.style.display = "none"
+        
+      }
+      else{
+        container.style.display = "flex"
+        
+      }
+      if(monstros){
+        monstros.map(monstro=>{
+          const createdElement = document.createElement("div")
+          createdElement.setAttribute("class", "monstroCard")
+          createdElement.addEventListener('click', function(){
+            Navigate(monstro.idMonstro)
+          })
+
+          const image = document.createElement("img")
+          image.setAttribute("class", "monstroImagenCard")
+          image.setAttribute("src", monstro.imagen.iconUrl)
+          const nombre = document.createTextNode(monstro.nombre)
+          createdElement.appendChild(image)
+          createdElement.appendChild(nombre)
+          
+          container.appendChild(createdElement)
+        })
+      }
     }
-    if (monstros) {
-      monstros.map((monstro) => {
-        const createdElement = document.createElement("div");
-        createdElement.setAttribute("class", "monstroCard");
-        createdElement.addEventListener("click", function () {
-          Navigate(monstro.idMonstro);
-        });
-
-        const image = document.createElement("img");
-        image.setAttribute("class", "monstroImagenCard");
-        image.setAttribute("src", monstro.imagen.iconUrl);
-
-        const nombre = document.createTextNode(monstro.nombre);
-        createdElement.appendChild(image);
-        createdElement.appendChild(nombre);
-
-        container.appendChild(createdElement);
-      });
+    catch(error){
+      console.log(error)
     }
-  } catch (error) {
-    console.log(error);
   }
-}
 
-function Navigate(id) {
-  window.location.href = `/src/monstros.html?id=${id}`;
-}
+
+  async function showBioma (params) {
+    try {
+      const container = document.getElementById("resultadoBioma");
+      container.innerHTML =''
+      const bioma = await GetBioma();
+      if(container.style.display === "flex"){
+        container.style.display = "none"
+      }
+      else{
+        container.style.display = "flex"
+      }
+      if(bioma){
+        bioma.map(bioma=>{
+          const div = document.createElement("div")
+          div.setAttribute("class", "biomaCard")
+          div.addEventListener("click", function(){
+          Navigate(bioma.id_bioma)
+          })
+          const imagen = document.createElement("img")
+          imagen.setAttribute("class", "imagenBioma")
+          imagen.setAttribute("src","" )
+        })
+      }
+      
+    } catch (error) {
+      console.log(error)
+    }
+    
+  }
+  
+  function Navigate (id) {  
+    window.location.href = `/src/monstros.html?id=${id}`;
+  }
+    
 
 // funcion para obtener datos de la API
 async function GetMonstro() {

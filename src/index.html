@@ -69,7 +69,12 @@
             </div>
           </div>
         </div>
-        <ul id="busquedaResult"></ul>
+        <div class="busquedaContenedor" id="busquedaContenedor" >
+          <span class="transition"> </span>
+        <ul id="busquedaResult">  </ul>
+        <span class="transition"> </span>
+        </div>
+ 
         <div class="scrollDown">
           <p>Scroll</p>
           <img src="/recursos/scroll.png"/>
@@ -298,10 +303,12 @@
             <a href="/src/autores.html">Autores </a>
           </button>
         </li>
-        <span class="transition"> </span>
+        
       </ul>
-
-      <section id="resultados"></section>
+      <span class="transition"> </span>
+      <section id="resultados"> </section>
+      <section id="resultadoBioma"> </section>
+      <section id="resultadoElemento"></section>
       <button class="agregarMonstruo" onclick="navegarIngresar()">
         <p>+</p>
         <img
@@ -375,7 +382,7 @@
     <!-- footer de la pagina -->
     <script src="/scripts/script.js"></script>
     <script src="/scripts/scriptBuscador.js"></script>
-   
+
     <footer>
       <span class="transition"> </span>
       <div class="footerInfo">

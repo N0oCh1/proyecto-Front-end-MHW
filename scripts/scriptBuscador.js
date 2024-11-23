@@ -2,24 +2,39 @@
 document.addEventListener("DOMContentLoaded", function () {
   const input = document.getElementById("search");
   const lista = document.getElementById("busquedaResult");
+  const cont = document.getElementById("busquedaContenedor");
 
   function mostrarBusqueda(monstros) {
     lista.innerHTML = "";
 
-    monstros.forEach((monstros) => {
-      const li = document.createElement("li");
-      li.setAttribute("class", "liMonstro");
-      li.addEventListener("click", () => {
-        navegarMonstruo(monstros.idMonstro);
-      });
-      li.innerHTML = `
-    <img class="monstroImagenCard" src=${monstros.imagen.iconUrl}> </img>
-     <div class="contenidoMonstro">
-    <H3>${monstros.nombre}</H3>
-    </div>`;
+monstros.forEach(monstro => { 
+const li = document.createElement('li');
+li.setAttribute("class", "liMonstro"); 
+li.addEventListener('click', () => { 
+navegarMonstruo(monstro.idMonstro); 
+}); 
 
-      lista.appendChild(li);
-    });
+//iterar en los elementos
+const iconUrls = { 
+  Fuego: '/recursos/elementos_icons/FuegoIcon.webp', 
+  Dragon: '/recursos/elementos_icons/DragonIcon.webp',
+  Treuno: '/recursos/elementos_icons/TreunoIcon.webp'
+} // Añade más elementos según sea necesario
+const elementosHTML = monstro.elementos.map(elemento => ` 
+<img src="${iconUrls[elemento.elemento]}"> 
+`).join('');
+
+li.innerHTML = ` 
+<img class="monstroImagenCard2" src="${monstro.imagen.iconUrl}" >
+<h3 class="contenidoMonstro">${monstro.nombre}</h3> 
+<span class ="elementoIcon"> ${elementosHTML} </span>`
+;
+lista.appendChild(li); });
+}
+
+  // funcion para navegar a la pagina que pertenece al monstruo buscado
+  function navegarMonstruo(id) {
+    window.location.href = `/src/monstros.html?id=${id}`;
   }
 
   // funcion para navegar a la pagina que pertenece al monstruo buscado
@@ -29,7 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // funcion para buscar el monstro segun cuando estas tecleando
   function filtroMonstros(monstros, lista) {
+    cont.style.display="flex";
     return monstros.filter((monstros) =>
+      
       monstros.nombre.toLowerCase().includes(lista.toLowerCase())
     );
   }
@@ -41,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const query = input.value.trim();
     if (query === "") {
       lista.innerHTML = "";
+      cont.style.display="none";
       return;
     }
     const monstros = await GetMonstro();

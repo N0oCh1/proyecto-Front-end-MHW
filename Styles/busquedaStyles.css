@@ -1,44 +1,156 @@
-#busquedaResult {
-  display: none;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 24px;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 4px;
-  list-style-type: none;
-  padding: 0;
-  justify-content: center;
+#busquedaContenedor{
+    display: none;
+    width: 32rem;
+    position: relative;
+    flex-direction: column;
+    overflow-y: scroll;
+    transform: translateY(-7rem);
+    background-image: url(/recursos/BgImagen3.webp);
+    background-size: cover;
+    background-position: center;
 }
+#busquedaResult { 
+    display: none;
+    position: relative;
+    flex-direction: column;
+    margin: 10px;
+    width: 100%;
+    } 
 
-.liMonstro {
-  cursor: pointer;
-  max-width: 300px;
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ddd;
-  background-image: url("/recursos/BgImagen3.webp");
-  margin-bottom: 5px;
-  justify-content: space-between;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
+.liMonstro { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    height: 90px;
+    width: 30rem;
+    margin-bottom: 5px; 
+    animation: regreso alternate 1s infinite;
+    border-image-source: url('/recursos/transition.png'); /* Asegúrate de que sea visible */
+    border-image-slice: 100;
+  
+} 
 
-}
 .liMonstro:hover{
-  filter: drop-shadow(0,0,20px white);
+    filter: drop-shadow(0 0 0.75rem rgb(241, 175, 31))
+    drop-shadow(0 0 0.75rem rgb(241, 175, 31));
+    
 }
-.monstroImagenCard {
-  margin-right: 10px;
-  width: 100px;
-  height: 100px;
-}
-.contenidoMonstro{
-  width: 100%;
-  h3{
-    text-align: center;
-    font-size: 24px;
-    color: black;
+
+@keyframes regreso {
+    0% {
+      left: 32px;
+    }
+    25% {
+      left: 25px;
+    }
+    50% {
+      left: 20px;
+    }
+    75% {
+      left: 15px;
+    }
+    100% {
+      left: 10px;
+    }
   }
+
+.monstroImagenCard2 {
+     
+      height: 100%;
+      aspect-ratio: 4/4; 
+      border-radius: 50%; 
+    } 
+
+
+.contenidoMonstro  {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+   
+    font-size: 2rem; 
+    
+} 
+
+.elementoIcon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    
 }
+.elementoIcon > img{
+  height: 3rem ;
+  aspect-ratio: 4/4;
+}
+
+
+
+
+    @media (758px > width) { 
+
+        #busquedaContenedor{
+            display: flex;
+            width: 40%;
+            position: relative;
+            flex-direction: column;
+            overflow-y: scroll;
+            transform: translateY(-7rem);
+            background-image: url(/recursos/BgImagen3.webp);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .contenidoMonstro {
+            position: relative;
+            width: fit-content;
+            width: 100%;
+            height: 10%;
+            justify-items: center;
+            flex-direction: column;  
+           } 
+           .elementoIcon {
+            flex-wrap: nowrap;
+            height: 30%;
+            width: 100%;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+       .monstroImagenCard2 {
+            height: 60%;
+            
+           } 
+
+        .elementoIcon > img{
+            height: 100%;
+        }
+
+
+        #busquedaResult{
+            align-items: center;
+        }
+
+        #busquedaResult > li { 
+            height: 15rem;
+            width: 15rem;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;          
+        } 
+
+        .busquedaDecoration{
+            display: none;
+            position:fixed;
+            transform: translateY(5rem);
+            left: 9rem;
+            top: -6rem;
+            height: 100%;
+            width: 50%;
+            background: linear-gradient(0deg, rgba(52, 39, 1, 0.8), rgba(10, 8, 0, 0.8));
+            
+            z-index: -1;
+            }
+    
+    }
