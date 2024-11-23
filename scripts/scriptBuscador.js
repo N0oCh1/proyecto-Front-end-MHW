@@ -1,17 +1,14 @@
-// Funcion para ensenar la busqueda que se hiso en el buscador
 document.addEventListener("DOMContentLoaded", function () {
   const input = document.getElementById("search");
   const lista = document.getElementById("busquedaResult");
-<<<<<<< HEAD
   const cont = document.getElementById("busquedaContenedor");
-=======
->>>>>>> main
 
   function mostrarBusqueda(monstros) {
     lista.innerHTML = "";
 
-<<<<<<< HEAD
 monstros.forEach(monstro => { 
+const span = document.createElement('span');
+span.setAttribute("class", "transition");
 const li = document.createElement('li');
 li.setAttribute("class", "liMonstro"); 
 li.addEventListener('click', () => { 
@@ -35,30 +32,11 @@ li.innerHTML = `
 ;
 lista.appendChild(li); });
 }
-=======
-    monstros.forEach((monstros) => {
-      const li = document.createElement("li");
-      li.setAttribute("class", "liMonstro");
-      li.addEventListener("click", () => {
-        navegarMonstruo(monstros.idMonstro);
-      });
-      li.innerHTML = `
-    <img class="monstroImagenCard" src=${monstros.imagen.iconUrl}> </img>
-     <div class="contenidoMonstro">
-    <H3>${monstros.nombre}</H3>
-    </div>`;
 
-      lista.appendChild(li);
-    });
-  }
->>>>>>> main
+function navegarMonstruo(id){
+  window.location.href = `/src/monstros.html?id=${id}`
+}
 
-  // funcion para navegar a la pagina que pertenece al monstruo buscado
-  function navegarMonstruo(id) {
-    window.location.href = `/src/monstros.html?id=${id}`;
-  }
-
-<<<<<<< HEAD
   // funcion para navegar a la pagina que pertenece al monstruo buscado
   function navegarMonstruo(id) {
     window.location.href = `/src/monstros.html?id=${id}`;
@@ -73,15 +51,6 @@ lista.appendChild(li); });
     );
   }
 
-=======
-  // funcion para buscar el monstro segun cuando estas tecleando
-  function filtroMonstros(monstros, lista) {
-    return monstros.filter((monstros) =>
-      monstros.nombre.toLowerCase().includes(lista.toLowerCase())
-    );
-  }
-
->>>>>>> main
   // listener del tecleo
   input.addEventListener("keyup", async function () {
     lista.style.display = "flex";
@@ -89,10 +58,7 @@ lista.appendChild(li); });
     const query = input.value.trim();
     if (query === "") {
       lista.innerHTML = "";
-<<<<<<< HEAD
       cont.style.display="none";
-=======
->>>>>>> main
       return;
     }
     const monstros = await GetMonstro();
