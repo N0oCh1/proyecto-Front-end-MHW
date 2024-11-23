@@ -1,6 +1,6 @@
 #busquedaContenedor{
     display: none;
-    width: 32rem;
+    width: 35rem;
     position: relative;
     flex-direction: column;
     overflow-y: scroll;
@@ -77,6 +77,8 @@
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     flex-direction: row-reverse;
     
 }

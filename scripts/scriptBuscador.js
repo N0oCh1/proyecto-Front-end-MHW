@@ -16,13 +16,13 @@ navegarMonstruo(monstro.idMonstro);
 
 //iterar en los elementos
 const iconUrls = { 
-  Fuego: '/recursos/elementos_icons/FuegoIcon.webp', 
-  Dragon: '/recursos/elementos_icons/DragonIcon.webp',
-  Treuno: '/recursos/elementos_icons/TreunoIcon.webp'
+  Fuego: "/recursos/elementos_icons/FuegoIcon.webp", 
+  Dragon: "/recursos/elementos_icons/DragonIcon.webp",
+  Treuno: "/recursos/elementos_icons/TreunoIcon.webp",
+  Agua: "/recursos/elementos_icons/Agua.png",
+  Hielo: "/recursos/elementos_icons/Hielo.png"
 } // Añade más elementos según sea necesario
-const elementosHTML = monstro.elementos.map(elemento => ` 
-<img src="${iconUrls[elemento.elemento]}"> 
-`).join('');
+const elementosHTML = monstro.elementos.map(elemento => (elemento.elemento === "Ninguno" ? `<p>Ninguno</p>`:`<img src="${iconUrls[elemento.elemento]}">`)).join('');
 
 li.innerHTML = ` 
 <img class="monstroImagenCard2" src="${monstro.imagen.iconUrl}" >
