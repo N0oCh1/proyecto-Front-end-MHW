@@ -14,10 +14,12 @@ label {
 }
 
 h1 {
+h1 {
   text-align: center;
   font-size: 40px;
 }
 
+/* ===================== estilos para la parte de informacion principal ===================== */
 /* ===================== estilos para la parte de informacion principal ===================== */
 .infoPContainer {
   position: relative;
@@ -517,7 +519,7 @@ select {
 /* =============================================================== */
 
 footer {
-  color: white;
+  color:  #dcdcdc;
   padding: 24px 24px;
   align-items: start;
   justify-content: center;
