@@ -29,7 +29,11 @@
         </button>
       </div>
       <div class="logging">
-        <button type="button" onclick="AbrirLogging()">LOGGING</button>
+        <button type="button" onclick="AbrirLogging()">LOGIN</button>
+        <button type="button"><a href="https://www.google.com" target="_blank"><img class="iconExtra" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png"/></a></button>
+        <button type="button"><a href="https://x.com" target="_blank"><img class="iconExtra" src="https://cdn-icons-png.flaticon.com/512/3938/3938028.png"/></a></button>
+        <button type="button"><a href="https://www.instagram.com/" target="_blank"><img class="iconExtra" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1024px-Instagram_logo_2022.svg.png"/></a></button>
+        <button type="button"><a href="https://www.tiktok.com/" target="_blank"><img class="iconExtra" src="https://p16-va-tiktok.ibyteimg.com/obj/musically-maliva-obj/a45cf75986e5f90595049b68725bfd87.png"/></a></button>
       </div>
     </header>
     
@@ -71,6 +75,11 @@
         <span class="transition"> </span>
         </div>
  
+        <div class="scrollDown">
+          <p>Scroll</p>
+          <img src="/recursos/scroll.png"/>
+        </div>
+        
       </section>
 
       <ul class="space"></ul>
@@ -174,7 +183,8 @@
             <h3>
               <a
                 href="https://www.msn.com/es-es/entretenimiento/juegos/monster-hunter-anuncia-un-nuevo-juego-de-mundo-abierto-y-tiene-ideas-que-te-recordar%C3%A1n-a-breath-of-the-wild-as%C3%AD-es-el-nuevo-outlanders/ar-AA1u529u?ocid=BingNewsSerp"
-              >
+                target="_blank"
+                >
                 Monster Hunter anuncia un nuevo juego de mundo abierto... y
                 tiene ideas que te recordarán a Breath of the Wild: así es el
                 nuevo Outlanders
@@ -199,7 +209,8 @@
             <h3>
               <a
                 href="https://www.nintenderos.com/ninteocio/recrean-a-pikachu-y-mas-en-monster-hunter-wilds/"
-              >
+                target="_blank"
+                >
                 Recrean a Pikachu y más en Monster Hunter Wilds
               </a>
             </h3>
@@ -284,10 +295,13 @@
         <li>
           <button class="menuButton" type="button" href="#">Biomas</button>
         </li>
-        <li>
+        <!-- <li>
           <button class="menuButton" type="button" href="#">Elementos</button>
-        </li>
+        </li> -->
         <li>
+          <button class="menuButton" type="button">
+            <a href="/src/autores.html">Autores </a>
+          </button>
           <button class="menuButton" type="button">
             <a href="/src/autores.html">Autores </a>
           </button>
@@ -304,6 +318,71 @@
           src="/recursos/decoraciones/decoracion 2.png"
           class="botonAgregar"
         />
+        <img
+          src="/recursos/decoraciones/decoracion 2.png"
+          class="botonAgregar"
+        />
+      </button>
+    </div>
+
+    <!-- pantalla desplegable -->
+    <div class="pantallaLoggin" id="pantallaLoggin" style="display: none">
+      <img
+        class="borde4 animationBorder"
+        src="/recursos/decoraciones/BorderFrame2.png"
+      />
+      <img
+        class="borde2 animationBorder"
+        src="/recursos/decoraciones/BorderFrame2.png"
+      />
+      <img
+        class="borde3 animationBorder"
+        src="/recursos/decoraciones/BorderFrame2.png"
+      />
+      <img
+        class="borde1 animationBorder"
+        src="/recursos/decoraciones/BorderFrame2.png"
+      />
+      <button class="botonX" onclick="AbrirLogging()">X</button>
+      <div>
+        <img src="/recursos/user.webp" class="iconUsers" />
+      </div>
+  <!-- Seccion de Logging -->
+      <form class="form" id="form" style="display: flex">
+        <div class="inputsUsers">
+          <div class="user">
+            <label for="user">Nombre Usuario</label>
+            <input
+              id="user"
+              type="text"
+              placeholder="user"
+              name="usuario"
+              required
+            />
+          </div>
+          <div class="password">
+            <label for="password">Contraseña</label>
+            <input
+              id="password"
+              type="password"
+              placeholder="********"
+              name="password"
+              required
+            />
+          </div>
+        </div>
+        <div class="botonLog">
+          <button type="submit" data-action="registrar">Registrarse</button>
+          <button type="submit" data-action="inicio">Iniciar sesion</button>
+        </div>
+      </form>
+      <button
+        style="display: none"
+        id="cerrar"
+        class="botonCerrarSesion"
+        onclick="CerrarSesion(this)"
+      >
+        Cerrar Sesion
       </button>
     </div>
 
