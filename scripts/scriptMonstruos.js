@@ -124,7 +124,8 @@ function ObtenerImagenBioma(bioma) {
 }
 // FUncion GET del api para  obtener todo los detalle del mosntruo especifico
 async function ObtenerDetalle(id) {
-  return await fetch(`https://localhost:7101/monstro/${id}`, { method: "GET" })
+  return await fetch(`https://localhost:7101/monstro/${id}`, 
+    { method: "GET" })
     .then((res) => res.json())
     .then((data) => data);
 }
