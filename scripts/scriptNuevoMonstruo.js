@@ -200,9 +200,9 @@ function ShowModal() {
 }
 // Funcion para regresa a la pagina anterior
 function regresar() {
-  window.location.href = "/src/index.html";
+  window.location.href = "/index.html";
 }
 // Funcion para regresar al home cuando se actualiza
 function MonstroInsertado() {
-  window.location.href = "/src/index.html";
+  window.location.href = "/index.html";
 }
