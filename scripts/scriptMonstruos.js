@@ -124,7 +124,7 @@ function ObtenerImagenBioma(bioma) {
 }
 // FUncion GET del api para  obtener todo los detalle del mosntruo especifico
 async function ObtenerDetalle(id) {
-  return await fetch(`https://localhost:7101/monstro/${id}`, 
+  return await fetch(`http://grupo5.utp:7101/monstro/${id}`, 
     { method: "GET" })
     .then((res) => res.json())
     .then((data) => data);
@@ -143,7 +143,7 @@ function showModal() {
 // Funcion para eleminar le monstro
 async function ElminarMonstruo() {
   const id = getID();
-  await fetch(`https://localhost:7101/monstro/${id}`, { method: "DELETE" });
+  await fetch(`http://grupo5.utp:7101/monstro/${id}`, { method: "DELETE" });
   showModal();
   location.reload();
 }

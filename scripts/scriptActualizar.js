@@ -209,7 +209,7 @@ function getID() {
 
 // Funcion de GET del API para obtener los datos del mosntro con el id del url param
 async function ObtenerDetalle(id) {
-  return await fetch(`https://localhost:7101/monstro/${id}`, { method: "GET" })
+  return await fetch(`http://grupo5.utp:7101/monstro/${id}`, { method: "GET" })
     .then((res) => res.json())
     .then((data) => data);
 }
@@ -235,7 +235,7 @@ document
     });
     showModal();
     try {
-      await fetch(`https://localhost:7101/monstro/${id}`, {
+      await fetch(`http://grupo5.utp:7101/monstro/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

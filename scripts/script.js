@@ -103,7 +103,7 @@ document.getElementById("AbrirMenu").addEventListener("click", function () {
 
 // funcion para obtener datos de la API
 async function GetMonstro() {
-  const monstroData = await fetch("https://localhost:7101/monstro", {
+  const monstroData = await fetch("http://grupo5.utp:7101/monstro", {
     method: "GET",
     headers: {
       "Content-Type": "application/json; charset=utf-8",
@@ -157,7 +157,7 @@ document.getElementById("form").addEventListener("submit", async function (e) {
 
 // Funcion cuando se registra nuevo usuario
 async function Registrarse(jsonObject, user, password) {
-  await fetch("https://localhost:7101/usuario/nuevo", {
+  await fetch("http://grupo5.utp:7101/usuario/nuevo", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -179,7 +179,7 @@ async function Registrarse(jsonObject, user, password) {
 async function Iniciar(jsonObject, user, password) {
   const form = document.getElementById("form");
   const boton = document.getElementById("cerrar");
-  await fetch("https://localhost:7101/usuario", {
+  await fetch("http://grupo5.utp:7101/usuario", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
